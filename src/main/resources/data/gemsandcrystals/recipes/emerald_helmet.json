@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "EEE",
+        "E E"
+    ],
+    "key": {
+        "E": { "item": "minecraft:emerald" }
+    },
+    "result": { "item": "gemsandcrystals:emerald_helmet", "count": 1 }
+}

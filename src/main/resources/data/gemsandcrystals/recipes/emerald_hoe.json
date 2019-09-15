@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "EE",
+        " #",
+        " #"
+    ],
+    "key": {
+        "E": { "item": "minecraft:emerald" },
+        "#": { "item": "minecraft:stick" }
+    },
+    "result": { "item": "gemsandcrystals:emerald_hoe", "count": 1 }
+}

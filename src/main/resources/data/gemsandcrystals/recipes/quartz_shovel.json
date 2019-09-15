@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "Q",
+        "#",
+        "#"
+    ],
+    "key": {
+        "Q": { "item": "minecraft:quartz" },
+        "#": { "item": "minecraft:stick" }
+    },
+    "result": { "item": "gemsandcrystals:quartz_shovel", "count": 1 }
+}

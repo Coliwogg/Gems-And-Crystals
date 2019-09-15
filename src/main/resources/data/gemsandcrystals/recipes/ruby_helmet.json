@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "RRR",
+        "R R"
+    ],
+    "key": {
+        "R": { "item": "gemsandcrystals:ruby" }
+    },
+    "result": { "item": "gemsandcrystals:ruby_helmet", "count": 1 }
+}

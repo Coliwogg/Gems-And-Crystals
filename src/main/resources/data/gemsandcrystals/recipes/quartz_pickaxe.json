@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "QQQ",
+        " # ",
+        " # "
+    ],
+    "key": {
+        "Q": { "item": "minecraft:quartz" },
+        "#": { "item": "minecraft:stick" }
+    },
+    "result": { "item": "gemsandcrystals:quartz_pickaxe", "count": 1 }
+}

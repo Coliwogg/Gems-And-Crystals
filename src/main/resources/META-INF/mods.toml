@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+logoFile="logo.png"
+[[mods]]
+modId="gemsandcrystals"
+version="1.2.4"
+displayName="Gems and Crystals"
+displayURL="https://www.curseforge.com/members/coliwogg"
+credits="Thanks to Harry Talks for teaching me how to do this."
+authors="Coliwogg"
+description='''
+This mod adds multiple different kinds of Gems and Crystals to the game of Minecraft.
+It adds Rubies, Sapphires, Topaz, and Amethyst to the game, with the ability to craft tools and armor for each.
+It also adds the ability to craft tools armor for Emeralds and Quartz.
+'''
+[[dependencies.gemsandcrystals]] 
+    modId="forge"
+    mandatory=true
+    versionRange="[28,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.gemsandcrystals]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"

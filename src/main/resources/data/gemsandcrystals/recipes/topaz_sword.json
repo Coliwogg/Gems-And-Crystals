@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "T",
+        "T",
+        "#"
+    ],
+    "key": {
+        "T": { "item": "gemsandcrystals:topaz" },
+        "#": { "item": "minecraft:stick" }
+    },
+    "result": { "item": "gemsandcrystals:topaz_sword", "count": 1 }
+}

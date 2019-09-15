@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [ {
+      		"item": "gemsandcrystals:ruby_block"
+    	}
+    ],
+    "result": {
+        "item": "gemsandcrystals:ruby",
+        "count": 9
+    }
+}

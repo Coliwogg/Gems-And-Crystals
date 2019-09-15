@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "A A",
+        "A A"
+    ],
+    "key": {
+        "A": { "item": "gemsandcrystals:amethyst" }
+    },
+    "result": { "item": "gemsandcrystals:amethyst_boots", "count": 1 }
+}
