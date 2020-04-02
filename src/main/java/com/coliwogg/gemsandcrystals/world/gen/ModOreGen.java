@@ -18,9 +18,9 @@ public class ModOreGen {
 	
 	private static final CountRangeConfig RUBY = new CountRangeConfig(4, 0, 4, 30);
 	private static final CountRangeConfig SAPPHIRE = new CountRangeConfig(4, 0, 4, 30);
-	private static final CountRangeConfig AMETHYST = new CountRangeConfig(4, 0, 4, 30);
-	private static final CountRangeConfig TOPAZ = new CountRangeConfig(4, 0, 4, 30);
-	// private static final CountRangeConfig QUARTZ = new CountRangeConfig(4, 0, 4, 30);
+	private static final CountRangeConfig AMETHYST = new CountRangeConfig(4, 0, 4, 45);
+	private static final CountRangeConfig TOPAZ = new CountRangeConfig(4, 0, 4, 45);
+	// private static final CountRangeConfig QUARTZ = new CountRangeConfig(4, 0, 4, 50);
 
 	public static void generateOre() {
 		for (Biome biome : ForgeRegistries.BIOMES) {
