@@ -9,5 +9,5 @@
         "R": { "item": "gemsandcrystals:ruby" },
         "#": { "item": "minecraft:stick" }
     },
-    "result": { "item": "gemsandcrystals:ruby_axe", "count": 1 }
+    "result": { "item": "gemsandcrystals:ruby_hoe", "count": 1 }
 }
