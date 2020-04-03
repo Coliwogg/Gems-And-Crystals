@@ -2,7 +2,7 @@ package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.config.Config;
 import com.coliwogg.gemsandcrystals.init.ItemInit;
-import com.coliwogg.gemsandcrystals.world.gen.ModOreGen;
+import com.coliwogg.gemsandcrystals.world.gen.OreGeneration;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -41,8 +41,6 @@ public class GemsandCrystals
         Config.loadConfig(Config.client_config, FMLPaths.CONFIGDIR.get().resolve("gemsandcrystals-client.toml").toString());
         Config.loadConfig(Config.server_config, FMLPaths.CONFIGDIR.get().resolve("gemsandcrystals-server.toml").toString());
 
-        
-        
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -64,7 +62,7 @@ public class GemsandCrystals
     
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-    	ModOreGen.generateOre();
+    	OreGeneration.generateOre();
     }
     
     public static class GemsandCrystalsItemGroup extends ItemGroup {
