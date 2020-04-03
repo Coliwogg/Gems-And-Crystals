@@ -37,25 +37,25 @@ public class OreGeneration {
 			if(OreGenConfig.generate_ruby.get()) {
 				customConfig = Placement.COUNT_RANGE.configure(RUBY);
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.RUBY_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 1, 2))).withPlacement(customConfig));
+						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.RUBY_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 2, 4))).withPlacement(customConfig));
 			}
 			
 			if(OreGenConfig.generate_sapphire.get()) {
 				customConfig = Placement.COUNT_RANGE.configure(SAPPHIRE);
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.SAPPHIRE_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 1, 2))).withPlacement(customConfig));
+						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.SAPPHIRE_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 2, 4))).withPlacement(customConfig));
 			}
 			
 			if(OreGenConfig.generate_topaz.get()) {
 				customConfig = Placement.COUNT_RANGE.configure(TOPAZ);
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.TOPAZ_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 2, 4))).withPlacement(customConfig));
+						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.TOPAZ_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 2, 5))).withPlacement(customConfig));
 			}
 			
 			if(OreGenConfig.generate_amethyst.get()) {
 				customConfig = Placement.COUNT_RANGE.configure(AMETHYST);
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.AMETHYST_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 2, 5))).withPlacement(customConfig));
+						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.AMETHYST_ORE.getDefaultState(), MathHelper.nextInt(new Random(), 3, 5))).withPlacement(customConfig));
 			}
 			
 			if(OreGenConfig.generate_quartz.get()) {
