@@ -13,9 +13,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.2'
-group = 'com.coliwogg.gemsandcrystals' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'gemsandcrystals'
+version = modMinecraftVersion + "-" + modVersion
+group = modGroup
+archivesBaseName = modFileName
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -25,7 +25,7 @@ minecraft {
     // stable_#            Stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'snapshot', version: '20200330-1.15.1'
+    mappings channel: mappingsChannel, version: mappingsVersion
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -74,7 +74,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'gemsandcrystals', '--all', '--output', file('src/generated/resources/')
+            args '--mod', modId, '--all', '--output', file('src/generated/resources/')
 
             mods {
                 examplemod {
@@ -115,12 +115,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "gemsandcrystals",
-            "Specification-Vendor": "gemsandcrystalssareus",
+            "Specification-Title": modId,
+            "Specification-Vendor": modGroup,
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"gemsandcrystalssareus",
+            "Implementation-Vendor" :modGroup,
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
