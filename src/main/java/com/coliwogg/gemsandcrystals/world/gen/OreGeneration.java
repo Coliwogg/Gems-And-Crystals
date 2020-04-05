@@ -1,16 +1,12 @@
 package com.coliwogg.gemsandcrystals.world.gen;
 
 import java.util.Random;
-import java.util.Set;
 
 import com.coliwogg.gemsandcrystals.config.OreGenConfig;
 import com.coliwogg.gemsandcrystals.init.BlockInit;
 
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.Biome;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.BiomeDictionary.Type;
-import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -19,7 +15,6 @@ import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;
 
-@SuppressWarnings("unused")
 public class OreGeneration {
 	
 	private static final CountRangeConfig RUBY = new CountRangeConfig(OreGenConfig.ruby_chance.get(), 0, 4, 30);
