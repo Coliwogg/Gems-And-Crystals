@@ -199,27 +199,27 @@ public class ItemInit {
 	
 	public enum ModItemTier implements IItemTier {
 		// int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
-		RUBY(4, 900, 10.0F, 4.0F, 12, () -> {
+		RUBY(3, 900, 10.0F, 4.0F, 12, () -> {
 			return Ingredient.fromItems(ItemInit.RUBY);
 		}),
 		
-		SAPPHIRE(4, 900, 10.0F, 4.0F, 11, () -> {
+		SAPPHIRE(3, 900, 10.0F, 4.0F, 11, () -> {
 			return Ingredient.fromItems(ItemInit.SAPPHIRE);
 		}),
 		
-		EMERALD(4, 850,  10.0F, 4.0F, 10, () -> {
+		EMERALD(3, 850,  10.0F, 4.0F, 10, () -> {
 			return Ingredient.fromItems(ItemInit.EMERALD);
 		}),
 		
-		AMETHYST(4, 775,  10.0F, 4.0F, 10, () -> {
+		AMETHYST(2, 775,  10.0F, 4.0F, 10, () -> {
 			return Ingredient.fromItems(ItemInit.AMETHYST);
 		}),
 		
-		TOPAZ(4, 750,  10.0F, 4.0F, 10, () -> {
+		TOPAZ(2, 750,  10.0F, 4.0F, 10, () -> {
 			return Ingredient.fromItems(ItemInit.TOPAZ);
 		}),
 		
-		QUARTZ(4, 400,  10.0F, 4.0F, 10, () -> {
+		QUARTZ(2, 400,  10.0F, 4.0F, 10, () -> {
 			return Ingredient.fromItems(ItemInit.QUARTZ);
 		});
 		
