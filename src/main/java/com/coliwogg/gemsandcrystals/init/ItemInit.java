@@ -127,41 +127,43 @@ public class ItemInit {
 		event.getRegistry().register(new Item(new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz"));		
 		
 		// Tools
-		event.getRegistry().register(new SwordItem(ModItemTier.RUBY, 7, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_sword"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.RUBY, 4, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_pickaxe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.RUBY, 2, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_shovel"));
-		event.getRegistry().register(new AxeItem(ModItemTier.RUBY, 11, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.RUBY, 5.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_hoe"));
+		event.getRegistry().register(new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_sword"));
+		event.getRegistry().register(new PickaxeItem(ModItemTier.RUBY, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_pickaxe"));
+		event.getRegistry().register(new ShovelItem(ModItemTier.RUBY, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_shovel"));
+		event.getRegistry().register(new AxeItem(ModItemTier.RUBY, 5.0F, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_axe"));
+		event.getRegistry().register(new HoeItem(ModItemTier.RUBY, 2.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_hoe"));
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.SAPPHIRE, 7, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_sword"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.SAPPHIRE, 4, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_pickaxe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.SAPPHIRE, 2, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_shovel"));
-		event.getRegistry().register(new AxeItem(ModItemTier.SAPPHIRE, 11, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.SAPPHIRE, 5.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_hoe"));
+		event.getRegistry().register(new SwordItem(ModItemTier.SAPPHIRE, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_sword"));
+		event.getRegistry().register(new PickaxeItem(ModItemTier.SAPPHIRE, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_pickaxe"));
+		event.getRegistry().register(new ShovelItem(ModItemTier.SAPPHIRE, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_shovel"));
+		event.getRegistry().register(new AxeItem(ModItemTier.SAPPHIRE, 5.0F, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_axe"));
+		event.getRegistry().register(new HoeItem(ModItemTier.SAPPHIRE, 2.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_hoe"));
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.EMERALD, 7, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_sword"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.EMERALD, 4, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_pickaxe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.EMERALD, 2, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_shovel"));
-		event.getRegistry().register(new AxeItem(ModItemTier.EMERALD, 11, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.EMERALD, 5.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_hoe"));
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.AMETHYST, 7, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_sword"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.AMETHYST, 4, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_pickaxe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.AMETHYST, 2, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_shovel"));
-		event.getRegistry().register(new AxeItem(ModItemTier.AMETHYST, 11, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.AMETHYST, 5.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_hoe"));
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.TOPAZ, 7, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_sword"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.TOPAZ, 4, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_pickaxe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.TOPAZ, 2, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_shovel"));
-		event.getRegistry().register(new AxeItem(ModItemTier.TOPAZ, 11, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.TOPAZ, 5.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_hoe"));
+		event.getRegistry().register(new SwordItem(ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_sword"));
+		event.getRegistry().register(new PickaxeItem(ModItemTier.EMERALD, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_pickaxe"));
+		event.getRegistry().register(new ShovelItem(ModItemTier.EMERALD, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_shovel"));
+		event.getRegistry().register(new AxeItem(ModItemTier.EMERALD, 5.5F, -2.9F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_axe"));
+		event.getRegistry().register(new HoeItem(ModItemTier.EMERALD, 1.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_hoe"));
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.QUARTZ, 7, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_sword"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.QUARTZ, 4, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_pickaxe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.QUARTZ, 2, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_shovel"));
-		event.getRegistry().register(new AxeItem(ModItemTier.QUARTZ, 11, 3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.QUARTZ, 5.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_hoe"));
+		event.getRegistry().register(new SwordItem(ModItemTier.TOPAZ, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_sword"));
+		event.getRegistry().register(new PickaxeItem(ModItemTier.TOPAZ, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_pickaxe"));
+		event.getRegistry().register(new ShovelItem(ModItemTier.TOPAZ, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_shovel"));
+		event.getRegistry().register(new AxeItem(ModItemTier.TOPAZ, 5.3F, -3.03F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_axe"));
+		event.getRegistry().register(new HoeItem(ModItemTier.TOPAZ, -0.3F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_hoe"));
+		
+		event.getRegistry().register(new SwordItem(ModItemTier.AMETHYST, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_sword"));
+		event.getRegistry().register(new PickaxeItem(ModItemTier.AMETHYST, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_pickaxe"));
+		event.getRegistry().register(new ShovelItem(ModItemTier.AMETHYST, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_shovel"));
+		event.getRegistry().register(new AxeItem(ModItemTier.AMETHYST, 5.7F, -3.07F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_axe"));
+		event.getRegistry().register(new HoeItem(ModItemTier.AMETHYST, -0.7F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_hoe"));
+	
+		event.getRegistry().register(new SwordItem(ModItemTier.QUARTZ, 3 , -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_sword"));
+		event.getRegistry().register(new PickaxeItem(ModItemTier.QUARTZ, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_pickaxe"));
+		event.getRegistry().register(new ShovelItem(ModItemTier.QUARTZ, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_shovel"));
+		event.getRegistry().register(new AxeItem(ModItemTier.QUARTZ, 6.5F, -3.15F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_axe"));
+		event.getRegistry().register(new HoeItem(ModItemTier.QUARTZ, -1.5F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_hoe"));
 		
 		// Armor
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("ruby_helmet"));
@@ -179,16 +181,16 @@ public class ItemInit {
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_leggings"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_boots"));
 		
-		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_helmet"));
-		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_chestplate"));
-		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_leggings"));
-		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_boots"));
-
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_helmet"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_chestplate"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_leggings"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("topaz_boots"));
 
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_helmet"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_chestplate"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_leggings"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("amethyst_boots"));
+		
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_helmet"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_chestplate"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_leggings"));
@@ -199,27 +201,27 @@ public class ItemInit {
 	
 	public enum ModItemTier implements IItemTier {
 		// int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
-		RUBY(3, 900, 10.0F, 4.0F, 12, () -> {
+		RUBY(3, 900, 9.0F, 4.0F, 12, () -> {
 			return Ingredient.fromItems(ItemInit.RUBY);
 		}),
 		
-		SAPPHIRE(3, 900, 10.0F, 4.0F, 11, () -> {
+		SAPPHIRE(3, 900, 9.0F, 4.0F, 12, () -> {
 			return Ingredient.fromItems(ItemInit.SAPPHIRE);
 		}),
 		
-		EMERALD(3, 850,  10.0F, 4.0F, 10, () -> {
+		EMERALD(3, 850, 8.5F, 3.5F, 11, () -> {
 			return Ingredient.fromItems(ItemInit.EMERALD);
 		}),
-		
-		AMETHYST(2, 775,  10.0F, 4.0F, 10, () -> {
-			return Ingredient.fromItems(ItemInit.AMETHYST);
-		}),
-		
-		TOPAZ(2, 750,  10.0F, 4.0F, 10, () -> {
+	
+		TOPAZ(2, 775, 8.0F, 2.7F, 9, () -> {
 			return Ingredient.fromItems(ItemInit.TOPAZ);
 		}),
 		
-		QUARTZ(2, 400,  10.0F, 4.0F, 10, () -> {
+		AMETHYST(2, 775, 8.0F, 2.3F, 9, () -> {
+			return Ingredient.fromItems(ItemInit.AMETHYST);
+		}),
+		
+		QUARTZ(2, 400, 7.0F, 1.5F, 7, () -> {
 			return Ingredient.fromItems(ItemInit.QUARTZ);
 		});
 		
@@ -271,27 +273,29 @@ public class ItemInit {
 	}
 	
 	public enum ModArmorMaterial implements IArmorMaterial {
-		RUBY(GemsandCrystals.MOD_ID + ":ruby", 12, new int[] {3, 6, 8, 3}, 450, "item.armor.equip_diamond", 3.0F, () -> {
+		
+		//String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn
+		RUBY(GemsandCrystals.MOD_ID + ":ruby", 13, new int[] {3, 6, 8, 4}, 450, "item.armor.equip_diamond", 3.0F, () -> {
 			return Ingredient.fromItems(ItemInit.RUBY);
 		}),
 		
-		SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 11, new int[] {3, 6, 8, 3}, 450, "item.armor.equip_diamond", 3.0F, () -> {
+		SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 13, new int[] {3, 6, 8, 4}, 450, "item.armor.equip_diamond", 3.0F, () -> {
 			return Ingredient.fromItems(ItemInit.SAPPHIRE);
 		}),
 		
-		EMERALD(GemsandCrystals.MOD_ID + ":emerald", 11, new int[] {3, 5, 7, 4}, 425, "item.armor.equip_diamond", 2.5F, () -> {
+		EMERALD(GemsandCrystals.MOD_ID + ":emerald", 12, new int[] {3, 5, 7, 4}, 425, "item.armor.equip_diamond", 2.0F, () -> {
 			return Ingredient.fromItems(ItemInit.EMERALD);
 		}),
 		
-		AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 14, new int[] {2, 5, 8, 4}, 375, "item.armor.equip_diamond", 1.0F, () -> {
+		AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 11, new int[] {2, 5, 8, 4}, 375, "item.armor.equip_diamond", 1.0F, () -> {
 			return Ingredient.fromItems(ItemInit.AMETHYST);
 		}),
 		
-		TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 13, new int[] {2, 5, 8, 4}, 375, "item.armor.equip_diamond", 1.0F, () -> {
+		TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 11, new int[] {2, 6, 8, 3}, 375, "item.armor.equip_diamond", 1.0F, () -> {
 			return Ingredient.fromItems(ItemInit.TOPAZ);
 		}),
 		
-		QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 13, new int[] {2, 5, 7, 3}, 325, "item.armor.equip_diamond", 0.0F, () -> {
+		QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 10, new int[] {2, 5, 7, 2}, 325, "item.armor.equip_diamond", 0.0F, () -> {
 			return Ingredient.fromItems(ItemInit.QUARTZ);
 		});
 		
