@@ -17,11 +17,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class OreGeneration {
 	
-	private static final CountRangeConfig RUBY = new CountRangeConfig(OreGenConfig.ruby_chance.get(), 3, 0, 12);
-	private static final CountRangeConfig SAPPHIRE = new CountRangeConfig(OreGenConfig.sapphire_chance.get(), 3, 0, 12);
+	private static final CountRangeConfig RUBY = new CountRangeConfig(OreGenConfig.ruby_chance.get(), 3, 0, 14);
+	private static final CountRangeConfig SAPPHIRE = new CountRangeConfig(OreGenConfig.sapphire_chance.get(), 3, 0, 14);
 	private static final CountRangeConfig TOPAZ = new CountRangeConfig(OreGenConfig.topaz_chance.get(), 4, 0, 32);
 	private static final CountRangeConfig AMETHYST = new CountRangeConfig(OreGenConfig.amethyst_chance.get(), 4, 0, 32);
-	private static final CountRangeConfig QUARTZ = new CountRangeConfig(OreGenConfig.quartz_chance.get(), 6, 0, 32);
+	private static final CountRangeConfig QUARTZ = new CountRangeConfig(OreGenConfig.quartz_chance.get(), 6, 0, 40);
 	
 	static ConfiguredPlacement<CountRangeConfig> customConfig = null;
 
