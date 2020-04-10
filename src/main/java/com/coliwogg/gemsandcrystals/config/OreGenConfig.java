@@ -10,11 +10,11 @@ public class OreGenConfig {
 		
 		server.comment("OreGen Config");
 		
-		ruby_chance = server.comment("Maximum number of ore veins of ruby ore that can spawn in one chunk").defineInRange("oregen.ruby_chance", 7, 8, 10);
-		sapphire_chance = server.comment("Maximum number of ore veins of sapphire ore that can spawn in one chunk").defineInRange("oregen.sapphire_chance", 7, 8, 10);
-		topaz_chance = server.comment("Maximum number of ore veins of topaz ore that can spawn in one chunk").defineInRange("oregen.topaz_chance", 8, 7, 10);
-		amethyst_chance = server.comment("Maximum number of ore veins of amethyst ore that can spawn in one chunk").defineInRange("oregen.amethyst_chance", 8, 7, 11);
-		quartz_chance = server.comment("Maximum number of ore veins of quartz ore that can spawn in one chunk").defineInRange("oregen.quartz_chance", 11, 9, 13);
+		ruby_chance = server.comment("Maximum number of ore veins of ruby ore that can spawn in one chunk").defineInRange("oregen.ruby_chance", 2, 3, 4);
+		sapphire_chance = server.comment("Maximum number of ore veins of sapphire ore that can spawn in one chunk").defineInRange("oregen.sapphire_chance", 2, 3, 4);
+		topaz_chance = server.comment("Maximum number of ore veins of topaz ore that can spawn in one chunk").defineInRange("oregen.topaz_chance", 3, 4, 5);
+		amethyst_chance = server.comment("Maximum number of ore veins of amethyst ore that can spawn in one chunk").defineInRange("oregen.amethyst_chance", 3, 4, 5);
+		quartz_chance = server.comment("Maximum number of ore veins of quartz ore that can spawn in one chunk").defineInRange("oregen.quartz_chance", 4, 5, 6);
 
 		generate_ruby = server.comment("Decide if you want ruby ore to spawn in the overworld").define("oregen.generate_ruby", true);
 		generate_sapphire = server.comment("Decide if you want sapphire ore to spawn in the overworld").define("oregen.generate_sapphire", true);

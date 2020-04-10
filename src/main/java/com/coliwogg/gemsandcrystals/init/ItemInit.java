@@ -139,8 +139,6 @@ public class ItemInit {
 		event.getRegistry().register(new AxeItem(ModItemTier.SAPPHIRE, 5.0F, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_axe"));
 		event.getRegistry().register(new HoeItem(ModItemTier.SAPPHIRE, 2.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("sapphire_hoe"));
 		
-		
-		
 		event.getRegistry().register(new SwordItem(ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_sword"));
 		event.getRegistry().register(new PickaxeItem(ModItemTier.EMERALD, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_pickaxe"));
 		event.getRegistry().register(new ShovelItem(ModItemTier.EMERALD, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("emerald_shovel"));
@@ -195,35 +193,16 @@ public class ItemInit {
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_chestplate"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_leggings"));
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)).setRegistryName("quartz_boots"));
-
-
 	}
 	
 	public enum ModItemTier implements IItemTier {
 		// int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
-		RUBY(3, 900, 9.0F, 4.0F, 12, () -> {
-			return Ingredient.fromItems(ItemInit.RUBY);
-		}),
-		
-		SAPPHIRE(3, 900, 9.0F, 4.0F, 12, () -> {
-			return Ingredient.fromItems(ItemInit.SAPPHIRE);
-		}),
-		
-		EMERALD(3, 850, 8.5F, 3.5F, 11, () -> {
-			return Ingredient.fromItems(ItemInit.EMERALD);
-		}),
-	
-		TOPAZ(2, 775, 8.0F, 2.7F, 9, () -> {
-			return Ingredient.fromItems(ItemInit.TOPAZ);
-		}),
-		
-		AMETHYST(2, 775, 8.0F, 2.3F, 9, () -> {
-			return Ingredient.fromItems(ItemInit.AMETHYST);
-		}),
-		
-		QUARTZ(2, 400, 7.0F, 1.5F, 7, () -> {
-			return Ingredient.fromItems(ItemInit.QUARTZ);
-		});
+		RUBY(3, 900, 9.0F, 4.0F, 12, () -> { return Ingredient.fromItems(ItemInit.RUBY); }),
+		SAPPHIRE(3, 900, 9.0F, 4.0F, 12, () -> { return Ingredient.fromItems(ItemInit.SAPPHIRE); }),
+		EMERALD(3, 850, 8.5F, 3.5F, 11, () -> { return Ingredient.fromItems(ItemInit.EMERALD); }),
+		TOPAZ(2, 775, 8.0F, 2.7F, 9, () -> { return Ingredient.fromItems(ItemInit.TOPAZ); }),
+		AMETHYST(2, 775, 8.0F, 2.3F, 9, () -> { return Ingredient.fromItems(ItemInit.AMETHYST); }),
+		QUARTZ(2, 400, 7.0F, 1.5F, 7, () -> { return Ingredient.fromItems(ItemInit.QUARTZ); });
 		
 		private final int harvestLevel;
 		private final int maxUses;
@@ -275,27 +254,27 @@ public class ItemInit {
 	public enum ModArmorMaterial implements IArmorMaterial {
 		
 		//String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn
-		RUBY(GemsandCrystals.MOD_ID + ":ruby", 13, new int[] {3, 6, 8, 4}, 450, "item.armor.equip_diamond", 3.0F, () -> {
+		RUBY(GemsandCrystals.MOD_ID + ":ruby", 35, new int[] {4, 7, 9, 4}, 11, "item.armor.equip_diamond", 3.0F, () -> {
 			return Ingredient.fromItems(ItemInit.RUBY);
 		}),
 		
-		SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 13, new int[] {3, 6, 8, 4}, 450, "item.armor.equip_diamond", 3.0F, () -> {
+		SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 35, new int[] {4, 7, 9, 4}, 11, "item.armor.equip_diamond", 3.0F, () -> {
 			return Ingredient.fromItems(ItemInit.SAPPHIRE);
 		}),
 		
-		EMERALD(GemsandCrystals.MOD_ID + ":emerald", 12, new int[] {3, 5, 7, 4}, 425, "item.armor.equip_diamond", 2.0F, () -> {
+		EMERALD(GemsandCrystals.MOD_ID + ":emerald", 33, new int[] {4, 6, 9, 3}, 10, "item.armor.equip_diamond", 2.5F, () -> {
 			return Ingredient.fromItems(ItemInit.EMERALD);
 		}),
 		
-		AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 11, new int[] {2, 5, 8, 4}, 375, "item.armor.equip_diamond", 1.0F, () -> {
-			return Ingredient.fromItems(ItemInit.AMETHYST);
-		}),
-		
-		TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 11, new int[] {2, 6, 8, 3}, 375, "item.armor.equip_diamond", 1.0F, () -> {
+		TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 20, new int[] {2, 6, 7, 2}, 9, "item.armor.equip_diamond", 1.0F, () -> {
 			return Ingredient.fromItems(ItemInit.TOPAZ);
 		}),
 		
-		QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 10, new int[] {2, 5, 7, 2}, 325, "item.armor.equip_diamond", 0.0F, () -> {
+		AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 17, new int[] {3, 5, 6, 3}, 9, "item.armor.equip_diamond", 0.0F, () -> {
+			return Ingredient.fromItems(ItemInit.AMETHYST);
+		}),
+		
+		QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 10, new int[] {1, 4, 5, 2}, 12, "item.armor.equip_diamond", 0.0F, () -> {
 			return Ingredient.fromItems(ItemInit.QUARTZ);
 		});
 		
