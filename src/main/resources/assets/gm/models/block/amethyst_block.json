@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "gm:blocks/amethyst_block_bottom",
+    "top": "gm:blocks/amethyst_block_top",
+    "side": "gm:blocks/amethyst_block_side"
+  }
+}

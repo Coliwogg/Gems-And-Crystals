@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gm:ruby_block"
+    }
+  ],
+  "result": {
+    "type": "forge:ore_dict",
+    "ore": "gemRuby",
+    "count": 9
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gm:sapphire_block"
+    }
+  ],
+  "result": {
+    "type": "forge:ore_dict",
+    "ore": "gemSapphire",
+    "count": 9
+  }
+}

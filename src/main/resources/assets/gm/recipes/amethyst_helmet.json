@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gemAmethyst"
+    }
+  },
+  "result": {
+    "item": "gm:amethyst_helmet"
+  }
+}

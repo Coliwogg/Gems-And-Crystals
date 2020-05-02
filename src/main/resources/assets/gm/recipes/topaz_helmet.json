@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gemTopaz"
+    }
+  },
+  "result": {
+    "item": "gm:topaz_helmet"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gm:amethyst_block"
+    }
+  ],
+  "result": {
+    "type": "forge:ore_dict",
+    "ore": "gemAmethyst",
+    "count": 4
+  }
+}
