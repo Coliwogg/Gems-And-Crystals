@@ -1,1 +1,1 @@
-# Gems and Crystals for Minecraft version 1.15
+# Gems and Crystals Mod for Minecraft version 1.15
