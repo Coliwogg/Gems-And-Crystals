@@ -2,13 +2,13 @@ modLoader="javafml"
 
 loaderVersion="[31,)"
 
-#issueTrackerURL="https://github.com/Coliwogg/Gems-And-Crystals-1.14.4/issues"
+issueTrackerURL="https://github.com/Coliwogg/Gems-And-Crystals/issues"
 
 [[mods]]
 
 modId="gemsandcrystals"
 
-version="1.2.6"
+version="1.2.7"
 
 displayName="Gems and Crystals"
 
@@ -18,14 +18,11 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals"
 
 logoFile="logo.png"
 
-credits="Thanks to YOU for downloading this mod"
+credits="Thanks to YOU for downloading this mod!"
 
 authors="Coliwogg"
 
-description='''
-This mod adds multiple different kinds of gems and crystals to Minecraft version 1.15
-It adds Rubies and Sapphires, along with craftable tools and armor. It also adds craftable Emerald tools and armor.
-'''
+description='''This mod adds different kinds of gems, crystals, tools, and armor to Minecraft version 1.15.'''
 
 [[dependencies.gemsandcrystals]]
     modId="forge"
