@@ -8,7 +8,7 @@ issueTrackerURL="https://github.com/Coliwogg/Gems-And-Crystals/issues"
 
 modId="gemsandcrystals"
 
-version="1.2.7"
+version="1.2.8"
 
 displayName="Gems and Crystals"
 
@@ -16,7 +16,7 @@ displayName="Gems and Crystals"
 
 displayURL="https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals"
 
-logoFile="logo.png"
+logoFile="gemsandcrystals.png"
 
 credits="Thanks to YOU for downloading this mod!"
 

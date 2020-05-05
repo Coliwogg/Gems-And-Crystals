@@ -121,7 +121,7 @@ public class ItemInit {
         private final int enchantability;
         private final LazyValue<Ingredient> repairMaterial;
 
-        private ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
+        ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
             this.harvestLevel = harvestLevel;
             this.maxUses = maxUses;
             this.efficiency = efficiency;
@@ -197,7 +197,7 @@ public class ItemInit {
         private final float toughness;
         private final LazyValue<Ingredient> repairMaterial;
 
-        private ModArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn) {
+        ModArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn) {
             this.name = nameIn;
             this.maxDamageFactor = maxDamageFactorIn;
             this.damageReductionAmountArray = damageReductionAmountIn;
