@@ -6,8 +6,7 @@
     }
   ],
   "result": {
-    "type": "forge:ore_dict",
-    "ore": "gemRuby",
+    "item": "gm:ruby",
     "count": 9
   }
 }

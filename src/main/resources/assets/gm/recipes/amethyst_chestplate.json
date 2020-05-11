@@ -7,10 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "gemsandcrystals:amethyst"
+      "type": "forge:ore_dict",
+      "ore": "gemAmethyst"
     }
   },
   "result": {
-    "item": "gemsandcrystals:amethyst_chestplate"
+    "item": "gm:amethyst_chestplate"
   }
 }

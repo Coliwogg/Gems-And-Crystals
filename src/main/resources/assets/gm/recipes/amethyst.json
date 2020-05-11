@@ -6,8 +6,7 @@
     }
   ],
   "result": {
-    "type": "forge:ore_dict",
-    "ore": "gemAmethyst",
+    "item": "gm:amethyst",
     "count": 4
   }
 }
