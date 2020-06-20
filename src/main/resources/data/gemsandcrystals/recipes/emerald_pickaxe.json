@@ -1,13 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "EEE",
+        "XXX",
         " # ",
         " # "
     ],
     "key": {
-        "E": { "item": "minecraft:emerald" },
-        "#": { "item": "minecraft:stick" }
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "item": "minecraft:emerald"
+        }
     },
-    "result": { "item": "gemsandcrystals:emerald_pickaxe", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:emerald_pickaxe"
+    }
 }

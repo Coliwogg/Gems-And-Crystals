@@ -1,11 +1,15 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "QQQ",
-        "Q Q"
+        "XXX",
+        "X X"
     ],
     "key": {
-        "Q": { "item": "minecraft:quartz" }
+        "X": {
+            "item": "minecraft:quartz"
+        }
     },
-    "result": { "item": "gemsandcrystals:quartz_helmet", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:quartz_helmet"
+    }
 }

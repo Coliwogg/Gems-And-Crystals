@@ -1,7 +1,0 @@
-{
-    "type": "minecraft:smelting",
-	"ingredient": { "tag": "gemsandcrystals:sapphire_ore" },
-    "result": { "item": "gemsandcrystals:sapphire" },
-    "experience": 2.3,
-    "cookingtime": 200
-}

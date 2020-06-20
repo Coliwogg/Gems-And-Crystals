@@ -1,13 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "TTT",
+        "XXX",
         " # ",
         " # "
     ],
     "key": {
-        "T": { "item": "gemsandcrystals:topaz" },
-        "#": { "item": "minecraft:stick" }
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "item": "gemsandcrystals:topaz"
+        }
     },
-    "result": { "item": "gemsandcrystals:topaz_pickaxe", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:topaz_pickaxe"
+    }
 }

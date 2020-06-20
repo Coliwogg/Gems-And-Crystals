@@ -1,11 +1,15 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "AA",
-        "AA"
-    ],
-    "key": {
-        "A": { "item": "gemsandcrystals:amethyst" }
-    },
-    "result": { "item": "gemsandcrystals:amethyst_block", "count": 1 }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "gemsandcrystals:amethyst"
+    }
+  },
+  "result": {
+    "item": "gemsandcrystals:amethyst_block"
+  }
 }

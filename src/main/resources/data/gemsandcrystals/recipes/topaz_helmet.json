@@ -1,11 +1,15 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "TTT",
-        "T T"
+        "XXX",
+        "X X"
     ],
     "key": {
-        "T": { "item": "gemsandcrystals:topaz" }
+        "X": {
+            "item": "gemsandcrystals:topaz"
+        }
     },
-    "result": { "item": "gemsandcrystals:topaz_helmet", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:topaz_helmet"
+    }
 }

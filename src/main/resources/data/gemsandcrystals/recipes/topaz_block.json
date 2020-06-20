@@ -1,12 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "TTT",
-        "TTT",
-        "TTT"
+        "###",
+        "###",
+        "###"
     ],
     "key": {
-        "T": { "item": "gemsandcrystals:topaz" }
+        "#": {
+            "item": "gemsandcrystals:topaz"
+        }
     },
-    "result": { "item": "gemsandcrystals:topaz_block", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:topaz_block"
+    }
 }

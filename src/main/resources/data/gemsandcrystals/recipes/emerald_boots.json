@@ -1,11 +1,15 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "E E",
-        "E E"
+        "X X",
+        "X X"
     ],
     "key": {
-        "E": { "item": "minecraft:emerald" }
+        "X": {
+            "item": "minecraft:emerald"
+        }
     },
-    "result": { "item": "gemsandcrystals:emerald_boots", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:emerald_boots"
+    }
 }

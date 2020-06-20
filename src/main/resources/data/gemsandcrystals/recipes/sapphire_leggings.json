@@ -1,12 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "SSS",
-        "S S",
-        "S S"
+        "XXX",
+        "X X",
+        "X X"
     ],
     "key": {
-        "S": { "item": "gemsandcrystals:sapphire" }
+        "X": {
+            "item": "gemsandcrystals:sapphire"
+        }
     },
-    "result": { "item": "gemsandcrystals:sapphire_leggings", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:sapphire_leggings"
+    }
 }

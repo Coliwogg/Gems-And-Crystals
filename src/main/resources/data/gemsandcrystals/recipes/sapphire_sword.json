@@ -1,13 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "S",
-        "S",
+        "X",
+        "X",
         "#"
     ],
     "key": {
-        "S": { "item": "gemsandcrystals:sapphire" },
-        "#": { "item": "minecraft:stick" }
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "item": "gemsandcrystals:sapphire"
+        }
     },
-    "result": { "item": "gemsandcrystals:sapphire_sword", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:sapphire_sword"
+    }
 }

@@ -8,6 +8,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.RegistryObject;
@@ -26,72 +27,72 @@ public class ItemInit {
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", () -> new Item(new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
     /* Tools */
-    public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe", () -> new AxeItem(ItemInit.ModItemTier.RUBY, 5.0F, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new HoeItem(ItemInit.ModItemTier.RUBY, 2.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(ItemInit.ModItemTier.RUBY, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () -> new ShovelItem(ItemInit.ModItemTier.RUBY, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ItemInit.ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe", () -> new AxeItem(ModItemTier.RUBY, 5.0F, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new HoeItem(ModItemTier.RUBY, 2.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(ModItemTier.RUBY, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () -> new ShovelItem(ModItemTier.RUBY, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () -> new AxeItem(ItemInit.ModItemTier.SAPPHIRE, 5.0F, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () -> new HoeItem(ItemInit.ModItemTier.SAPPHIRE, 2.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () -> new PickaxeItem(ItemInit.ModItemTier.SAPPHIRE, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () -> new ShovelItem(ItemInit.ModItemTier.SAPPHIRE, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () -> new SwordItem(ItemInit.ModItemTier.SAPPHIRE, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () -> new AxeItem(ModItemTier.SAPPHIRE, 5.0F, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () -> new HoeItem(ModItemTier.SAPPHIRE, 2.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () -> new PickaxeItem(ModItemTier.SAPPHIRE, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () -> new ShovelItem(ModItemTier.SAPPHIRE, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () -> new SwordItem(ModItemTier.SAPPHIRE, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", () -> new AxeItem(ItemInit.ModItemTier.EMERALD, 5.5F, -2.9F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(ItemInit.ModItemTier.EMERALD, 1.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () -> new PickaxeItem(ItemInit.ModItemTier.EMERALD, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () -> new ShovelItem(ItemInit.ModItemTier.EMERALD, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(ItemInit.ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", () -> new AxeItem(ModItemTier.EMERALD, 5.5F, -2.9F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(ModItemTier.EMERALD, 1.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () -> new PickaxeItem(ModItemTier.EMERALD, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () -> new ShovelItem(ModItemTier.EMERALD, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> TOPAZ_AXE = ITEMS.register("topaz_axe", () -> new AxeItem(ItemInit.ModItemTier.TOPAZ, 5.3F, -3.03F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> TOPAZ_HOE = ITEMS.register("topaz_hoe", () -> new HoeItem(ItemInit.ModItemTier.TOPAZ, -0.3F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> TOPAZ_PICKAXE = ITEMS.register("topaz_pickaxe", () -> new PickaxeItem(ItemInit.ModItemTier.TOPAZ, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> TOPAZ_SHOVEL = ITEMS.register("topaz_shovel", () -> new ShovelItem(ItemInit.ModItemTier.TOPAZ, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> TOPAZ_SWORD = ITEMS.register("topaz_sword", () -> new SwordItem(ItemInit.ModItemTier.TOPAZ, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_AXE = ITEMS.register("topaz_axe", () -> new AxeItem(ModItemTier.TOPAZ, 5.3F, -3.03F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_HOE = ITEMS.register("topaz_hoe", () -> new HoeItem(ModItemTier.TOPAZ, -0.3F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_PICKAXE = ITEMS.register("topaz_pickaxe", () -> new PickaxeItem(ModItemTier.TOPAZ, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_SHOVEL = ITEMS.register("topaz_shovel", () -> new ShovelItem(ModItemTier.TOPAZ, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_SWORD = ITEMS.register("topaz_sword", () -> new SwordItem(ModItemTier.TOPAZ, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ItemInit.ModItemTier.AMETHYST, 5.7F, -3.07F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ItemInit.ModItemTier.AMETHYST, -0.7F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new PickaxeItem(ItemInit.ModItemTier.AMETHYST, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ItemInit.ModItemTier.AMETHYST, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ItemInit.ModItemTier.AMETHYST, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModItemTier.AMETHYST, 5.7F, -3.07F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ModItemTier.AMETHYST, -0.7F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new PickaxeItem(ModItemTier.AMETHYST, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModItemTier.AMETHYST, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModItemTier.AMETHYST, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> QUARTZ_AXE = ITEMS.register("quartz_axe", () -> new AxeItem(ItemInit.ModItemTier.QUARTZ, 6.5F, -3.15F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> QUARTZ_HOE = ITEMS.register("quartz_hoe", () -> new HoeItem(ItemInit.ModItemTier.QUARTZ, -1.5F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> QUARTZ_PICKAXE = ITEMS.register("quartz_pickaxe", () -> new PickaxeItem(ItemInit.ModItemTier.QUARTZ, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> QUARTZ_SHOVEL = ITEMS.register("quartz_shovel", () -> new ShovelItem(ItemInit.ModItemTier.QUARTZ, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> QUARTZ_SWORD = ITEMS.register("quartz_sword", () -> new SwordItem(ItemInit.ModItemTier.QUARTZ, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_AXE = ITEMS.register("quartz_axe", () -> new AxeItem(ModItemTier.QUARTZ, 6.5F, -3.15F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_HOE = ITEMS.register("quartz_hoe", () -> new HoeItem(ModItemTier.QUARTZ, -1.5F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_PICKAXE = ITEMS.register("quartz_pickaxe", () -> new PickaxeItem(ModItemTier.QUARTZ, 1, -2.8F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_SHOVEL = ITEMS.register("quartz_shovel", () -> new ShovelItem(ModItemTier.QUARTZ, 1.5F, -3.0F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_SWORD = ITEMS.register("quartz_sword", () -> new SwordItem(ModItemTier.QUARTZ, 3, -2.4F, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
     /* Armor */
-    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> TOPAZ_HELMET = ITEMS.register("topaz_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> TOPAZ_CHESTPLATE = ITEMS.register("topaz_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.TOPAZ, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> TOPAZ_LEGGINGS = ITEMS.register("topaz_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.TOPAZ, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> TOPAZ_BOOTS = ITEMS.register("topaz_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_HELMET = ITEMS.register("topaz_helmet", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_CHESTPLATE = ITEMS.register("topaz_chestplate", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_LEGGINGS = ITEMS.register("topaz_leggings", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> TOPAZ_BOOTS = ITEMS.register("topaz_boots", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
-    public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.QUARTZ, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> QUARTZ_CHESTPLATE = ITEMS.register("quartz_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.QUARTZ, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.QUARTZ, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
-    public static final RegistryObject<Item> QUARTZ_BOOTS = ITEMS.register("quartz_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.QUARTZ, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.HEAD, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_CHESTPLATE = ITEMS.register("quartz_chestplate", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.CHEST, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.LEGS, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
+    public static final RegistryObject<Item> QUARTZ_BOOTS = ITEMS.register("quartz_boots", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.FEET, new Item.Properties().group(GemsandCrystalsItemGroup.instance)));
 
     public enum ModItemTier implements IItemTier {
         // int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
@@ -121,7 +122,7 @@ public class ItemInit {
         private final int enchantability;
         private final LazyValue<Ingredient> repairMaterial;
 
-        private ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
+        ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
             this.harvestLevel = harvestLevel;
             this.maxUses = maxUses;
             this.efficiency = efficiency;
@@ -164,27 +165,27 @@ public class ItemInit {
     public enum ModArmorMaterial implements IArmorMaterial {
 
         // String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn
-        RUBY(GemsandCrystals.MODID + ":ruby", 35, new int[]{4, 7, 9, 4}, 11, "item.armor.equip_diamond", 3.0F, () -> {
+        RUBY(GemsandCrystals.MODID + ":ruby", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
             return Ingredient.fromItems(ItemInit.RUBY.get());
         }),
 
-        SAPPHIRE(GemsandCrystals.MODID + ":sapphire", 35, new int[]{4, 7, 9, 4}, 11, "item.armor.equip_diamond", 3.0F, () -> {
+        SAPPHIRE(GemsandCrystals.MODID + ":sapphire", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
             return Ingredient.fromItems(ItemInit.SAPPHIRE.get());
         }),
 
-        EMERALD(GemsandCrystals.MODID + ":emerald", 33, new int[]{4, 6, 9, 3}, 10, "item.armor.equip_diamond", 2.5F, () -> {
+        EMERALD(GemsandCrystals.MODID + ":emerald", 33, new int[]{4, 6, 9, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F, () -> {
             return Ingredient.fromItems(Items.EMERALD);
         }),
 
-        TOPAZ(GemsandCrystals.MODID + ":topaz", 20, new int[]{2, 6, 7, 2}, 9, "item.armor.equip_diamond", 1.0F, () -> {
+        TOPAZ(GemsandCrystals.MODID + ":topaz", 20, new int[]{2, 6, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
             return Ingredient.fromItems(ItemInit.TOPAZ.get());
         }),
 
-        AMETHYST(GemsandCrystals.MODID + ":amethyst", 17, new int[]{3, 5, 6, 3}, 9, "item.armor.equip_diamond", 0.0F, () -> {
+        AMETHYST(GemsandCrystals.MODID + ":amethyst", 17, new int[]{3, 5, 6, 3}, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
             return Ingredient.fromItems(ItemInit.AMETHYST.get());
         }),
 
-        QUARTZ(GemsandCrystals.MODID + ":quartz", 10, new int[]{1, 4, 5, 2}, 12, "item.armor.equip_diamond", 0.0F, () -> {
+        QUARTZ(GemsandCrystals.MODID + ":quartz", 10, new int[]{1, 4, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
             return Ingredient.fromItems(Items.QUARTZ);
         });
 
@@ -193,11 +194,11 @@ public class ItemInit {
         private final int maxDamageFactor;
         private final int[] damageReductionAmountArray;
         private final int enchantability;
-        private final String soundEvent;
+        private final SoundEvent soundEvent;
         private final float toughness;
         private final LazyValue<Ingredient> repairMaterial;
 
-        private ModArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn) {
+        ModArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, SoundEvent soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn) {
             this.name = nameIn;
             this.maxDamageFactor = maxDamageFactorIn;
             this.damageReductionAmountArray = damageReductionAmountIn;
@@ -224,7 +225,7 @@ public class ItemInit {
 
         @Override
         public SoundEvent getSoundEvent() {
-            return new SoundEvent(new ResourceLocation(this.soundEvent));
+            return this.soundEvent;
         }
 
         @Override

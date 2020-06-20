@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "gemsandcrystals:amethyst_ore"
+  },
+  "result": "gemsandcrystals:amethyst",
+  "experience": 1.0,
+  "cookingtime": 100
+}

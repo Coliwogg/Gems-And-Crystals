@@ -1,13 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "RR",
-        "R#",
+        "XX",
+        "X#",
         " #"
     ],
     "key": {
-        "R": { "item": "gemsandcrystals:ruby" },
-        "#": { "item": "minecraft:stick" }
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "item": "gemsandcrystals:ruby"
+        }
     },
-    "result": { "item": "gemsandcrystals:ruby_axe", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:ruby_axe"
+    }
 }

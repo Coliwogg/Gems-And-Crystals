@@ -1,12 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "E E",
-        "EEE",
-        "EEE"
+        "X X",
+        "XXX",
+        "XXX"
     ],
     "key": {
-        "E": { "item": "minecraft:emerald" }
+        "X": {
+            "item": "minecraft:emerald"
+        }
     },
-    "result": { "item": "gemsandcrystals:emerald_chestplate", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:emerald_chestplate"
+    }
 }

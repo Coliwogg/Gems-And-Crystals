@@ -1,12 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "R R",
-        "RRR",
-        "RRR"
+        "X X",
+        "XXX",
+        "XXX"
     ],
     "key": {
-        "R": { "item": "gemsandcrystals:ruby" }
+        "X": {
+            "item": "gemsandcrystals:ruby"
+        }
     },
-    "result": { "item": "gemsandcrystals:ruby_chestplate", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:ruby_chestplate"
+    }
 }

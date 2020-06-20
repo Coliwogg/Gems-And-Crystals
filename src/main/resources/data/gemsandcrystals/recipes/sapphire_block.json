@@ -1,12 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "SSS",
-        "SSS",
-        "SSS"
+        "###",
+        "###",
+        "###"
     ],
     "key": {
-        "S": { "item": "gemsandcrystals:sapphire" }
+        "#": {
+            "item": "gemsandcrystals:sapphire"
+        }
     },
-    "result": { "item": "gemsandcrystals:sapphire_block", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:sapphire_block"
+    }
 }

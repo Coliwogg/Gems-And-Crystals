@@ -1,11 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [ {
-     	 	"item": "gemsandcrystals:amethyst_block"
-    	}
-    ],
-    "result": {
-        "item": "gemsandcrystals:amethyst",
-        "count": 4
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemsandcrystals:amethyst_block"
     }
+  ],
+  "result": {
+    "item": "gemsandcrystals:amethyst",
+    "count": 4
+  }
 }

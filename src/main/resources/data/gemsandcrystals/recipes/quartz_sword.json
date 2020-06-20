@@ -1,13 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "Q",
-        "Q",
+        "X",
+        "X",
         "#"
     ],
     "key": {
-        "Q": { "item": "minecraft:quartz" },
-        "#": { "item": "minecraft:stick" }
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "item": "minecraft:quartz"
+        }
     },
-    "result": { "item": "gemsandcrystals:quartz_sword", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:quartz_sword"
+    }
 }

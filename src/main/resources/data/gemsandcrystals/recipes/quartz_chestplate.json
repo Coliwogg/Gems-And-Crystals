@@ -1,12 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "Q Q",
-        "QQQ",
-        "QQQ"
+        "X X",
+        "XXX",
+        "XXX"
     ],
     "key": {
-        "Q": { "item": "minecraft:quartz" }
+        "X": {
+            "item": "minecraft:quartz"
+        }
     },
-    "result": { "item": "gemsandcrystals:quartz_chestplate", "count": 1 }
+    "result": {
+        "item": "gemsandcrystals:quartz_chestplate"
+    }
 }
