@@ -95,7 +95,7 @@ public class OreGenConfig {
 				.comment("Generate Amethyst Ore in the overworld - [true/false]")
 				.define("amethyst_ore.generate_amethyst", true);
 		amethyst_size = server
-				.comment("Size of Ruby Ore veins - default = 6")
+				.comment("Size of Amethyst Ore veins - default = 6")
 				.defineInRange("amethyst_ore.amethyst_size", 6, 0, 100);
 		amethyst_chance = server
 				.comment("Number of Amethyst Ore veins generated in a chunk - default = 4")

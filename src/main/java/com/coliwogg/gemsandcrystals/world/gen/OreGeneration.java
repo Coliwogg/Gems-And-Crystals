@@ -1,8 +1,8 @@
 package com.coliwogg.gemsandcrystals.world.gen;
 
-import com.coliwogg.gemsandcrystals.config.OreGenConfig;
-import com.coliwogg.gemsandcrystals.init.BlockInit;
-import net.minecraft.util.math.MathHelper;
+import com.coliwogg.gemsandcrystals.GemsandCrystals;
+import com.coliwogg.gemsandcrystals.util.RegistryHandler;
+import net.minecraft.block.BlockState;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
@@ -10,53 +10,30 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.ConfiguredPlacement;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Random;
-
+@Mod.EventBusSubscriber(modid = GemsandCrystals.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class OreGeneration {
-	
-	private static final CountRangeConfig RUBY = new CountRangeConfig(OreGenConfig.ruby_chance.get(), OreGenConfig.ruby_min_height.get(), 0, OreGenConfig.ruby_max_height.get());
-	private static final CountRangeConfig SAPPHIRE = new CountRangeConfig(OreGenConfig.sapphire_chance.get(), OreGenConfig.sapphire_min_height.get(), 0, OreGenConfig.sapphire_max_height.get());
-	private static final CountRangeConfig TOPAZ = new CountRangeConfig(OreGenConfig.topaz_chance.get(), OreGenConfig.topaz_min_height.get(), 0, OreGenConfig.topaz_max_height.get());
-	private static final CountRangeConfig AMETHYST = new CountRangeConfig(OreGenConfig.amethyst_chance.get(), OreGenConfig.amethyst_min_height.get(), 0, OreGenConfig.amethyst_max_height.get());
-	private static final CountRangeConfig QUARTZ = new CountRangeConfig(OreGenConfig.quartz_chance.get(), OreGenConfig.quartz_min_height.get(), 0, OreGenConfig.quartz_max_height.get());
-	
-	static ConfiguredPlacement<CountRangeConfig> customConfig = null;
 
-	public static void generateOre() {
+    @SubscribeEvent
+    public static void generateOre(FMLLoadCompleteEvent event) {
+        for (Biome biome : ForgeRegistries.BIOMES) {
+            generate(biome, 2, 4, 0, 14, OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.RUBY_ORE.get().getDefaultState(), 4);
+            generate(biome, 2, 4, 0, 14, OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.SAPPHIRE_ORE.get().getDefaultState(), 4);
+            generate(biome, 3, 4, 0, 28, OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.TOPAZ_ORE.get().getDefaultState(), 5);
+            generate(biome, 4, 4, 0, 32, OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.AMETHYST_ORE.get().getDefaultState(), 6);
+            // generate(biome, 6, 4, 0, 40, OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.QUARTZ_ORE.get().getDefaultState(), 8);
 
-		for (Biome biome : ForgeRegistries.BIOMES) {
-			
-			if(OreGenConfig.generate_ruby.get()) {
-				customConfig = Placement.COUNT_RANGE.configure(RUBY);
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.RUBY_ORE.get().getDefaultState(), OreGenConfig.ruby_size.get())).withPlacement(customConfig));
-			}
-			
-			if(OreGenConfig.generate_sapphire.get()) {
-				customConfig = Placement.COUNT_RANGE.configure(SAPPHIRE);
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.SAPPHIRE_ORE.get().getDefaultState(),  OreGenConfig.sapphire_size.get())).withPlacement(customConfig));
-			}
-			
-			if(OreGenConfig.generate_topaz.get()) {
-				customConfig = Placement.COUNT_RANGE.configure(TOPAZ);
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.TOPAZ_ORE.get().getDefaultState(),  OreGenConfig.topaz_size.get())).withPlacement(customConfig));
-			}
-			
-			if(OreGenConfig.generate_amethyst.get()) {
-				customConfig = Placement.COUNT_RANGE.configure(AMETHYST);
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.AMETHYST_ORE.get().getDefaultState(),  OreGenConfig.amethyst_size.get())).withPlacement(customConfig));
-			}
-			
-			if(OreGenConfig.generate_quartz.get()) {
-				customConfig = Placement.COUNT_RANGE.configure(QUARTZ);
-				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-						.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.QUARTZ_ORE.get().getDefaultState(),  OreGenConfig.quartz_size.get())).withPlacement(customConfig));
-			}
-		}	
-	}
+        }
+    }
+
+    private static void generate(Biome biome, int count, int bottomOffset, int topOffset, int max, OreFeatureConfig.FillerBlockType filler, BlockState defaultBlockState, int size) {
+        CountRangeConfig range = new CountRangeConfig(count, bottomOffset, topOffset, max);
+        OreFeatureConfig feature = new OreFeatureConfig(filler, defaultBlockState, size);
+        ConfiguredPlacement config = Placement.COUNT_RANGE.configure(range);
+        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(feature).withPlacement(config));
+    }
 }
