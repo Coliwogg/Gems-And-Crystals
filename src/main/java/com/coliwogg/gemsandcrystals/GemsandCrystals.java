@@ -32,6 +32,7 @@ public class GemsandCrystals {
         Config.loadConfig(Config.client_config, FMLPaths.CONFIGDIR.get().resolve("gemsandcrystals-client.toml").toString());
         Config.loadConfig(Config.server_config, FMLPaths.CONFIGDIR.get().resolve("gemsandcrystals-server.toml").toString());
 
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -45,9 +46,8 @@ public class GemsandCrystals {
 
     public static final ItemGroup TAB = new ItemGroup("gemsandcrystalsTab") {
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(RegistryHandler.RUBY.get());
         }
     };
-
 }

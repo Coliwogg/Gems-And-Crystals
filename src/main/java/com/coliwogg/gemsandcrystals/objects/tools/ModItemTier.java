@@ -10,22 +10,22 @@ import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
     RUBY(3, 900, 9.0F, 4.0F, 12, () -> {
-        return Ingredient.fromItems(RegistryHandler.RUBY.get());
+        return Ingredient.of(RegistryHandler.RUBY.get());
     }),
     SAPPHIRE(3, 900, 9.0F, 4.0F, 12, () -> {
-        return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());
+        return Ingredient.of(RegistryHandler.SAPPHIRE.get());
     }),
     EMERALD(3, 850, 8.5F, 3.5F, 11, () -> {
-        return Ingredient.fromItems(Items.EMERALD);
+        return Ingredient.of(Items.EMERALD);
     }),
     TOPAZ(2, 775, 8.0F, 2.7F, 9, () -> {
-        return Ingredient.fromItems(RegistryHandler.TOPAZ.get());
+        return Ingredient.of(RegistryHandler.TOPAZ.get());
     }),
     AMETHYST(2, 775, 8.0F, 2.3F, 9, () -> {
-        return Ingredient.fromItems(RegistryHandler.AMETHYST.get());
+        return Ingredient.of(RegistryHandler.AMETHYST.get());
     }),
     QUARTZ(2, 400, 7.0F, 1.5F, 7, () -> {
-        return Ingredient.fromItems(Items.QUARTZ);
+        return Ingredient.of(Items.QUARTZ);
     });
 
     private final int harvestLevel;
@@ -45,32 +45,33 @@ public enum ModItemTier implements IItemTier {
     }
 
     @Override
-    public int getMaxUses() {
+    public int getUses() {
         return maxUses;
     }
 
     @Override
-    public float getEfficiency() {
+    public float getSpeed() {
         return efficiency;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
         return attackDamage;
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getLevel() {
         return harvestLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return enchantability;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairIngredient() {
         return repairMaterial.get();
     }
+
 }

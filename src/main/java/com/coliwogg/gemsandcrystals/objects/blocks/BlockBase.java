@@ -7,8 +7,8 @@ import net.minecraftforge.common.ToolType;
 
 public class BlockBase extends Block {
     public BlockBase() {
-        super(Block.Properties.create(Material.IRON)
-                .hardnessAndResistance(5.0F, 6.0F)
+        super(Block.Properties.of(Material.METAL)
+                .strength(5.0F, 6.0F)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .sound(SoundType.METAL)

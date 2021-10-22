@@ -14,8 +14,8 @@ import java.util.Random;
 
 public class OreBlockBase extends OreBlock {
     public OreBlockBase() {
-        super(Block.Properties.create(Material.ROCK)
-                .hardnessAndResistance(3.0F, 3.0F)
+        super(Block.Properties.of(Material.STONE)
+                .strength(3.0F, 3.0F)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .sound(SoundType.STONE)

@@ -14,28 +14,28 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
-    RUBY(GemsandCrystals.MOD_ID + ":ruby", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
-        return Ingredient.fromItems(RegistryHandler.RUBY.get());
+    RUBY(GemsandCrystals.MOD_ID + ":ruby", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+        return Ingredient.of(RegistryHandler.RUBY.get());
     }, 0),
 
-    SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
-        return Ingredient.fromItems(RegistryHandler.SAPPHIRE.get());
+    SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+        return Ingredient.of(RegistryHandler.SAPPHIRE.get());
     }, 0),
 
-    EMERALD(GemsandCrystals.MOD_ID + ":emerald", 33, new int[]{4, 6, 9, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F, () -> {
-        return Ingredient.fromItems(Items.EMERALD);
+    EMERALD(GemsandCrystals.MOD_ID + ":emerald", 33, new int[]{4, 6, 9, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.5F, () -> {
+        return Ingredient.of(Items.EMERALD);
     }, 0),
 
-    TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 20, new int[]{2, 6, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
-        return Ingredient.fromItems(RegistryHandler.TOPAZ.get());
+    TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 20, new int[]{2, 6, 7, 2}, 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
+        return Ingredient.of(RegistryHandler.TOPAZ.get());
     }, 0),
 
-    AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 17, new int[]{3, 5, 6, 3}, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
-        return Ingredient.fromItems(RegistryHandler.AMETHYST.get());
+    AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 17, new int[]{3, 5, 6, 3}, 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
+        return Ingredient.of(RegistryHandler.AMETHYST.get());
     }, 0),
 
-    QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 10, new int[]{1, 4, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
-        return Ingredient.fromItems(Items.QUARTZ);
+    QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 10, new int[]{1, 4, 5, 2}, 12, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
+        return Ingredient.of(Items.QUARTZ);
     }, 0);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{16, 16, 16, 16};
@@ -60,29 +60,30 @@ public enum ModArmorMaterial implements IArmorMaterial {
     }
 
     @Override
-    public int getDurability(EquipmentSlotType slotIn) {
+    public int getDurabilityForSlot(EquipmentSlotType slotIn) {
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * maxDamageFactor;
     }
 
     @Override
-    public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+    public int getDefenseForSlot(EquipmentSlotType slotIn) {
         return damageReductionAmountArray[slotIn.getIndex()];
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return enchantability;
     }
 
     @Override
-    public SoundEvent getSoundEvent() {
+    public SoundEvent getEquipSound() {
         return soundEvent;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairIngredient() {
         return repairMaterial.get();
     }
+
 
     @OnlyIn(Dist.CLIENT)
     @Override
@@ -96,7 +97,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     }
 
     @Override
-    public float func_230304_f_() {
+    public float getKnockbackResistance() {
         return knockbackResistance;
     }
 }
