@@ -22,6 +22,7 @@ public class BlockInit {
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
 
@@ -35,11 +36,11 @@ public class BlockInit {
     public static final RegistryObject<Block> TOPAZ_BLOCK = registerBlock("topaz_block", () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(5.0F, 6.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
     public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block", () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(5.0F, 6.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> SAPPHIRE_ORE = BLOCKS.register("sapphire_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> TOPAZ_ORE = BLOCKS.register("topaz_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> AMETHYST_ORE = BLOCKS.register("amethyst_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> QUARTZ_ORE = BLOCKS.register("quartz_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> TOPAZ_ORE = registerBlock("topaz_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> AMETHYST_ORE = registerBlock("amethyst_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> QUARTZ_ORE = registerBlock("quartz_ore", () -> new ModOre(AbstractBlock.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
 
     public static void register(IEventBus eventBus) {
