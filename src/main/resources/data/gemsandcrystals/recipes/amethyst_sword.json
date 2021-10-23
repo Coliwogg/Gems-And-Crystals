@@ -10,7 +10,7 @@
             "item": "minecraft:stick"
         },
         "X": {
-            "item": "gemsandcrystals:amethyst"
+            "item": "minecraft:amethyst_shard"
         }
     },
     "result": {

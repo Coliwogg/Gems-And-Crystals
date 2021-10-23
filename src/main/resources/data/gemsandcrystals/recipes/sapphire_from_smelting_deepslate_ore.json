@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "gemsandcrystals:deepslate_sapphire_ore"
+  },
+  "result": "gemsandcrystals:sapphire",
+  "experience": 1.0,
+  "cookingtime": 200
+}

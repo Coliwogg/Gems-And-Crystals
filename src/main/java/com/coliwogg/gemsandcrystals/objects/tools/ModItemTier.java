@@ -2,13 +2,13 @@ package com.coliwogg.gemsandcrystals.objects.tools;
 
 import com.coliwogg.gemsandcrystals.config.ToolStatConfig;
 import com.coliwogg.gemsandcrystals.util.RegistryHandler;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModItemTier implements IItemTier {
+public enum ModItemTier implements Tier {
     RUBY(ToolStatConfig.ruby_harvest_level.get(), ToolStatConfig.ruby_max_uses.get(), ToolStatConfig.ruby_efficiency.get().floatValue(), ToolStatConfig.ruby_attack_damage.get().floatValue(), ToolStatConfig.ruby_enchantability.get(), () -> {
         return Ingredient.of(RegistryHandler.RUBY.get());
     }),
@@ -22,7 +22,7 @@ public enum ModItemTier implements IItemTier {
         return Ingredient.of(RegistryHandler.TOPAZ.get());
     }),
     AMETHYST(ToolStatConfig.amethyst_harvest_level.get(), ToolStatConfig.amethyst_max_uses.get(), ToolStatConfig.amethyst_efficiency.get().floatValue(), ToolStatConfig.amethyst_attack_damage.get().floatValue(), ToolStatConfig.amethyst_enchantability.get(), () -> {
-        return Ingredient.of(RegistryHandler.AMETHYST.get());
+        return Ingredient.of(Items.AMETHYST_SHARD);
     }),
     QUARTZ(ToolStatConfig.quartz_harvest_level.get(), ToolStatConfig.quartz_max_uses.get(), ToolStatConfig.quartz_efficiency.get().floatValue(), ToolStatConfig.quartz_attack_damage.get().floatValue(), ToolStatConfig.quartz_enchantability.get(), () -> {
         return Ingredient.of(Items.QUARTZ);

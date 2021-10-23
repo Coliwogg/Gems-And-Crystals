@@ -4,16 +4,15 @@ import com.coliwogg.gemsandcrystals.GemsandCrystals;
 import com.coliwogg.gemsandcrystals.config.ArmorStatConfig;
 import com.coliwogg.gemsandcrystals.config.ToolStatConfig;
 import com.coliwogg.gemsandcrystals.util.RegistryHandler;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -26,12 +25,9 @@ public class ItemInit {
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new Item(new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", () -> new Item(new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz", () -> new Item(new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", () -> new Item(new Item.Properties().tab(GemsandCrystals.TAB)));
-
     /* Tools */
     public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe", () -> new AxeItem(ModItemTier.RUBY, 5.0F, -2.8F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new HoeItem(ModItemTier.RUBY,2,2.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
-//    public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new HoeItem(ModItemTier.RUBY, 2.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(ModItemTier.RUBY, 1, -2.8F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () -> new ShovelItem(ModItemTier.RUBY, 1.5F, -3.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().tab(GemsandCrystals.TAB)));
@@ -67,41 +63,41 @@ public class ItemInit {
     public static final RegistryObject<Item> QUARTZ_SWORD = ITEMS.register("quartz_sword", () -> new SwordItem(ModItemTier.QUARTZ, 3, -2.4F, new Item.Properties().tab(GemsandCrystals.TAB)));
 
     /* Armor */
-    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
 
-    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlot.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlot.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlot.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () -> new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlot.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
 
-    public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
 
-    public static final RegistryObject<Item> TOPAZ_HELMET = ITEMS.register("topaz_helmet", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> TOPAZ_CHESTPLATE = ITEMS.register("topaz_chestplate", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> TOPAZ_LEGGINGS = ITEMS.register("topaz_leggings", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> TOPAZ_BOOTS = ITEMS.register("topaz_boots", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> TOPAZ_HELMET = ITEMS.register("topaz_helmet", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlot.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> TOPAZ_CHESTPLATE = ITEMS.register("topaz_chestplate", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlot.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> TOPAZ_LEGGINGS = ITEMS.register("topaz_leggings", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlot.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> TOPAZ_BOOTS = ITEMS.register("topaz_boots", () -> new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlot.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
 
-    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlot.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlot.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlot.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlot.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
 
-    public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> QUARTZ_CHESTPLATE = ITEMS.register("quartz_chestplate", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> QUARTZ_BOOTS = ITEMS.register("quartz_boots", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlotType.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlot.HEAD, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> QUARTZ_CHESTPLATE = ITEMS.register("quartz_chestplate", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlot.CHEST, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlot.LEGS, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> QUARTZ_BOOTS = ITEMS.register("quartz_boots", () -> new ArmorItem(ModArmorMaterial.QUARTZ, EquipmentSlot.FEET, new Item.Properties().tab(GemsandCrystals.TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 
-    public enum ModItemTier implements IItemTier {
+    public enum ModItemTier implements Tier {
         // int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
         RUBY(ToolStatConfig.ruby_harvest_level.get(), ToolStatConfig.ruby_max_uses.get(), ToolStatConfig.ruby_efficiency.get().floatValue(), ToolStatConfig.ruby_attack_damage.get().floatValue(), ToolStatConfig.ruby_enchantability.get(), () -> {
             return Ingredient.of(RegistryHandler.RUBY.get());
@@ -116,7 +112,7 @@ public class ItemInit {
             return Ingredient.of(RegistryHandler.TOPAZ.get());
         }),
         AMETHYST(ToolStatConfig.amethyst_harvest_level.get(), ToolStatConfig.amethyst_max_uses.get(), ToolStatConfig.amethyst_efficiency.get().floatValue(), ToolStatConfig.amethyst_attack_damage.get().floatValue(), ToolStatConfig.amethyst_enchantability.get(), () -> {
-            return Ingredient.of(RegistryHandler.AMETHYST.get());
+            return Ingredient.of(Items.AMETHYST_SHARD);
         }),
         QUARTZ(ToolStatConfig.quartz_harvest_level.get(), ToolStatConfig.quartz_max_uses.get(), ToolStatConfig.quartz_efficiency.get().floatValue(), ToolStatConfig.quartz_attack_damage.get().floatValue(), ToolStatConfig.quartz_enchantability.get(), () -> {
             return Ingredient.of(Items.QUARTZ);
@@ -127,7 +123,7 @@ public class ItemInit {
         private final float efficiency;
         private final float attackDamage;
         private final int enchantability;
-        private final LazyValue<Ingredient> repairMaterial;
+        private final Supplier<Ingredient> repairMaterial;
 
         ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
             this.harvestLevel = harvestLevel;
@@ -135,7 +131,7 @@ public class ItemInit {
             this.efficiency = efficiency;
             this.attackDamage = attackDamage;
             this.enchantability = enchantability;
-            this.repairMaterial = new LazyValue<>(repairMaterial);
+            this.repairMaterial = repairMaterial;
         }
 
         @Override
@@ -169,7 +165,7 @@ public class ItemInit {
         }
     }
 
-    public enum ModArmorMaterial implements IArmorMaterial {
+    public enum ModArmorMaterial implements ArmorMaterial {
 
         // String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn
         RUBY(GemsandCrystals.MOD_ID + ":ruby", ArmorStatConfig.ruby_max_damage_factor_in.get(), new int[]{ArmorStatConfig.ruby_boots_strength.get(), ArmorStatConfig.ruby_leggings_strength.get(), ArmorStatConfig.ruby_chestplate_strength.get(), ArmorStatConfig.ruby_helmet_strength.get()}, ArmorStatConfig.ruby_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
@@ -189,7 +185,7 @@ public class ItemInit {
         }),
 
         AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", ArmorStatConfig.amethyst_max_damage_factor_in.get(), new int[]{ArmorStatConfig.amethyst_boots_strength.get(), ArmorStatConfig.amethyst_leggings_strength.get(), ArmorStatConfig.amethyst_chestplate_strength.get(), ArmorStatConfig.amethyst_helmet_strength.get()}, ArmorStatConfig.amethyst_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
-            return Ingredient.of(RegistryHandler.AMETHYST.get());
+            return Ingredient.of(Items.AMETHYST_SHARD);
         }),
 
         QUARTZ(GemsandCrystals.MOD_ID + ":quartz", ArmorStatConfig.quartz_max_damage_factor_in.get(), new int[]{ArmorStatConfig.quartz_boots_strength.get(), ArmorStatConfig.quartz_leggings_strength.get(), ArmorStatConfig.quartz_chestplate_strength.get(), ArmorStatConfig.quartz_helmet_strength.get()}, ArmorStatConfig.quartz_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
@@ -203,7 +199,7 @@ public class ItemInit {
         private final int enchantability;
         private final SoundEvent soundEvent;
         private final float toughness;
-        private final LazyValue<Ingredient> repairMaterial;
+        private final Supplier<Ingredient> repairMaterial;
 
         ModArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, SoundEvent soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn) {
             this.name = nameIn;
@@ -212,16 +208,16 @@ public class ItemInit {
             this.enchantability = enchantabilityIn;
             this.soundEvent = soundEventIn;
             this.toughness = toughnessIn;
-            this.repairMaterial = new LazyValue<>(repairMaterialIn);
+            this.repairMaterial = repairMaterialIn;
         }
 
         @Override
-        public int getDurabilityForSlot(EquipmentSlotType slotIn) {
+        public int getDurabilityForSlot(EquipmentSlot slotIn) {
             return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
         }
 
         @Override
-        public int getDefenseForSlot(EquipmentSlotType slotIn) {
+        public int getDefenseForSlot(EquipmentSlot slotIn) {
             return this.damageReductionAmountArray[slotIn.getIndex()];
         }
 

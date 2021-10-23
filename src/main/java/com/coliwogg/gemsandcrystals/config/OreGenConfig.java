@@ -3,31 +3,25 @@ package com.coliwogg.gemsandcrystals.config;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public class OreGenConfig {
-    public static ForgeConfigSpec.BooleanValue generate_ruby;
+//    public static ForgeConfigSpec.BooleanValue generate_ruby;
     public static ForgeConfigSpec.IntValue ruby_size;
     public static ForgeConfigSpec.IntValue ruby_chance;
     public static ForgeConfigSpec.IntValue ruby_min_height;
     public static ForgeConfigSpec.IntValue ruby_max_height;
 
-    public static ForgeConfigSpec.BooleanValue generate_sapphire;
+//    public static ForgeConfigSpec.BooleanValue generate_sapphire;
     public static ForgeConfigSpec.IntValue sapphire_size;
     public static ForgeConfigSpec.IntValue sapphire_chance;
     public static ForgeConfigSpec.IntValue sapphire_min_height;
     public static ForgeConfigSpec.IntValue sapphire_max_height;
 
-    public static ForgeConfigSpec.BooleanValue generate_topaz;
+//    public static ForgeConfigSpec.BooleanValue generate_topaz;
     public static ForgeConfigSpec.IntValue topaz_size;
     public static ForgeConfigSpec.IntValue topaz_chance;
     public static ForgeConfigSpec.IntValue topaz_min_height;
     public static ForgeConfigSpec.IntValue topaz_max_height;
 
-    public static ForgeConfigSpec.BooleanValue generate_amethyst;
-    public static ForgeConfigSpec.IntValue amethyst_size;
-    public static ForgeConfigSpec.IntValue amethyst_chance;
-    public static ForgeConfigSpec.IntValue amethyst_min_height;
-    public static ForgeConfigSpec.IntValue amethyst_max_height;
-
-    public static ForgeConfigSpec.BooleanValue generate_quartz;
+//    public static ForgeConfigSpec.BooleanValue generate_quartz;
     public static ForgeConfigSpec.IntValue quartz_size;
     public static ForgeConfigSpec.IntValue quartz_chance;
     public static ForgeConfigSpec.IntValue quartz_min_height;
@@ -37,9 +31,9 @@ public class OreGenConfig {
 
         server.comment("Ruby Ore Generation");
 
-        generate_ruby = server
-                .comment("Generate Ruby Ore in the overworld - [true/false]")
-                .define("oregen.ruby_ore.generate_ruby", true);
+//        generate_ruby = server
+//                .comment("Generate Ruby Ore in the overworld - [true/false]")
+//                .define("oregen.ruby_ore.generate_ruby", true);
 
         ruby_size = server
                 .comment("Size of Ruby Ore veins - default = 4")
@@ -59,9 +53,9 @@ public class OreGenConfig {
 
         server.comment("Sapphire Ore Generation");
 
-        generate_sapphire = server
-                .comment("Generate Sapphire Ore in the overworld - [true/false]")
-                .define("oregen.sapphire_ore.generate_sapphire", true);
+//        generate_sapphire = server
+//                .comment("Generate Sapphire Ore in the overworld - [true/false]")
+//                .define("oregen.sapphire_ore.generate_sapphire", true);
 
         sapphire_size = server
                 .comment("Size of Sapphire Ore veins - default = 4")
@@ -81,9 +75,9 @@ public class OreGenConfig {
 
         server.comment("Topaz Ore Generation");
 
-        generate_topaz = server
-                .comment("Generate Topaz Ore in the overworld - [true/false]")
-                .define("oregen.topaz_ore.generate_topaz", true);
+//        generate_topaz = server
+//                .comment("Generate Topaz Ore in the overworld - [true/false]")
+//                .define("oregen.topaz_ore.generate_topaz", true);
 
         topaz_size = server
                 .comment("Size of Topaz Ore veins - default = 5")
@@ -101,33 +95,11 @@ public class OreGenConfig {
                 .comment("Maximum height for Topaz Ore generation - default = 28")
                 .defineInRange("oregen.topaz_ore.topaz_max_height", 28, 0, 255);
 
-        server.comment("Amethyst Ore Generation");
-
-        generate_amethyst = server
-                .comment("Generate Amethyst Ore in the overworld - [true/false]")
-                .define("oregen.amethyst_ore.generate_amethyst", true);
-
-        amethyst_size = server
-                .comment("Size of Amethyst Ore veins - default = 6")
-                .defineInRange("oregen.amethyst_ore.amethyst_size", 6, 0, 100);
-
-        amethyst_chance = server
-                .comment("Number of Amethyst Ore veins generated in a chunk - default = 3")
-                .defineInRange("oregen.amethyst_ore.amethyst_chance", 3, 0, 100);
-
-        amethyst_min_height = server
-                .comment("Minimum height for Amethyst Ore generation - default = 4")
-                .defineInRange("oregen.amethyst_ore.amethyst_min_height", 4, 0, 255);
-
-        amethyst_max_height = server
-                .comment("Maximum height for Amethyst Ore generation - default = 32")
-                .defineInRange("oregen.amethyst_ore.amethyst_max_height", 32, 0, 255);
-
         server.comment("Quartz Ore Generation");
 
-        generate_quartz = server
-                .comment("Generate Quartz Ore in the overworld - [true/false]")
-                .define("oregen.quartz_ore.generate_quartz", false);
+//        generate_quartz = server
+//                .comment("Generate Quartz Ore in the overworld - [true/false]")
+//                .define("oregen.quartz_ore.generate_quartz", false);
 
         quartz_size = server
                 .comment("Size of Quartz Ore veins - default = 8")

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "gemsandcrystals:deepslate_ruby_ore"
+  },
+  "result": "gemsandcrystals:ruby",
+  "experience": 1.0,
+  "cookingtime": 200
+}

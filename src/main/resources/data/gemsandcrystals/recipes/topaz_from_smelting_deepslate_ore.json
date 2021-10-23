@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "gemsandcrystals:deepslate_topaz_ore"
+  },
+  "result": "gemsandcrystals:topaz",
+  "experience": 1.0,
+  "cookingtime": 200
+}

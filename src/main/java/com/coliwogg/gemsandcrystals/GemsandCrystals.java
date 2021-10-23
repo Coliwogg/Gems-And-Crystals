@@ -2,8 +2,8 @@ package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.config.Config;
 import com.coliwogg.gemsandcrystals.util.RegistryHandler;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -17,13 +17,9 @@ import org.apache.logging.log4j.Logger;
 
 @Mod("gemsandcrystals")
 public class GemsandCrystals {
-    private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "gemsandcrystals";
 
     public GemsandCrystals() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
         RegistryHandler.init();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.server_config);
@@ -36,15 +32,8 @@ public class GemsandCrystals {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
+    public static final CreativeModeTab TAB = new CreativeModeTab("gemsandcrystalsTab") {
 
-    }
-
-    private void doClientStuff(final FMLClientSetupEvent event) {
-
-    }
-
-    public static final ItemGroup TAB = new ItemGroup("gemsandcrystalsTab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(RegistryHandler.RUBY.get());

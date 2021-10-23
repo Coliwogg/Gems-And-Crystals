@@ -1,9 +1,9 @@
 package com.coliwogg.gemsandcrystals.objects.blocks;
 
 import com.coliwogg.gemsandcrystals.GemsandCrystals;
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 
 public class BlockItemBase extends BlockItem {
     public BlockItemBase(Block block) {
