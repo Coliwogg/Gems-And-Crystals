@@ -1,6 +1,7 @@
 package com.coliwogg.gemsandcrystals.objects.armor;
 
 import com.coliwogg.gemsandcrystals.GemsandCrystals;
+import com.coliwogg.gemsandcrystals.config.ArmorStatConfig;
 import com.coliwogg.gemsandcrystals.util.RegistryHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -14,29 +15,29 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
-    RUBY(GemsandCrystals.MOD_ID + ":ruby", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+    RUBY(GemsandCrystals.MOD_ID + ":ruby", ArmorStatConfig.ruby_max_damage_factor_in.get(), new int[]{ArmorStatConfig.ruby_boots_strength.get(), ArmorStatConfig.ruby_leggings_strength.get(), ArmorStatConfig.ruby_chestplate_strength.get(), ArmorStatConfig.ruby_helmet_strength.get()}, ArmorStatConfig.ruby_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
         return Ingredient.of(RegistryHandler.RUBY.get());
-    }, 0),
+    }, ArmorStatConfig.ruby_armor_knockback_resistance.get()),
 
-    SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+    SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", ArmorStatConfig.sapphire_max_damage_factor_in.get(), new int[]{ArmorStatConfig.sapphire_boots_strength.get(), ArmorStatConfig.sapphire_leggings_strength.get(), ArmorStatConfig.sapphire_chestplate_strength.get(), ArmorStatConfig.sapphire_helmet_strength.get()}, ArmorStatConfig.sapphire_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
         return Ingredient.of(RegistryHandler.SAPPHIRE.get());
-    }, 0),
+    }, ArmorStatConfig.sapphire_armor_knockback_resistance.get()),
 
-    EMERALD(GemsandCrystals.MOD_ID + ":emerald", 33, new int[]{4, 6, 9, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.5F, () -> {
+    EMERALD(GemsandCrystals.MOD_ID + ":emerald", ArmorStatConfig.emerald_max_damage_factor_in.get(), new int[]{ArmorStatConfig.emerald_boots_strength.get(), ArmorStatConfig.emerald_leggings_strength.get(), ArmorStatConfig.emerald_chestplate_strength.get(), ArmorStatConfig.emerald_helmet_strength.get()}, ArmorStatConfig.emerald_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
         return Ingredient.of(Items.EMERALD);
-    }, 0),
+    }, ArmorStatConfig.emerald_armor_knockback_resistance.get()),
 
-    TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 20, new int[]{2, 6, 7, 2}, 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
+    TOPAZ(GemsandCrystals.MOD_ID + ":topaz", ArmorStatConfig.topaz_max_damage_factor_in.get(), new int[]{ArmorStatConfig.topaz_boots_strength.get(), ArmorStatConfig.topaz_leggings_strength.get(), ArmorStatConfig.topaz_chestplate_strength.get(), ArmorStatConfig.topaz_helmet_strength.get()}, ArmorStatConfig.topaz_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
         return Ingredient.of(RegistryHandler.TOPAZ.get());
-    }, 0),
+    }, ArmorStatConfig.topaz_armor_knockback_resistance.get()),
 
-    AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 17, new int[]{3, 5, 6, 3}, 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
+    AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", ArmorStatConfig.amethyst_max_damage_factor_in.get(), new int[]{ArmorStatConfig.amethyst_boots_strength.get(), ArmorStatConfig.amethyst_leggings_strength.get(), ArmorStatConfig.amethyst_chestplate_strength.get(), ArmorStatConfig.amethyst_helmet_strength.get()}, ArmorStatConfig.amethyst_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
         return Ingredient.of(RegistryHandler.AMETHYST.get());
-    }, 0),
+    }, ArmorStatConfig.amethyst_armor_knockback_resistance.get()),
 
-    QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 10, new int[]{1, 4, 5, 2}, 12, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
+    QUARTZ(GemsandCrystals.MOD_ID + ":quartz", ArmorStatConfig.quartz_max_damage_factor_in.get(), new int[]{ArmorStatConfig.quartz_boots_strength.get(), ArmorStatConfig.quartz_leggings_strength.get(), ArmorStatConfig.quartz_chestplate_strength.get(), ArmorStatConfig.quartz_helmet_strength.get()}, ArmorStatConfig.quartz_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
         return Ingredient.of(Items.QUARTZ);
-    }, 0);
+    }, ArmorStatConfig.quartz_armor_knockback_resistance.get());
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{16, 16, 16, 16};
     private final String name;

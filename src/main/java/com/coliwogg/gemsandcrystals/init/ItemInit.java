@@ -1,6 +1,9 @@
 package com.coliwogg.gemsandcrystals.init;
 
 import com.coliwogg.gemsandcrystals.GemsandCrystals;
+import com.coliwogg.gemsandcrystals.config.ArmorStatConfig;
+import com.coliwogg.gemsandcrystals.config.ToolStatConfig;
+import com.coliwogg.gemsandcrystals.util.RegistryHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
@@ -100,22 +103,22 @@ public class ItemInit {
 
     public enum ModItemTier implements IItemTier {
         // int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
-        RUBY(3, 900, 9.0F, 4.0F, 12, () -> {
-            return Ingredient.of(ItemInit.RUBY.get());
+        RUBY(ToolStatConfig.ruby_harvest_level.get(), ToolStatConfig.ruby_max_uses.get(), ToolStatConfig.ruby_efficiency.get().floatValue(), ToolStatConfig.ruby_attack_damage.get().floatValue(), ToolStatConfig.ruby_enchantability.get(), () -> {
+            return Ingredient.of(RegistryHandler.RUBY.get());
         }),
-        SAPPHIRE(3, 900, 9.0F, 4.0F, 12, () -> {
-            return Ingredient.of(ItemInit.SAPPHIRE.get());
+        SAPPHIRE(ToolStatConfig.sapphire_harvest_level.get(), ToolStatConfig.sapphire_max_uses.get(), ToolStatConfig.sapphire_efficiency.get().floatValue(), ToolStatConfig.sapphire_attack_damage.get().floatValue(), ToolStatConfig.sapphire_enchantability.get(), () -> {
+            return Ingredient.of(RegistryHandler.SAPPHIRE.get());
         }),
-        EMERALD(3, 850, 8.5F, 3.5F, 11, () -> {
+        EMERALD(ToolStatConfig.emerald_harvest_level.get(), ToolStatConfig.emerald_max_uses.get(), ToolStatConfig.emerald_efficiency.get().floatValue(), ToolStatConfig.emerald_attack_damage.get().floatValue(), ToolStatConfig.emerald_enchantability.get(), () -> {
             return Ingredient.of(Items.EMERALD);
         }),
-        TOPAZ(2, 775, 8.0F, 2.7F, 9, () -> {
-            return Ingredient.of(ItemInit.TOPAZ.get());
+        TOPAZ(ToolStatConfig.topaz_harvest_level.get(), ToolStatConfig.topaz_max_uses.get(), ToolStatConfig.topaz_efficiency.get().floatValue(), ToolStatConfig.topaz_attack_damage.get().floatValue(), ToolStatConfig.topaz_enchantability.get(), () -> {
+            return Ingredient.of(RegistryHandler.TOPAZ.get());
         }),
-        AMETHYST(2, 775, 8.0F, 2.3F, 9, () -> {
-            return Ingredient.of(ItemInit.AMETHYST.get());
+        AMETHYST(ToolStatConfig.amethyst_harvest_level.get(), ToolStatConfig.amethyst_max_uses.get(), ToolStatConfig.amethyst_efficiency.get().floatValue(), ToolStatConfig.amethyst_attack_damage.get().floatValue(), ToolStatConfig.amethyst_enchantability.get(), () -> {
+            return Ingredient.of(RegistryHandler.AMETHYST.get());
         }),
-        QUARTZ(2, 400, 7.0F, 1.5F, 7, () -> {
+        QUARTZ(ToolStatConfig.quartz_harvest_level.get(), ToolStatConfig.quartz_max_uses.get(), ToolStatConfig.quartz_efficiency.get().floatValue(), ToolStatConfig.quartz_attack_damage.get().floatValue(), ToolStatConfig.quartz_enchantability.get(), () -> {
             return Ingredient.of(Items.QUARTZ);
         });
 
@@ -169,27 +172,27 @@ public class ItemInit {
     public enum ModArmorMaterial implements IArmorMaterial {
 
         // String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, String soundEventIn, float toughnessIn, Supplier<Ingredient> repairMaterialIn
-        RUBY(GemsandCrystals.MOD_ID + ":ruby", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
-            return Ingredient.of(ItemInit.RUBY.get());
+        RUBY(GemsandCrystals.MOD_ID + ":ruby", ArmorStatConfig.ruby_max_damage_factor_in.get(), new int[]{ArmorStatConfig.ruby_boots_strength.get(), ArmorStatConfig.ruby_leggings_strength.get(), ArmorStatConfig.ruby_chestplate_strength.get(), ArmorStatConfig.ruby_helmet_strength.get()}, ArmorStatConfig.ruby_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+            return Ingredient.of(RegistryHandler.RUBY.get());
         }),
 
-        SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", 35, new int[]{4, 7, 9, 4}, 11, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
-            return Ingredient.of(ItemInit.SAPPHIRE.get());
+        SAPPHIRE(GemsandCrystals.MOD_ID + ":sapphire", ArmorStatConfig.sapphire_max_damage_factor_in.get(), new int[]{ArmorStatConfig.sapphire_boots_strength.get(), ArmorStatConfig.sapphire_leggings_strength.get(), ArmorStatConfig.sapphire_chestplate_strength.get(), ArmorStatConfig.sapphire_helmet_strength.get()}, ArmorStatConfig.sapphire_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+            return Ingredient.of(RegistryHandler.SAPPHIRE.get());
         }),
 
-        EMERALD(GemsandCrystals.MOD_ID + ":emerald", 33, new int[]{4, 6, 9, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.5F, () -> {
+        EMERALD(GemsandCrystals.MOD_ID + ":emerald", ArmorStatConfig.emerald_max_damage_factor_in.get(), new int[]{ArmorStatConfig.emerald_boots_strength.get(), ArmorStatConfig.emerald_leggings_strength.get(), ArmorStatConfig.emerald_chestplate_strength.get(), ArmorStatConfig.emerald_helmet_strength.get()}, ArmorStatConfig.emerald_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
             return Ingredient.of(Items.EMERALD);
         }),
 
-        TOPAZ(GemsandCrystals.MOD_ID + ":topaz", 20, new int[]{2, 6, 7, 2}, 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
-            return Ingredient.of(ItemInit.TOPAZ.get());
+        TOPAZ(GemsandCrystals.MOD_ID + ":topaz", ArmorStatConfig.topaz_max_damage_factor_in.get(), new int[]{ArmorStatConfig.topaz_boots_strength.get(), ArmorStatConfig.topaz_leggings_strength.get(), ArmorStatConfig.topaz_chestplate_strength.get(), ArmorStatConfig.topaz_helmet_strength.get()}, ArmorStatConfig.topaz_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+            return Ingredient.of(RegistryHandler.TOPAZ.get());
         }),
 
-        AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", 17, new int[]{3, 5, 6, 3}, 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
-            return Ingredient.of(ItemInit.AMETHYST.get());
+        AMETHYST(GemsandCrystals.MOD_ID + ":amethyst", ArmorStatConfig.amethyst_max_damage_factor_in.get(), new int[]{ArmorStatConfig.amethyst_boots_strength.get(), ArmorStatConfig.amethyst_leggings_strength.get(), ArmorStatConfig.amethyst_chestplate_strength.get(), ArmorStatConfig.amethyst_helmet_strength.get()}, ArmorStatConfig.amethyst_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
+            return Ingredient.of(RegistryHandler.AMETHYST.get());
         }),
 
-        QUARTZ(GemsandCrystals.MOD_ID + ":quartz", 10, new int[]{1, 4, 5, 2}, 12, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, () -> {
+        QUARTZ(GemsandCrystals.MOD_ID + ":quartz", ArmorStatConfig.quartz_max_damage_factor_in.get(), new int[]{ArmorStatConfig.quartz_boots_strength.get(), ArmorStatConfig.quartz_leggings_strength.get(), ArmorStatConfig.quartz_chestplate_strength.get(), ArmorStatConfig.quartz_helmet_strength.get()}, ArmorStatConfig.quartz_armor_enchantability.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0F, () -> {
             return Ingredient.of(Items.QUARTZ);
         });
 
