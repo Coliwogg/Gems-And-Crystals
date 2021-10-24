@@ -110,6 +110,8 @@ public class RegistryHandler {
     public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = BLOCKS.register("deepslate_sapphire_ore", OreBlockBase::new);
     public static final RegistryObject<Block> TOPAZ_ORE = BLOCKS.register("topaz_ore", OreBlockBase::new);
     public static final RegistryObject<Block> DEEPSLATE_TOPAZ_ORE = BLOCKS.register("deepslate_topaz_ore", OreBlockBase::new);
+    public static final RegistryObject<Block> AMETHYST_ORE = BLOCKS.register("amethyst_ore", OreBlockBase::new);
+    public static final RegistryObject<Block> DEEPSLATE_AMETHYST_ORE = BLOCKS.register("deepslate_amethyst_ore", OreBlockBase::new);
     public static final RegistryObject<Block> QUARTZ_ORE = BLOCKS.register("quartz_ore", OreBlockBase::new);
     public static final RegistryObject<Block> DEEPSLATE_QUARTZ_ORE = BLOCKS.register("deepslate_quartz_ore", OreBlockBase::new);
 
@@ -124,6 +126,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> DEEPSLATE_SAPPHIRE_ORE_ITEM = ITEMS.register("deepslate_sapphire_ore", () -> new BlockItemBase(DEEPSLATE_SAPPHIRE_ORE.get()));
     public static final RegistryObject<Item> TOPAZ_ORE_ITEM = ITEMS.register("topaz_ore", () -> new BlockItemBase(TOPAZ_ORE.get()));
     public static final RegistryObject<Item> DEEPSLATE_TOPAZ_ORE_ITEM = ITEMS.register("deepslate_topaz_ore", () -> new BlockItemBase(DEEPSLATE_TOPAZ_ORE.get()));
+    public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ITEMS.register("amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
+    public static final RegistryObject<Item> DEEPSLATE_AMETHYST_ORE_ITEM = ITEMS.register("deepslate_amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
     public static final RegistryObject<Item> QUARTZ_ORE_ITEM = ITEMS.register("quartz_ore", () -> new BlockItemBase(QUARTZ_ORE.get()));
     public static final RegistryObject<Item> DEEPSLATE_QUARTZ_ORE_ITEM = ITEMS.register("deepslate_quartz_ore", () -> new BlockItemBase(DEEPSLATE_QUARTZ_ORE.get()));
 
