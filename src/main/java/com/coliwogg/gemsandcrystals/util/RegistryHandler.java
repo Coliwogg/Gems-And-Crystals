@@ -13,7 +13,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -127,7 +127,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TOPAZ_ORE_ITEM = ITEMS.register("topaz_ore", () -> new BlockItemBase(TOPAZ_ORE.get()));
     public static final RegistryObject<Item> DEEPSLATE_TOPAZ_ORE_ITEM = ITEMS.register("deepslate_topaz_ore", () -> new BlockItemBase(DEEPSLATE_TOPAZ_ORE.get()));
     public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ITEMS.register("amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
-    public static final RegistryObject<Item> DEEPSLATE_AMETHYST_ORE_ITEM = ITEMS.register("deepslate_amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
+    public static final RegistryObject<Item> DEEPSLATE_AMETHYST_ORE_ITEM = ITEMS.register("deepslate_amethyst_ore", () -> new BlockItemBase(DEEPSLATE_AMETHYST_ORE.get()));
     public static final RegistryObject<Item> QUARTZ_ORE_ITEM = ITEMS.register("quartz_ore", () -> new BlockItemBase(QUARTZ_ORE.get()));
     public static final RegistryObject<Item> DEEPSLATE_QUARTZ_ORE_ITEM = ITEMS.register("deepslate_quartz_ore", () -> new BlockItemBase(DEEPSLATE_QUARTZ_ORE.get()));
 

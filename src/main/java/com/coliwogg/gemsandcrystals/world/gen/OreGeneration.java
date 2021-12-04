@@ -4,44 +4,60 @@ import com.coliwogg.gemsandcrystals.GemsandCrystals;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.OreFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.List;
+
 @Mod.EventBusSubscriber(modid = GemsandCrystals.MOD_ID)
 public class OreGeneration {
 
+    // public static final ConfiguredFeature<?, ?> ORE_EMERALD = FeatureUtils.register("ore_emerald", Feature.ORE.configured(new OreConfiguration(List.of(OreConfiguration.target(STONE_ORE_REPLACEABLES, Blocks.EMERALD_ORE.defaultBlockState()), OreConfiguration.target(DEEPSLATE_ORE_REPLACEABLES, Blocks.DEEPSLATE_EMERALD_ORE.defaultBlockState())), 3)));
+    // public static final PlacedFeature ORE_EMERALD = PlacementUtils.register("ore_emerald", OreFeatures.ORE_EMERALD.placed(commonOrePlacement(100, HeightRangePlacement.triangle(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(480)))));
     @SubscribeEvent
     public static void generateOres(final BiomeLoadingEvent event) {
         for (OreType ore : OreType.values()) {
             if (!(event.getCategory().equals(Biome.BiomeCategory.NETHER) || event.getCategory().equals(Biome.BiomeCategory.THEEND))) {
                 if (ore.getGenerateOreToggle()) {
-                    ImmutableList<OreConfiguration.TargetBlockState> ORE_TARGET_LIST = ImmutableList.of(OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, ore.getBlock().get().defaultBlockState()), OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, ore.getDeepslateBlock().get().defaultBlockState()));
-                    ConfiguredFeature<?, ?> ORE_TYPE = register(ore.getBlock().get(), Feature.REPLACE_SINGLE_BLOCK.configured(new ReplaceBlockConfiguration(ORE_TARGET_LIST)).rangeUniform(VerticalAnchor.absolute(ore.getMinHeight()), VerticalAnchor.absolute(ore.getMaxHeight())).squared().count(UniformInt.of(ore.getMinVeinSize(), ore.getMaxVeinSize())));
-                    generateOre(event.getGeneration(), ORE_TYPE);
+                    List<OreConfiguration.TargetBlockState> ORE_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.getBlock().get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore.getDeepslateBlock().get().defaultBlockState()));
+                    ConfiguredFeature<?, ?> ORE_FEATURE = FeatureUtils.register(ore.getBlock().get().getRegistryName().toString(), Feature.ORE.configured(new OreConfiguration(ORE_TARGET_LIST, UniformInt.of(ore.getMinVeinSize(), ore.getMaxVeinSize()).getMinValue())));
+                    PlacedFeature ORE_PLACEMENT = PlacementUtils.register(ore.getBlock().get().getRegistryName().toString(), ORE_FEATURE.placed(commonOrePlacement(ore.getChance(), HeightRangePlacement.triangle(VerticalAnchor.absolute(ore.getMinHeight()), VerticalAnchor.absolute(ore.getMaxHeight())))));
+                    generateOre(event.getGeneration(), ORE_PLACEMENT);
                 }
             }
         }
 
     }
 
-    private static <FC extends FeatureConfiguration> ConfiguredFeature<?, ?> register(Block ore, ConfiguredFeature<FC, ?> pConfiguredFeature) {
-        return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, ore.getRegistryName(), pConfiguredFeature);
+    private static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
+        return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
     }
 
-    public static void generateOre(BiomeGenerationSettings.Builder pBuilder, ConfiguredFeature<?, ?> ore) {
-        pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ore);
+    private static List<PlacementModifier> commonOrePlacement(int p_195344_, PlacementModifier p_195345_) {
+        return orePlacement(CountPlacement.of(p_195344_), p_195345_);
+    }
+
+
+    public static void generateOre(BiomeGenerationSettings.Builder pBuilder, PlacedFeature orePlacement) {
+        pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, orePlacement);
     }
 
 }
