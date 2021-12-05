@@ -1,1 +1,1 @@
-# Gems and Crystals Mod for Minecraft version 1.17
+# Gems and Crystals Mod for Minecraft version 1.18
