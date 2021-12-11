@@ -1,25 +1,17 @@
 package com.coliwogg.gemsandcrystals.world.gen;
 
 import com.coliwogg.gemsandcrystals.GemsandCrystals;
-import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.OreFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -37,14 +29,23 @@ public class OreGeneration {
         for (OreType ore : OreType.values()) {
             if (!(event.getCategory().equals(Biome.BiomeCategory.NETHER) || event.getCategory().equals(Biome.BiomeCategory.THEEND))) {
                 if (ore.getGenerateOreToggle()) {
-                    List<OreConfiguration.TargetBlockState> ORE_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.getBlock().get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore.getDeepslateBlock().get().defaultBlockState()));
-                    ConfiguredFeature<?, ?> ORE_FEATURE = FeatureUtils.register(ore.getBlock().get().getRegistryName().toString(), Feature.ORE.configured(new OreConfiguration(ORE_TARGET_LIST, UniformInt.of(ore.getMinVeinSize(), ore.getMaxVeinSize()).getMinValue())));
-                    PlacedFeature ORE_PLACEMENT = PlacementUtils.register(ore.getBlock().get().getRegistryName().toString(), ORE_FEATURE.placed(commonOrePlacement(ore.getChance(), HeightRangePlacement.triangle(VerticalAnchor.absolute(ore.getMinHeight()), VerticalAnchor.absolute(ore.getMaxHeight())))));
+                    List<OreConfiguration.TargetBlockState> ORE_TARGET_LIST = List.of(
+                            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.getBlock().get().defaultBlockState()),
+                            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore.getDeepslateBlock().get().defaultBlockState())
+                    );
+
+                    ConfiguredFeature<?, ?> ORE_FEATURE = FeatureUtils.register(
+                            ore.getBlock().get().getRegistryName().toString(), Feature.ORE.configured(new OreConfiguration(ORE_TARGET_LIST, UniformInt.of(ore.getMinVeinSize(), ore.getMaxVeinSize()).getMinValue()))
+                    );
+
+                    PlacedFeature ORE_PLACEMENT = ORE_FEATURE.placed(
+                            commonOrePlacement(ore.getChance(), HeightRangePlacement.triangle(VerticalAnchor.absolute(ore.getMinHeight()), VerticalAnchor.absolute(ore.getMaxHeight())))
+                    );
+
                     generateOre(event.getGeneration(), ORE_PLACEMENT);
                 }
             }
         }
-
     }
 
     private static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
@@ -55,8 +56,7 @@ public class OreGeneration {
         return orePlacement(CountPlacement.of(p_195344_), p_195345_);
     }
 
-
-    public static void generateOre(BiomeGenerationSettings.Builder pBuilder, PlacedFeature orePlacement) {
+    private static void generateOre(BiomeGenerationSettings.Builder pBuilder, PlacedFeature orePlacement) {
         pBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, orePlacement);
     }
 
