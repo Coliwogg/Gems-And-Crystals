@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
-    RUBY(Lazy.of(BlockInit.RUBY_ORE), Lazy.of(BlockInit.DEEPSLATE_RUBY_ORE), OreGenConfig.ruby_min_vein_size.get(), OreGenConfig.ruby_max_vein_size.get(), OreGenConfig.ruby_min_height.get(), OreGenConfig.ruby_max_height.get(),  OreGenConfig.ruby_chance.get(), OreGenConfig.generate_ruby.get()),
+    RUBY(Lazy.of(BlockInit.RUBY_ORE), Lazy.of(BlockInit.DEEPSLATE_RUBY_ORE), OreGenConfig.ruby_min_vein_size.get(), OreGenConfig.ruby_max_vein_size.get(), OreGenConfig.ruby_min_height.get(), OreGenConfig.ruby_max_height.get(), OreGenConfig.ruby_chance.get(), OreGenConfig.generate_ruby.get()),
     SAPPHIRE(Lazy.of(BlockInit.SAPPHIRE_ORE), Lazy.of(BlockInit.DEEPSLATE_SAPPHIRE_ORE), OreGenConfig.sapphire_min_vein_size.get(), OreGenConfig.sapphire_max_vein_size.get(), OreGenConfig.sapphire_min_height.get(), OreGenConfig.sapphire_max_height.get(), OreGenConfig.sapphire_chance.get(), OreGenConfig.generate_sapphire.get()),
     TOPAZ(Lazy.of(BlockInit.TOPAZ_ORE), Lazy.of(BlockInit.DEEPSLATE_TOPAZ_ORE), OreGenConfig.topaz_min_vein_size.get(), OreGenConfig.topaz_max_vein_size.get(), OreGenConfig.topaz_min_height.get(), OreGenConfig.topaz_max_height.get(), OreGenConfig.topaz_chance.get(), OreGenConfig.generate_topaz.get()),
     AMETHYST(Lazy.of(BlockInit.AMETHYST_ORE), Lazy.of(BlockInit.DEEPSLATE_AMETHYST_ORE), OreGenConfig.amethyst_min_vein_size.get(), OreGenConfig.amethyst_max_vein_size.get(), OreGenConfig.amethyst_min_height.get(), OreGenConfig.amethyst_max_height.get(), OreGenConfig.amethyst_chance.get(), OreGenConfig.generate_amethyst.get()),

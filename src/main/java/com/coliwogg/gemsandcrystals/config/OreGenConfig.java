@@ -59,12 +59,12 @@ public class OreGenConfig {
                 .defineInRange("oregen.ruby_ore.ruby_chance", 4, 0, 1000);
 
         ruby_min_height = server
-                .comment("Minimum height for Ruby Ore generation - default = -80")
-                .defineInRange("oregen.ruby_ore.ruby_min_height", -80, 0, 319);
+                .comment("Minimum height for Ruby Ore generation - default = -64")
+                .defineInRange("oregen.ruby_ore.ruby_min_height", -64, -64, 319);
 
         ruby_max_height = server
                 .comment("Maximum height for Ruby Ore generation - default = 16")
-                .defineInRange("oregen.ruby_ore.ruby_max_height", 16, 0, 319);
+                .defineInRange("oregen.ruby_ore.ruby_max_height", 16, -64, 319);
 
         server.comment("Sapphire Ore Generation");
 
@@ -85,12 +85,12 @@ public class OreGenConfig {
                 .defineInRange("oregen.sapphire_ore.sapphire_chance", 4, 0, 1000);
 
         sapphire_min_height = server
-                .comment("Minimum height for Sapphire Ore generation - default = -80")
-                .defineInRange("oregen.sapphire_ore.sapphire_min_height", -80, 0, 319);
+                .comment("Minimum height for Sapphire Ore generation - default = -64")
+                .defineInRange("oregen.sapphire_ore.sapphire_min_height", -64, -64, 319);
 
         sapphire_max_height = server
                 .comment("Maximum height for Sapphire Ore generation - default = 16")
-                .defineInRange("oregen.sapphire_ore.sapphire_max_height", 16, 0, 319);
+                .defineInRange("oregen.sapphire_ore.sapphire_max_height", 16, -64, 319);
 
         server.comment("Topaz Ore Generation");
 
@@ -112,11 +112,11 @@ public class OreGenConfig {
 
         topaz_min_height = server
                 .comment("Minimum height for Topaz Ore generation - default = -64")
-                .defineInRange("oregen.topaz_ore.topaz_min_height", -64, 0, 319);
+                .defineInRange("oregen.topaz_ore.topaz_min_height", -64, -64, 319);
 
         topaz_max_height = server
                 .comment("Maximum height for Topaz Ore generation - default = 24")
-                .defineInRange("oregen.topaz_ore.topaz_max_height", 24, 0, 319);
+                .defineInRange("oregen.topaz_ore.topaz_max_height", 24, -64, 319);
 
         server.comment("Amethyst Ore Generation");
 
@@ -138,11 +138,11 @@ public class OreGenConfig {
 
         amethyst_min_height = server
                 .comment("Minimum height for Amethyst Ore generation - default = -64")
-                .defineInRange("oregen.amethyst_ore.amethyst_min_height", -64, 0, 319);
+                .defineInRange("oregen.amethyst_ore.amethyst_min_height", -64, -64, 319);
 
         amethyst_max_height = server
                 .comment("Maximum height for Amethyst Ore generation - default = 32")
-                .defineInRange("oregen.amethyst_ore.amethyst_max_height", 32, 0, 319);
+                .defineInRange("oregen.amethyst_ore.amethyst_max_height", 32, -64, 319);
 
         server.comment("Quartz Ore Generation");
 
@@ -164,10 +164,10 @@ public class OreGenConfig {
 
         quartz_min_height = server
                 .comment("Minimum height for Quartz Ore generation - default = -64")
-                .defineInRange("oregen.quartz_ore.quartz_min_height", -64, 0, 319);
+                .defineInRange("oregen.quartz_ore.quartz_min_height", -64, -64, 319);
 
         quartz_max_height = server
                 .comment("Maximum height for Quartz Ore generation - default = 48")
-                .defineInRange("oregen.quartz_ore.quartz_max_height", 48, 0, 319);
+                .defineInRange("oregen.quartz_ore.quartz_max_height", 48, -64, 319);
     }
 }

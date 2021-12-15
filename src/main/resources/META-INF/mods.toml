@@ -1,6 +1,6 @@
 modLoader="javafml"
 
-loaderVersion="[38,)"
+loaderVersion="[39,)"
 
 license="All rights reserved"
 
@@ -10,7 +10,7 @@ issueTrackerURL="https://github.com/Coliwogg/Gems-And-Crystals/issues"
 
 modId="gemsandcrystals"
 
-version="1.18-1.3.4"
+version="1.18.1-1.3.5"
 
 displayName="Gems and Crystals"
 
@@ -20,23 +20,23 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals"
 
 logoFile="logo.png"
 
-credits="Thanks for downloading this mod!"
+credits="I would like to thank Tutorials by Kaupenjoe, TurtyWurty, TechnoVision, and Harry Talks for creating the tutorials that would enable me to make this mod."
 
 authors="Coliwogg"
 
-description='''Gems and Crystals mod for Minecraft 1.18.'''
+description='''Gems and Crystals mod for Minecraft 1.18.1.'''
 
 [[dependencies.gemsandcrystals]]
     modId="forge"
     mandatory=true
-    versionRange="[38,)"
+    versionRange="[39,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.gemsandcrystals]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18,1.19)"
+    versionRange="[1.18.1,1.19)"
     ordering="NONE"
     side="BOTH"
 
