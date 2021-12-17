@@ -1,13 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: build
+name: Check Build
 on: [pull_request, push]
 
 jobs:
   build:
-    strategy:
-      matrix:
-        java: [ 17 ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
