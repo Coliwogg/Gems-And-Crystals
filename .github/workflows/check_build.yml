@@ -25,7 +25,10 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
       - name: Build
-        run: ./gradlew build
+        uses: gradle/gradle-build-action@v2.0.1
+        with:
+          gradle-version: 7.2
+
       - name: Capture build artifacts
         uses: actions/upload-artifact@v2
         with:
