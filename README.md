@@ -1,4 +1,4 @@
-# Gems and Crystals Mod for Minecraft version 1.18
+# Gems and Crystals ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Coliwogg/Gems-And-Crystals)
 
 <https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals>
 
