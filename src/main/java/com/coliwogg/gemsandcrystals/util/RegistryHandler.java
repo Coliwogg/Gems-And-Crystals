@@ -13,9 +13,9 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class RegistryHandler {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GemsandCrystals.MOD_ID);
@@ -39,13 +39,13 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().tab(GemsandCrystals.TAB)));
 
     public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () -> new AxeItem(ModItemTier.SAPPHIRE, 5.0F, -2.8F, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () -> new HoeItem(ModItemTier.SAPPHIRE, -3,2.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () -> new HoeItem(ModItemTier.SAPPHIRE, -3, 2.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () -> new PickaxeItem(ModItemTier.SAPPHIRE, 1, -2.8F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () -> new ShovelItem(ModItemTier.SAPPHIRE, 1.5F, -3.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () -> new SwordItem(ModItemTier.SAPPHIRE, 3, -2.4F, new Item.Properties().tab(GemsandCrystals.TAB)));
 
     public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", () -> new AxeItem(ModItemTier.EMERALD, 5.5F, -2.9F, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(ModItemTier.EMERALD, -3,1.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
+    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(ModItemTier.EMERALD, -3, 1.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () -> new PickaxeItem(ModItemTier.EMERALD, 1, -2.8F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () -> new ShovelItem(ModItemTier.EMERALD, 1.5F, -3.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().tab(GemsandCrystals.TAB)));
@@ -65,7 +65,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> QUARTZ_AXE = ITEMS.register("quartz_axe", () -> new AxeItem(ModItemTier.QUARTZ, 6.5F, -3.15F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> QUARTZ_HOE = ITEMS.register("quartz_hoe", () -> new HoeItem(ModItemTier.QUARTZ, -3, -1.5F, new Item.Properties().tab(GemsandCrystals.TAB)));
     public static final RegistryObject<Item> QUARTZ_PICKAXE = ITEMS.register("quartz_pickaxe", () -> new PickaxeItem(ModItemTier.QUARTZ, 1, -2.8F, new Item.Properties().tab(GemsandCrystals.TAB)));
-    public static final RegistryObject<Item> QUARTZ_SHOVEL = ITEMS.register("quartz_shovel", () -> new ShovelItem(ModItemTier.QUARTZ, 1.5F, -3.0F, new Item.Properties().tab(GemsandCrystals.TAB)));;
+    public static final RegistryObject<Item> QUARTZ_SHOVEL = ITEMS.register("quartz_shovel", () -> new ShovelItem(ModItemTier.QUARTZ, 1.5F, -3.0F, new Item.Properties().tab(GemsandCrystals.TAB)));
+    ;
     public static final RegistryObject<Item> QUARTZ_SWORD = ITEMS.register("quartz_sword", () -> new SwordItem(ModItemTier.QUARTZ, 3, -2.4F, new Item.Properties().tab(GemsandCrystals.TAB)));
 
     /* Armor */
@@ -127,7 +128,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TOPAZ_ORE_ITEM = ITEMS.register("topaz_ore", () -> new BlockItemBase(TOPAZ_ORE.get()));
     public static final RegistryObject<Item> DEEPSLATE_TOPAZ_ORE_ITEM = ITEMS.register("deepslate_topaz_ore", () -> new BlockItemBase(DEEPSLATE_TOPAZ_ORE.get()));
     public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ITEMS.register("amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
-    public static final RegistryObject<Item> DEEPSLATE_AMETHYST_ORE_ITEM = ITEMS.register("deepslate_amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
+    public static final RegistryObject<Item> DEEPSLATE_AMETHYST_ORE_ITEM = ITEMS.register("deepslate_amethyst_ore", () -> new BlockItemBase(DEEPSLATE_AMETHYST_ORE.get()));
     public static final RegistryObject<Item> QUARTZ_ORE_ITEM = ITEMS.register("quartz_ore", () -> new BlockItemBase(QUARTZ_ORE.get()));
     public static final RegistryObject<Item> DEEPSLATE_QUARTZ_ORE_ITEM = ITEMS.register("deepslate_quartz_ore", () -> new BlockItemBase(DEEPSLATE_QUARTZ_ORE.get()));
 

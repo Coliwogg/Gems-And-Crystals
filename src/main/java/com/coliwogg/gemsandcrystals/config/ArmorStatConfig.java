@@ -194,7 +194,6 @@ public class ArmorStatConfig {
                 .defineInRange("armorstats.quartz.quartz_armor_knockback_resistance", 0, 0, 100);
 
 
-
     }
 
 }
