@@ -1,6 +1,6 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "gemsandcrystals:item/topaz_axe"
-    }
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "gemsandcrystals:item/topaz_axe"
+  }
 }

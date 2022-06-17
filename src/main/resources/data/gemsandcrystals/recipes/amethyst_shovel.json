@@ -1,19 +1,19 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "X",
-        "#",
-        "#"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:stick"
-        },
-        "X": {
-            "item": "minecraft:amethyst_shard"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
     },
-    "result": {
-        "item": "gemsandcrystals:amethyst_shovel"
+    "X": {
+      "item": "minecraft:amethyst_shard"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:amethyst_shovel"
+  }
 }

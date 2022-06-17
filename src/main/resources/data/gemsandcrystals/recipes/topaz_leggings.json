@@ -1,16 +1,16 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "XXX",
-        "X X",
-        "X X"
-    ],
-    "key": {
-        "X": {
-            "item": "gemsandcrystals:topaz"
-        }
-    },
-    "result": {
-        "item": "gemsandcrystals:topaz_leggings"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:gems/topaz"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:topaz_leggings"
+  }
 }

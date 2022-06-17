@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "gemsandcrystals:block/deepslate_amethyst_ore" }
+  "variants": {
+    "": {
+      "model": "gemsandcrystals:block/deepslate_amethyst_ore"
     }
+  }
 }

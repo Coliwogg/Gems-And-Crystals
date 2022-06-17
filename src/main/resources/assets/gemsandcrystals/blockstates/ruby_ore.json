@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "gemsandcrystals:block/ruby_ore" }
+  "variants": {
+    "": {
+      "model": "gemsandcrystals:block/ruby_ore"
     }
+  }
 }

@@ -1,19 +1,19 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "XX",
-        " #",
-        " #"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:stick"
-        },
-        "X": {
-            "item": "minecraft:quartz"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
     },
-    "result": {
-        "item": "gemsandcrystals:quartz_hoe"
+    "X": {
+      "item": "minecraft:quartz"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:quartz_hoe"
+  }
 }

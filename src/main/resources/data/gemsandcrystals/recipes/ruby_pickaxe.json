@@ -1,19 +1,19 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "XXX",
-        " # ",
-        " # "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:stick"
-        },
-        "X": {
-            "item": "gemsandcrystals:ruby"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
     },
-    "result": {
-        "item": "gemsandcrystals:ruby_pickaxe"
+    "X": {
+      "tag": "forge:gems/ruby"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:ruby_pickaxe"
+  }
 }

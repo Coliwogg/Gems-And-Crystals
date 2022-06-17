@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:emerald"
+    },
+    "Y": {
+      "item": "minecraft:leather_horse_armor"
+    }
+  },
+  "result": {
+    "item": "gemsandcrystals:emerald_horse_armor"
+  }
+}

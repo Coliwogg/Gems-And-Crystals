@@ -1,6 +1,6 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "gemsandcrystals:item/sapphire_pickaxe"
-    }
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "gemsandcrystals:item/sapphire_pickaxe"
+  }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:gems/sapphire"
+    },
+    "Y": {
+      "item": "minecraft:leather_horse_armor"
+    }
+  },
+  "result": {
+    "item": "gemsandcrystals:sapphire_horse_armor"
+  }
+}

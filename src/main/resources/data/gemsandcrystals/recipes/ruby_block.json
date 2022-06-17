@@ -1,16 +1,16 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "###",
-        "###",
-        "###"
-    ],
-    "key": {
-        "#": {
-            "item": "gemsandcrystals:ruby"
-        }
-    },
-    "result": {
-        "item": "gemsandcrystals:ruby_block"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:gems/ruby"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:ruby_block"
+  }
 }

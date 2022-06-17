@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "gemsandcrystals:block/topaz_block" }
+  "variants": {
+    "": {
+      "model": "gemsandcrystals:block/topaz_block"
     }
+  }
 }

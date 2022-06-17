@@ -1,19 +1,19 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "X",
-        "X",
-        "#"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:stick"
-        },
-        "X": {
-            "item": "minecraft:emerald"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
     },
-    "result": {
-        "item": "gemsandcrystals:emerald_sword"
+    "X": {
+      "item": "minecraft:emerald"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:emerald_sword"
+  }
 }

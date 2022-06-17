@@ -1,15 +1,15 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "X X",
-        "X X"
-    ],
-    "key": {
-        "X": {
-            "item": "gemsandcrystals:sapphire"
-        }
-    },
-    "result": {
-        "item": "gemsandcrystals:sapphire_boots"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:gems/sapphire"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:sapphire_boots"
+  }
 }

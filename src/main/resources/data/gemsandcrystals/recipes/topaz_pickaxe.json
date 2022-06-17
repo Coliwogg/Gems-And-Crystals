@@ -1,19 +1,19 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "XXX",
-        " # ",
-        " # "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:stick"
-        },
-        "X": {
-            "item": "gemsandcrystals:topaz"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
     },
-    "result": {
-        "item": "gemsandcrystals:topaz_pickaxe"
+    "X": {
+      "tag": "forge:gems/topaz"
     }
+  },
+  "result": {
+    "item": "gemsandcrystals:topaz_pickaxe"
+  }
 }
