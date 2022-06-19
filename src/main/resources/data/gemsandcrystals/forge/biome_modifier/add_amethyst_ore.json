@@ -1,0 +1,5 @@
+{
+  "type": "gemsandcrystals:ores",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "gemsandcrystals:amethyst_ore_placed"
+}

@@ -1,16 +1,13 @@
 package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
-import com.coliwogg.gemsandcrystals.config.GemsAndCrystalsClientConfigs;
-import com.coliwogg.gemsandcrystals.config.GemsAndCrystalsCommonConfigs;
 import com.coliwogg.gemsandcrystals.item.ModItems;
+import com.coliwogg.gemsandcrystals.world.biomemods.ModBiomeModifiers;
+import com.coliwogg.gemsandcrystals.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -29,10 +26,13 @@ public class GemsAndCrystals {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModBiomeModifiers.register(eventBus);
+        ModPlacedFeatures.register(eventBus);
+
         eventBus.addListener(this::setup);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, GemsAndCrystalsClientConfigs.SPEC, "gemsandcrystals-client.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GemsAndCrystalsCommonConfigs.SPEC, "gemsandcrystals-common.toml");
+//        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, GemsAndCrystalsClientConfigs.SPEC, "gemsandcrystals-client.toml");
+//        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GemsAndCrystalsCommonConfigs.SPEC, "gemsandcrystals-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -41,7 +41,7 @@ public class GemsAndCrystals {
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
     }
 
 }

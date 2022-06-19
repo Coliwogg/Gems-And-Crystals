@@ -29,13 +29,13 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_QUARTZ_ORE.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> RUBY_ORE = FeatureUtils.register("ruby_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_RUBY_ORES, GemsAndCrystalsCommonConfigs.RUBY_ORE_VEIN_SIZE.get()));
+            Feature.ORE, new OreConfiguration(OVERWORLD_RUBY_ORES, 4));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SAPPHIRE_ORE = FeatureUtils.register("sapphire_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_SAPPHIRE_ORES, GemsAndCrystalsCommonConfigs.SAPPHIRE_ORE_VEIN_SIZE.get()));
+            Feature.ORE, new OreConfiguration(OVERWORLD_SAPPHIRE_ORES, 4));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> TOPAZ_ORE = FeatureUtils.register("topaz_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_TOPAZ_ORES, GemsAndCrystalsCommonConfigs.TOPAZ_ORE_VEIN_SIZE.get()));
+            Feature.ORE, new OreConfiguration(OVERWORLD_TOPAZ_ORES, 4));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> AMETHYST_ORE = FeatureUtils.register("amethyst_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_AMETHYST_ORES, GemsAndCrystalsCommonConfigs.AMETHYST_ORE_VEIN_SIZE.get()));
+            Feature.ORE, new OreConfiguration(OVERWORLD_AMETHYST_ORES, 4));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> QUARTZ_ORE = FeatureUtils.register("quartz_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_QUARTZ_ORES, GemsAndCrystalsCommonConfigs.QUARTZ_ORE_VEIN_SIZE.get()));
+            Feature.ORE, new OreConfiguration(OVERWORLD_QUARTZ_ORES, 4));
 }

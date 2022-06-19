@@ -1,0 +1,5 @@
+{
+  "type": "gemsandcrystals:ores",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "gemsandcrystals:ruby_ore_placed"
+}

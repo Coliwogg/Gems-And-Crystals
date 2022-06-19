@@ -31,7 +31,6 @@ public class GemsAndCrystalsCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> QUARTZ_ORE_GENERATION;
     public static final ForgeConfigSpec.ConfigValue<Integer> QUARTZ_ORE_MIN_HEIGHT;
     public static final ForgeConfigSpec.ConfigValue<Integer> QUARTZ_ORE_MAX_HEIGHT;
-
     public static final ForgeConfigSpec.ConfigValue<Integer> RUBY_ARMOR_DURABILITY_MULTIPLIER;
     public static final ForgeConfigSpec.ConfigValue<Integer> RUBY_ARMOR_ENCHANTMENT_VALUE;
     public static final ForgeConfigSpec.ConfigValue<Float> RUBY_ARMOR_TOUGHNESS;
@@ -56,7 +55,6 @@ public class GemsAndCrystalsCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Integer> QUARTZ_ARMOR_ENCHANTMENT_VALUE;
     public static final ForgeConfigSpec.ConfigValue<Float> QUARTZ_ARMOR_TOUGHNESS;
     public static final ForgeConfigSpec.ConfigValue<Float> QUARTZ_ARMOR_KNOCKBACK_RESISTANCE;
-
     public static final ForgeConfigSpec.ConfigValue<Integer> RUBY_TOOLS_LEVEL;
     public static final ForgeConfigSpec.ConfigValue<Integer> RUBY_TOOLS_USES;
     public static final ForgeConfigSpec.ConfigValue<Float> RUBY_TOOLS_SPEED;
@@ -142,7 +140,6 @@ public class GemsAndCrystalsCommonConfigs {
                 .defineInRange("Quartz Ore Min Height", -80, -80, 480);
         QUARTZ_ORE_MAX_HEIGHT = BUILDER.comment("How high do Quartz Ore Blocks spawn in the overworld!")
                 .defineInRange("Quartz Ore Max Height", 80, -80, 480);
-
         RUBY_ARMOR_DURABILITY_MULTIPLIER = BUILDER.comment("What is the Durability Multiplier for Ruby Armor!")
                 .define("Ruby Armor Durability Multiplier", 36);
         RUBY_ARMOR_ENCHANTMENT_VALUE = BUILDER.comment("What is the Enchantment Value for Ruby Armor!")
@@ -191,7 +188,6 @@ public class GemsAndCrystalsCommonConfigs {
                 .define("Quartz Armor Toughness", 0.0F);
         QUARTZ_ARMOR_KNOCKBACK_RESISTANCE = BUILDER.comment("What is the Knockback Resistance for Quartz Armor!")
                 .define("Quartz Armor Knockback Resistance", 0.0F);
-
         RUBY_TOOLS_LEVEL = BUILDER.comment("What is the Mining Level of Ruby Tools!")
                 .defineInRange("Ruby Tools Mining Level", 3, 0, 4);
         RUBY_TOOLS_USES = BUILDER.comment("What is the number of Uses for Ruby Tools!")
