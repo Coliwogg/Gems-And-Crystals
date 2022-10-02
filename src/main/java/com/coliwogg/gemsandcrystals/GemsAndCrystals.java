@@ -2,12 +2,14 @@ package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import com.coliwogg.gemsandcrystals.item.ModItems;
-import com.coliwogg.gemsandcrystals.world.biomemods.ModBiomeModifiers;
+import com.coliwogg.gemsandcrystals.world.feature.ModConfiguredFeatures;
 import com.coliwogg.gemsandcrystals.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -16,32 +18,33 @@ import org.slf4j.Logger;
 @Mod(GemsAndCrystals.MOD_ID)
 public class GemsAndCrystals {
     public static final String MOD_ID = "gemsandcrystals";
-
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public GemsAndCrystals() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
-        ModBiomeModifiers.register(eventBus);
-        ModPlacedFeatures.register(eventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
-        eventBus.addListener(this::setup);
+        modEventBus.addListener(this::commonSetup);
 
-//        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, GemsAndCrystalsClientConfigs.SPEC, "gemsandcrystals-client.toml");
-//        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GemsAndCrystalsCommonConfigs.SPEC, "gemsandcrystals-common.toml");
-
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
+    private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
 
+
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+
+        }
+    }
 }

@@ -1,5 +1,6 @@
 {
-  "type": "gemsandcrystals:ores",
+  "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "feature": "gemsandcrystals:topaz_ore_placed"
+  "features": "gemsandcrystals:topaz_ore_placed",
+  "step": "underground_ores"
 }

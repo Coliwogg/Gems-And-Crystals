@@ -23,6 +23,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GemsAndCrystals.MOD_ID);
 
+
     public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)), ModCreativeModeTab.GEMSANDCRYSTALS_TAB);
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
@@ -63,5 +64,4 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
-
 }

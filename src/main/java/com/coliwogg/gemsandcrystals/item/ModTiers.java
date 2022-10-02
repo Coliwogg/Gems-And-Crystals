@@ -1,6 +1,5 @@
 package com.coliwogg.gemsandcrystals.item;
 
-import com.coliwogg.gemsandcrystals.config.GemsAndCrystalsCommonConfigs;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -21,7 +20,7 @@ public class ModTiers {
             1761,
             8.5F,
             4.0F,
-           16,
+            16,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.SAPPHIRE.get())
     );
@@ -29,34 +28,34 @@ public class ModTiers {
             3,
             1451,
             7.5F,
-            3F,
+            3.0F,
             14,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.EMERALD)
     );
     public static final ForgeTier TOPAZ = new ForgeTier(
-           2,
+            2,
             1061,
-           6.5F,
-            3F,
-           14,
+            6.5F,
+            2.5F,
+            14,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.TOPAZ.get())
     );
     public static final ForgeTier AMETHYST = new ForgeTier(
             2,
             871,
-            6F,
-            2F,
+            6.0F,
+            2.0F,
             13,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.AMETHYST_SHARD)
     );
     public static final ForgeTier QUARTZ = new ForgeTier(
             2,
-            661,
-            4F,
-            1F,
+            671,
+            4.0F,
+            1.5F,
             12,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.QUARTZ)

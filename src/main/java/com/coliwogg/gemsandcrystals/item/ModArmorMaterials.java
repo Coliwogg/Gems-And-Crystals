@@ -1,7 +1,6 @@
 package com.coliwogg.gemsandcrystals.item;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
-import com.coliwogg.gemsandcrystals.config.GemsAndCrystalsCommonConfigs;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
@@ -13,39 +12,39 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    RUBY("ruby", 36,
+    RUBY("ruby",36,
             new int[]{3, 6, 8, 3}, 16,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 2.5F,
+            SoundEvents.ARMOR_EQUIP_DIAMOND,2.5F,
             0.1F,
             () -> Ingredient.of(ModItems.RUBY.get())
     ),
-    SAPPHIRE("sapphire", 36,
+    SAPPHIRE("sapphire",36,
             new int[]{3, 6, 8, 3}, 16,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 2.5F,
+            SoundEvents.ARMOR_EQUIP_DIAMOND,2.5F,
             0.1F,
             () -> Ingredient.of(ModItems.SAPPHIRE.get())
     ),
-    EMERALD("emerald", 33,
+    EMERALD("emerald",36,
             new int[]{3, 6, 8, 3}, 14,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 1.5F,
-            0.1F,
+            SoundEvents.ARMOR_EQUIP_DIAMOND,1.5F,
+            0.0F,
             () -> Ingredient.of(Items.EMERALD)
     ),
-    TOPAZ("topaz", 22,
-            new int[]{3, 6, 8, 3},14,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0.0F,
+    TOPAZ("topaz",22,
+            new int[]{3, 6, 8, 3}, 13,
+            SoundEvents.ARMOR_EQUIP_GOLD,0.0F,
             0.0F,
             () -> Ingredient.of(ModItems.TOPAZ.get())
     ),
     AMETHYST("amethyst",18,
             new int[]{3, 6, 8, 3}, 12,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0.0F,
+            SoundEvents.ARMOR_EQUIP_GOLD,0.0F,
             0.0F,
             () -> Ingredient.of(Items.AMETHYST_SHARD)
     ),
-    QUARTZ("quartz", 12,
+    QUARTZ("quartz",10,
             new int[]{3, 6, 8, 3}, 10,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0.0F,
+            SoundEvents.ARMOR_EQUIP_GOLD,0.0F,
             0.0F,
             () -> Ingredient.of(Items.QUARTZ)
     );

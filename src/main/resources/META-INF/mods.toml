@@ -6,10 +6,10 @@
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml" #mandatory
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="MIT"
+license="All rights reserved"
 # A URL to refer people to when problems occur with this mod
 issueTrackerURL="https://github.com/Coliwogg/Gems-And-Crystals/issues" #optional
 # A list of mods - how many allowed here is determined by the individual mod loader
@@ -19,7 +19,7 @@ modId="gemsandcrystals" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="1.4.0-1.19" #mandatory
+version="1.4.1-1.19.2" #mandatory
  # A display name for the mod
 displayName="Gems and Crystals" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -29,11 +29,27 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals" #opt
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="logo.png" #optional
 # A text field displayed in the mod UI
-credits="I would like to thank Tutorials by Kaupenjoe, TurtyWurty, TechnoVision, and Harry Talks for creating the tutorials that would enable me to make this mod" #optional
+credits="I would like to thank Tutorials by Kaupenjoe, TurtyWurty, TechnoVision, and Harry Talks for creating tutorials that enabled me to make this mod" #optional
 # A text field displayed in the mod UI
 authors="Coliwogg" #optional
+# Display Test controls the display for your mod in the server connection screen
+# MATCH_VERSION means that your mod will cause a red X if the versions on client and server differ. This is the default behaviour and should be what you choose if you have server and client elements to your mod.
+# IGNORE_SERVER_VERSION means that your mod will not cause a red X if it's present on the server but not on the client. This is what you should use if you're a server only mod.
+# IGNORE_ALL_VERSION means that your mod will not cause a red X if it's present on the client or the server. This is a special case and should only be used if your mod has no server component.
+# NONE means that no display test is set on your mod. You need to do this yourself, see IExtensionPoint.DisplayTest for more information. You can define any scheme you wish with this value.
+# IMPORTANT NOTE: this is NOT an instruction as to which environments (CLIENT or DEDICATED SERVER) your mod loads on. Your mod should load (and maybe do nothing!) whereever it finds itself.
+#displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
+
 # The description text for the mod (multi line!) (#mandatory)
-description='''Gems and Crystals mod for Minecraft 1.19.'''
+description='''
+Gems and Crystals for Minecraft 1.19.2 adds new gems and crystals to find within your Minecraft world!
+
+With this mod installed, you can find rubies, sapphires, topaz, amethyst, and quartz within the caves of the Minecraft Overworld.
+
+Once you find these new gems and crystals you can craft tools and armour to use as you explore your Minecraft world!
+
+Enjoy!
+'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.gemsandcrystals]] #optional
     # the modid of the dependency
@@ -41,7 +57,7 @@ description='''Gems and Crystals mod for Minecraft 1.19.'''
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[40,)" #mandatory
+    versionRange="[43,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
@@ -51,6 +67,6 @@ description='''Gems and Crystals mod for Minecraft 1.19.'''
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.18.1,1.20)"
+    versionRange="[1.19.2,1.20)"
     ordering="NONE"
     side="BOTH"
