@@ -1,0 +1,89 @@
+{
+  "item.gemsandcrystals.ruby": "Рубин",
+  "item.gemsandcrystals.sapphire": "Сапфир",
+  "item.gemsandcrystals.topaz": "Топаз",
+
+  "item.gemsandcrystals.ruby_axe": "Рубиновый топор",
+  "item.gemsandcrystals.ruby_hoe": "Рубиновая мотыга",
+  "item.gemsandcrystals.ruby_pickaxe": "Рубиновая кирка",
+  "item.gemsandcrystals.ruby_shovel": "Рубиновая лопата",
+  "item.gemsandcrystals.ruby_sword": "Рубиновый меч",
+
+  "item.gemsandcrystals.ruby_helmet": "Рубиновый шлем",
+  "item.gemsandcrystals.ruby_chestplate": "Рубиновый нагрудник",
+  "item.gemsandcrystals.ruby_leggings": "Рубиновые поножи",
+  "item.gemsandcrystals.ruby_boots": "Рубиновые ботинки",
+
+  "item.gemsandcrystals.sapphire_axe": "Сапфировый топор",
+  "item.gemsandcrystals.sapphire_hoe": "Сапфировая мотыга",
+  "item.gemsandcrystals.sapphire_pickaxe": "Сапфировая кирка",
+  "item.gemsandcrystals.sapphire_shovel": "Сапфировая лопата",
+  "item.gemsandcrystals.sapphire_sword": "Сапфировый меч",
+
+  "item.gemsandcrystals.sapphire_helmet": "Сапфировый шлем",
+  "item.gemsandcrystals.sapphire_chestplate": "Сапфировый нагрудник",
+  "item.gemsandcrystals.sapphire_leggings": "Сапфировые поножи",
+  "item.gemsandcrystals.sapphire_boots": "Сапфировые ботинки",
+
+  "item.gemsandcrystals.emerald_axe": "Изумрудный топор",
+  "item.gemsandcrystals.emerald_hoe": "Изумрудная мотыга",
+  "item.gemsandcrystals.emerald_pickaxe": "Изумрудная кирка",
+  "item.gemsandcrystals.emerald_shovel": "Изумрудная лопата",
+  "item.gemsandcrystals.emerald_sword": "Изумрудный меч",
+
+  "item.gemsandcrystals.emerald_helmet": "Изумрудный шлем",
+  "item.gemsandcrystals.emerald_chestplate": "Изумрудный нагрудник",
+  "item.gemsandcrystals.emerald_leggings": "Изумрудные поножи",
+  "item.gemsandcrystals.emerald_boots": "Изумрудные ботинки",
+
+  "item.gemsandcrystals.topaz_axe": "Топазовый топор",
+  "item.gemsandcrystals.topaz_hoe": "Топазовая мотыга",
+  "item.gemsandcrystals.topaz_pickaxe": "Топазовая кирка",
+  "item.gemsandcrystals.topaz_shovel": "Топазовая лопата",
+  "item.gemsandcrystals.topaz_sword": "Топазовый меч",
+
+  "item.gemsandcrystals.topaz_helmet": "Топазовый шлем",
+  "item.gemsandcrystals.topaz_chestplate": "Топазовый нагрудник",
+  "item.gemsandcrystals.topaz_leggings": "Топазовые поножи",
+  "item.gemsandcrystals.topaz_boots": "Топазовые ботинки",
+
+  "item.gemsandcrystals.amethyst_axe": "Аметистовый топор",
+  "item.gemsandcrystals.amethyst_hoe": "Аметистовая мотыга",
+  "item.gemsandcrystals.amethyst_pickaxe": "Аметистовая кирка",
+  "item.gemsandcrystals.amethyst_shovel": "Аметистовая лопата",
+  "item.gemsandcrystals.amethyst_sword": "Аметистовый меч",
+
+  "item.gemsandcrystals.amethyst_helmet": "Аметистовый шлем",
+  "item.gemsandcrystals.amethyst_chestplate": "Аметистовый нагрудник",
+  "item.gemsandcrystals.amethyst_leggings": "Аметистовые поножи",
+  "item.gemsandcrystals.amethyst_boots": "Аметистовые ботинки",
+
+  "item.gemsandcrystals.quartz_axe": "Кварцевый топор",
+  "item.gemsandcrystals.quartz_hoe": "Кварцевая мотыга",
+  "item.gemsandcrystals.quartz_pickaxe": "Кварцевая кирка",
+  "item.gemsandcrystals.quartz_shovel": "Кварцевая лопата",
+  "item.gemsandcrystals.quartz_sword": "Кварцевый меч",
+
+  "item.gemsandcrystals.quartz_helmet": "Кварцевый шлем",
+  "item.gemsandcrystals.quartz_chestplate": "Кварцевый нагрудник",
+  "item.gemsandcrystals.quartz_leggings": "Кварцевые поножи",
+  "item.gemsandcrystals.quartz_boots": "Кварцевые ботинки",
+
+  "block.gemsandcrystals.ruby_block": "Рубиновый блок",
+  "block.gemsandcrystals.sapphire_block": "Сапфировый блок",
+  "block.gemsandcrystals.topaz_block": "Топазовый блок",
+
+  "block.gemsandcrystals.ruby_ore": "Рубиновая руда",
+  "block.gemsandcrystals.sapphire_ore": "Сапфировая руда",
+  "block.gemsandcrystals.topaz_ore": "Топазовая руда",
+  "block.gemsandcrystals.amethyst_ore": "Аметистовая руда",
+  "block.gemsandcrystals.quartz_ore": "Кварцевая руда",
+
+  "block.gemsandcrystals.deepslate_ruby_ore": "Рубиноносный глубинный сланец",
+  "block.gemsandcrystals.deepslate_sapphire_ore": "Сапфироносный глубинный сланец",
+  "block.gemsandcrystals.deepslate_topaz_ore": "Топазоносный глубинный сланец",
+  "block.gemsandcrystals.deepslate_amethyst_ore": "Аметистоносный глубинный сланец",
+  "block.gemsandcrystals.deepslate_quartz_ore": "Кварценосный глубинный сланец",
+
+  "itemGroup.gemsandcrystalsTab": "Бриллианты и кристалы"
+}
