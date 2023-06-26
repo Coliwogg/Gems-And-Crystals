@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:emerald_chestplate"
-  }
+  },
+  "show_notification": true
 }

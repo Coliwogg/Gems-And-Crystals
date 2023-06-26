@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:emerald_pickaxe"
-  }
+  },
+  "show_notification": true
 }

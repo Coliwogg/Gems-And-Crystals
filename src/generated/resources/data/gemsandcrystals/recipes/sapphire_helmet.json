@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:sapphire_helmet"
-  }
+  },
+  "show_notification": true
 }

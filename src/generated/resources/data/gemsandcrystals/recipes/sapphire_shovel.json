@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:sapphire_shovel"
-  }
+  },
+  "show_notification": true
 }
