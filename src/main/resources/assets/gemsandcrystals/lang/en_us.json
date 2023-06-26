@@ -75,5 +75,5 @@
   "block.gemsandcrystals.deepslate_topaz_ore": "Deepslate Topaz Ore",
   "block.gemsandcrystals.deepslate_amethyst_ore": "Deepslate Amethyst Ore",
   "block.gemsandcrystals.deepslate_quartz_ore": "Deepslate Quartz Ore",
-  "itemGroup.gemsandcrystalstab": "Gems and Crystals"
+  "creativemodetab.gemsandcrystals_tab": "Gems and Crystals"
 }

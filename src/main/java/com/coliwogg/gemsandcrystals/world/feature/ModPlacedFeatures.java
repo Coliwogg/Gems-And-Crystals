@@ -1,64 +1,59 @@
 package com.coliwogg.gemsandcrystals.world.feature;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
-import net.minecraft.core.Registry;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
-            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, GemsAndCrystals.MOD_ID);
+    public static final ResourceKey<PlacedFeature> RUBY_ORE_PLACED_KEY = createKey("ruby_ore_placed");
+    public static final ResourceKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = createKey("sapphire_ore_placed");
+    public static final ResourceKey<PlacedFeature> TOPAZ_ORE_PLACED_KEY = createKey("topaz_ore_placed");
+    public static final ResourceKey<PlacedFeature> AMETHYST_ORE_PLACED_KEY = createKey("amethyst_ore_placed");
+    public static final ResourceKey<PlacedFeature> QUARTZ_ORE_PLACED_KEY = createKey("quartz_ore_placed");
+    public static final ResourceKey<PlacedFeature> QUARTZ_GEODE_PLACED_KEY = createKey("quartz_geode_placed");
 
-    public static final RegistryObject<PlacedFeature> RUBY_ORE_PLACED = PLACED_FEATURES.register("ruby_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(),
-                    commonOrePlacement(5, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(20)))));
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-    public static final RegistryObject<PlacedFeature> SAPPHIRE_ORE_PLACED = PLACED_FEATURES.register("sapphire_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.SAPPHIRE_ORE.getHolder().get(),
-                    commonOrePlacement(5, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(20)))));
-
-    public static final RegistryObject<PlacedFeature> TOPAZ_ORE_PLACED = PLACED_FEATURES.register("topaz_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.TOPAZ_ORE.getHolder().get(),
-                    commonOrePlacement(6, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(40)))));
-
-    public static final RegistryObject<PlacedFeature> AMETHYST_ORE_PLACED = PLACED_FEATURES.register("amethyst_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.AMETHYST_ORE.getHolder().get(),
-                    commonOrePlacement(7, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(60)))));
-
-    public static final RegistryObject<PlacedFeature> QUARTZ_ORE_PLACED = PLACED_FEATURES.register("quartz_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.QUARTZ_ORE.getHolder().get(),
-                    commonOrePlacement(8, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
-    public static final RegistryObject<PlacedFeature> QUARTZ_GEODE_PLACED = PLACED_FEATURES.register("quartz_geode_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.QUARTZ_GEODE.getHolder().get(), List.of(
-                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
-                    BiomeFilter.biome())));
-
-    public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
-        return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
+        register(context, RUBY_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUBY_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(5, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(20))));
+        register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_SAPPHIRE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(5, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(20))));
+        register(context, TOPAZ_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_TOPAZ_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(6, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(40))));
+        register(context, AMETHYST_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_AMETHYST_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(7, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(60))));
+        register(context, QUARTZ_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_QUARTZ_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(8, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, QUARTZ_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_QUARTZ_GEODE_KEY),
+                        List.of(RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
+                        BiomeFilter.biome()));
     }
 
-    public static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRange) {
-        return orePlacement(CountPlacement.of(pCount), pHeightRange);
+    private static ResourceKey<PlacedFeature> createKey(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(GemsAndCrystals.MOD_ID, name));
     }
 
-    public static List<PlacementModifier> rareOrePlacement(int pChance, PlacementModifier pHeightRange) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange);
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
-
-    public static void register(IEventBus eventBus) {
-        PLACED_FEATURES.register(eventBus);
+    
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration, PlacementModifier... modifiers) {
+       register(context, key, configuration, List.of(modifiers));
     }
-
 }

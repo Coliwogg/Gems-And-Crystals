@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:quartz"
+    },
+    "X": {
+      "item": "minecraft:leather_horse_armor"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###",
+    "#X#"
+  ],
+  "result": {
+    "item": "gemsandcrystals:quartz_horse_armor"
+  }
+}
