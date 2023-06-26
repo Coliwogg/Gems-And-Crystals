@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:quartz_pickaxe"
-  }
+  },
+  "show_notification": true
 }

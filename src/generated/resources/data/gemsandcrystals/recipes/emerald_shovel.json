@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:emerald_shovel"
-  }
+  },
+  "show_notification": true
 }

@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:sapphire_hoe"
-  }
+  },
+  "show_notification": true
 }

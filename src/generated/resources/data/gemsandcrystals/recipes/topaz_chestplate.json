@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:topaz_chestplate"
-  }
+  },
+  "show_notification": true
 }

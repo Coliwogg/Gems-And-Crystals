@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:topaz_horse_armor"
-  }
+  },
+  "show_notification": true
 }

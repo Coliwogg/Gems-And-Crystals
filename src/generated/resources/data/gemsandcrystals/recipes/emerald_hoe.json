@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:emerald_hoe"
-  }
+  },
+  "show_notification": true
 }

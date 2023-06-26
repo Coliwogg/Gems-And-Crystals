@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:quartz_chestplate"
-  }
+  },
+  "show_notification": true
 }

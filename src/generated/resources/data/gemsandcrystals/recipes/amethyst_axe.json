@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:amethyst_axe"
-  }
+  },
+  "show_notification": true
 }

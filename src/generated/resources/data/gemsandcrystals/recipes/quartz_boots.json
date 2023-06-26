@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:quartz_boots"
-  }
+  },
+  "show_notification": true
 }

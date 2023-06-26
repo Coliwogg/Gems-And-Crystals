@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:quartz_horse_armor"
-  }
+  },
+  "show_notification": true
 }

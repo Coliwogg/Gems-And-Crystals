@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:sapphire_pickaxe"
-  }
+  },
+  "show_notification": true
 }

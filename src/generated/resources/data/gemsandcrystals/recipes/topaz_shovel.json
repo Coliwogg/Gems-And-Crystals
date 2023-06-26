@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:topaz_shovel"
-  }
+  },
+  "show_notification": true
 }

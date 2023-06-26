@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "gemsandcrystals:ruby_block"
-  }
+  },
+  "show_notification": true
 }
