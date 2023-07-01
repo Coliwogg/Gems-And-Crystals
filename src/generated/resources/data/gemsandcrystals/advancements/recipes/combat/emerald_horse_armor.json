@@ -30,5 +30,6 @@
     "recipes": [
       "gemsandcrystals:emerald_horse_armor"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

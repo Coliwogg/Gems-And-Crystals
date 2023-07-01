@@ -30,5 +30,6 @@
     "recipes": [
       "gemsandcrystals:ruby"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
