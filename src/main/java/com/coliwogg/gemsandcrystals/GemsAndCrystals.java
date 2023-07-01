@@ -6,7 +6,7 @@ import com.coliwogg.gemsandcrystals.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -24,6 +24,8 @@ public class GemsAndCrystals {
     public GemsAndCrystals() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -37,20 +39,20 @@ public class GemsAndCrystals {
 
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.RUBY);
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.TOPAZ);
         }
 
-        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.RUBY_BLOCK);
             event.accept(ModBlocks.SAPPHIRE_BLOCK);
             event.accept(ModBlocks.TOPAZ_BLOCK);
         }
 
-        if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.RUBY_ORE);
             event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
             event.accept(ModBlocks.SAPPHIRE_ORE);
@@ -63,7 +65,7 @@ public class GemsAndCrystals {
             event.accept(ModBlocks.DEEPSLATE_QUARTZ_ORE);
         }
 
-        if (event.getTab() == CreativeModeTabs.COMBAT) {
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.RUBY_SWORD);
             event.accept(ModItems.SAPPHIRE_SWORD);
             event.accept(ModItems.EMERALD_SWORD);
@@ -108,7 +110,7 @@ public class GemsAndCrystals {
             event.accept(ModItems.QUARTZ_HORSE_ARMOR);
         }
 
-        if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.RUBY_SHOVEL);
             event.accept(ModItems.RUBY_PICKAXE);
             event.accept(ModItems.RUBY_AXE);
@@ -135,7 +137,7 @@ public class GemsAndCrystals {
             event.accept(ModItems.QUARTZ_HOE);
         }
 
-        if (event.getTab() == ModCreativeModeTabs.GEMS_AND_CRYSTALS_TAB) {
+        if (event.getTab() == ModCreativeModeTabs.GEMS_AND_CRYSTALS_TAB.get()) {
             event.accept(ModItems.RUBY);
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.TOPAZ);
