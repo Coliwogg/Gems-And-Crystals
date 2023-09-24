@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:emerald"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "##",
+    " |",
+    " |"
+  ],
+  "result": {
+    "item": "gemsandcrystals:emerald_hoe"
+  },
+  "show_notification": true
+}

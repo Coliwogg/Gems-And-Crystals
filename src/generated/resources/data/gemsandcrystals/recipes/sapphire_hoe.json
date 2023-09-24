@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "gemsandcrystals:sapphire"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "##",
+    " |",
+    " |"
+  ],
+  "result": {
+    "item": "gemsandcrystals:sapphire_hoe"
+  },
+  "show_notification": true
+}

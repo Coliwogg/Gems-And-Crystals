@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "gemsandcrystals:block/quartz_ore"
-  }
-}
