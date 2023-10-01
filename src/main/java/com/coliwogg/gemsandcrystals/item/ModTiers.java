@@ -8,7 +8,7 @@ import net.minecraftforge.common.ForgeTier;
 public class ModTiers {
     public static final ForgeTier RUBY = new ForgeTier(
             3,
-            1761,
+            1796,
             8.5F,
             4.0F,
             16,
@@ -17,7 +17,7 @@ public class ModTiers {
     );
     public static final ForgeTier SAPPHIRE = new ForgeTier(
             3,
-            1761,
+            1796,
             8.5F,
             4.0F,
             16,
@@ -37,7 +37,7 @@ public class ModTiers {
             2,
             1061,
             6.5F,
-            2.5F,
+            2.0F,
             14,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.TOPAZ.get())
@@ -55,7 +55,7 @@ public class ModTiers {
             2,
             671,
             4.0F,
-            1.5F,
+            1.0F,
             12,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.QUARTZ)
