@@ -52,23 +52,25 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_QUARTZ_ORE.get().defaultBlockState()));
 
 
-        register(context, OVERWORLD_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 3));
-        register(context, OVERWORLD_SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSaphireOres, 3));
+        register(context, OVERWORLD_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 6));
+        register(context, OVERWORLD_SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSaphireOres, 6));
         register(context, OVERWORLD_TOPAZ_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTopazOres, 7));
         register(context, OVERWORLD_AMETHYST_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAmethystOres,10));
         register(context, OVERWORLD_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(overworldQuartzOres, 14));
-        register(context, OVERWORLD_QUARTZ_GEODE_KEY, Feature.GEODE, new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
-                BlockStateProvider.simple(Blocks.DEEPSLATE),
-                BlockStateProvider.simple(ModBlocks.QUARTZ_ORE.get()),
-                BlockStateProvider.simple(Blocks.STONE),
-                BlockStateProvider.simple(Blocks.CALCITE),
-                List.of(Blocks.QUARTZ_BLOCK.defaultBlockState()),
-                BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
-                new GeodeLayerSettings(1.7D, 1.2D, 2.5D, 3.5D),
-                new GeodeCrackSettings(0.25D, 1.5D, 1), 0.5D, 0.1D,
-                true, UniformInt.of(3, 8),
-                UniformInt.of(2, 6), UniformInt.of(1, 2),
-                -18, 18, 0.075D, 1));
+        register(context, OVERWORLD_QUARTZ_GEODE_KEY, Feature.GEODE,
+                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(Blocks.DEEPSLATE),
+                        BlockStateProvider.simple(ModBlocks.QUARTZ_ORE.get()),
+                        BlockStateProvider.simple(Blocks.STONE),
+                        BlockStateProvider.simple(Blocks.CALCITE),
+                        List.of(Blocks.QUARTZ_BLOCK.defaultBlockState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerSettings(1.7D, 1.2D, 2.5D, 3.5D),
+                        new GeodeCrackSettings(0.25D, 1.5D, 1), 0.5D, 0.1D,
+                        true, UniformInt.of(3, 8),
+                        UniformInt.of(2, 6), UniformInt.of(1, 2),
+                        -18, 18, 0.075D, 1));
+
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
