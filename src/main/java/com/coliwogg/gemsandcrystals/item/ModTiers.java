@@ -6,58 +6,59 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 
 public class ModTiers {
+
     public static final ForgeTier RUBY = new ForgeTier(
-            3,
             1796,
+            3,
             8.5F,
-            4.0F,
             16,
             BlockTags.NEEDS_IRON_TOOL,
-            () -> Ingredient.of(ModItems.RUBY.get())
+            () -> Ingredient.of(ModItems.RUBY.get()),
+            BlockTags.INCORRECT_FOR_IRON_TOOL
     );
     public static final ForgeTier SAPPHIRE = new ForgeTier(
-            3,
             1796,
+            3,
             8.5F,
-            4.0F,
             16,
             BlockTags.NEEDS_IRON_TOOL,
-            () -> Ingredient.of(ModItems.SAPPHIRE.get())
+            () -> Ingredient.of(ModItems.SAPPHIRE.get()),
+            BlockTags.INCORRECT_FOR_IRON_TOOL
     );
     public static final ForgeTier EMERALD = new ForgeTier(
-            3,
             1451,
+            3,
             7.5F,
-            3.0F,
             14,
             BlockTags.NEEDS_IRON_TOOL,
-            () -> Ingredient.of(Items.EMERALD)
+            () -> Ingredient.of(Items.EMERALD),
+            BlockTags.INCORRECT_FOR_IRON_TOOL
     );
     public static final ForgeTier TOPAZ = new ForgeTier(
-            2,
             1061,
+            2,
             6.5F,
-            2.0F,
             14,
             BlockTags.NEEDS_IRON_TOOL,
-            () -> Ingredient.of(ModItems.TOPAZ.get())
+            () -> Ingredient.of(ModItems.TOPAZ.get()),
+            BlockTags.INCORRECT_FOR_IRON_TOOL
     );
     public static final ForgeTier AMETHYST = new ForgeTier(
-            2,
             871,
+            2,
             6.0F,
-            2.0F,
             13,
             BlockTags.NEEDS_IRON_TOOL,
-            () -> Ingredient.of(Items.AMETHYST_SHARD)
+            () -> Ingredient.of(Items.AMETHYST_SHARD),
+            BlockTags.INCORRECT_FOR_IRON_TOOL
     );
     public static final ForgeTier QUARTZ = new ForgeTier(
-            2,
             671,
+            2,
             4.0F,
-            1.0F,
             12,
             BlockTags.NEEDS_IRON_TOOL,
-            () -> Ingredient.of(Items.QUARTZ)
+            () -> Ingredient.of(Items.QUARTZ),
+            BlockTags.INCORRECT_FOR_IRON_TOOL
     );
 }

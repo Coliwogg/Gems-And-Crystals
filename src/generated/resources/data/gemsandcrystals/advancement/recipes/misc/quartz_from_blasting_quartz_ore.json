@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quartz_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gemsandcrystals:quartz_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gemsandcrystals:quartz_from_blasting_quartz_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_quartz_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gemsandcrystals:quartz_from_blasting_quartz_ore"
+    ]
+  }
+}
