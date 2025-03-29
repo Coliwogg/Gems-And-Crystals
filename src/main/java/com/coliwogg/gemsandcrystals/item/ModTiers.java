@@ -9,8 +9,8 @@ public class ModTiers {
 
     public static final ForgeTier RUBY = new ForgeTier(
             1796,
-            3,
-            8.5F,
+            9.0F,
+            4.0F,
             16,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.RUBY.get()),
@@ -18,8 +18,8 @@ public class ModTiers {
     );
     public static final ForgeTier SAPPHIRE = new ForgeTier(
             1796,
-            3,
-            8.5F,
+            9.0F,
+            4.0F,
             16,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.SAPPHIRE.get()),
@@ -27,8 +27,8 @@ public class ModTiers {
     );
     public static final ForgeTier EMERALD = new ForgeTier(
             1451,
-            3,
-            7.5F,
+            8.0F,
+            3.0F,
             14,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.EMERALD),
@@ -36,8 +36,8 @@ public class ModTiers {
     );
     public static final ForgeTier TOPAZ = new ForgeTier(
             1061,
-            2,
-            6.5F,
+            6.0F,
+            2.0F,
             14,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.TOPAZ.get()),
@@ -45,8 +45,8 @@ public class ModTiers {
     );
     public static final ForgeTier AMETHYST = new ForgeTier(
             871,
-            2,
-            6.0F,
+            4.0F,
+            3.0F,
             13,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.AMETHYST_SHARD),
@@ -54,8 +54,8 @@ public class ModTiers {
     );
     public static final ForgeTier QUARTZ = new ForgeTier(
             671,
-            2,
-            4.0F,
+            3.0F,
+            1.0F,
             12,
             BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.QUARTZ),
