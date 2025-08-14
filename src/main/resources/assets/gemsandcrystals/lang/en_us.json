@@ -75,5 +75,8 @@
   "block.gemsandcrystals.deepslate_topaz_ore": "Deepslate Topaz Ore",
   "block.gemsandcrystals.deepslate_amethyst_ore": "Deepslate Amethyst Ore",
   "block.gemsandcrystals.deepslate_quartz_ore": "Deepslate Quartz Ore",
+  "trim_material.gemsandcrystals.ruby": "Ruby Material",
+  "trim_material.gemsandcrystals.sapphire": "Sapphire Material",
+  "trim_material.gemsandcrystals.topaz": "Topaz Material",
   "creativemodetab.gemsandcrystals_tab": "Gems and Crystals"
 }

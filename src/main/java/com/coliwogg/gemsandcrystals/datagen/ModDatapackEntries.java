@@ -1,6 +1,7 @@
 package com.coliwogg.gemsandcrystals.datagen;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
+import com.coliwogg.gemsandcrystals.trim.ModTrimMaterials;
 import com.coliwogg.gemsandcrystals.worldgen.ModBiomeModifiers;
 import com.coliwogg.gemsandcrystals.worldgen.ModConfiguredFeatures;
 import com.coliwogg.gemsandcrystals.worldgen.ModPlacedFeatures;
@@ -16,6 +17,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModDatapackEntries extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);;

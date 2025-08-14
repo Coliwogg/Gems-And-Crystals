@@ -45,5 +45,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.QUARTZ_CHESTPLATE.get(),
                         ModItems.QUARTZ_LEGGINGS.get(),
                         ModItems.QUARTZ_BOOTS.get());
+
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.RUBY.get(),
+                        ModItems.SAPPHIRE.get(),
+                        ModItems.TOPAZ.get());
     }
 }
