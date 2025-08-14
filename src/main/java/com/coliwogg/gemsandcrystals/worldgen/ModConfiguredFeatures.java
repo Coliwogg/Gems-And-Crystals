@@ -1,4 +1,4 @@
-package com.coliwogg.gemsandcrystals.world.feature;
+package com.coliwogg.gemsandcrystals.worldgen;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
@@ -24,6 +24,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import java.util.List;
 
 public class ModConfiguredFeatures {
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_TOPAZ_ORE_KEY = registerKey("topaz_ore");
@@ -35,30 +36,29 @@ public class ModConfiguredFeatures {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        List<OreConfiguration.TargetBlockState> overworldRubyOres = List.of(OreConfiguration.target(stoneReplaceables,
-                ModBlocks.RUBY_ORE.get().defaultBlockState()),
+        List<OreConfiguration.TargetBlockState> overworldRubyOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.RUBY_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> overworldSaphireOres = List.of(OreConfiguration.target(stoneReplaceables,
-                ModBlocks.SAPPHIRE_ORE.get().defaultBlockState()),
+        List<OreConfiguration.TargetBlockState> overworldSapphireOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.SAPPHIRE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> overworldTopazOres = List.of(OreConfiguration.target(stoneReplaceables,
-                ModBlocks.TOPAZ_ORE.get().defaultBlockState()),
+        List<OreConfiguration.TargetBlockState> overworldTopazOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.TOPAZ_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_TOPAZ_ORE.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> overworldAmethystOres = List.of(OreConfiguration.target(stoneReplaceables,
-                ModBlocks.AMETHYST_ORE.get().defaultBlockState()),
+        List<OreConfiguration.TargetBlockState> overworldAmethystOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.AMETHYST_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_AMETHYST_ORE.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of(OreConfiguration.target(stoneReplaceables,
-                ModBlocks.QUARTZ_ORE.get().defaultBlockState()),
+        List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.QUARTZ_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_QUARTZ_ORE.get().defaultBlockState()));
 
-
         register(context, OVERWORLD_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 6));
-        register(context, OVERWORLD_SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSaphireOres, 6));
-        register(context, OVERWORLD_TOPAZ_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTopazOres, 7));
+        register(context, OVERWORLD_SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 6));
+        register(context, OVERWORLD_TOPAZ_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTopazOres, 6));
         register(context, OVERWORLD_AMETHYST_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAmethystOres,10));
         register(context, OVERWORLD_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(overworldQuartzOres, 14));
-        register(context, OVERWORLD_QUARTZ_GEODE_KEY, Feature.GEODE,
-                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+        register(context, OVERWORLD_QUARTZ_GEODE_KEY, Feature.GEODE, new GeodeConfiguration(
+                new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(Blocks.DEEPSLATE),
                         BlockStateProvider.simple(ModBlocks.QUARTZ_ORE.get()),
                         BlockStateProvider.simple(Blocks.STONE),
@@ -77,7 +77,8 @@ public class ModConfiguredFeatures {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 }
