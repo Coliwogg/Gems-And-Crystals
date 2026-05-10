@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "gemsandcrystals:topaz"
+              "gemsandcrystals:topaz_horse_armor"
             ]
           }
         ]
@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_topaz",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_topaz"
     ]
   ],
   "rewards": {

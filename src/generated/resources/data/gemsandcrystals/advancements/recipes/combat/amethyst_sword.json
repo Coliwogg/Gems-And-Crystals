@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_amethyst": {
+    "has_amethyst_shard": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:amethyst_shard"
+              "gemsandcrystals:amethyst_sword"
             ]
           }
         ]
@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_amethyst",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_amethyst_shard"
     ]
   ],
   "rewards": {
