@@ -2,62 +2,62 @@ package com.coliwogg.gemsandcrystals.item;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.ForgeTier;
+import net.neoforged.neoforge.common.SimpleTier;
 
 public class ModTiers {
-    public static final ForgeTier RUBY = new ForgeTier(
-            3,
+    public static final Tier RUBY = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
             1796,
-            8.5F,
-            4.0F,
+            8.5f,
+            4f,
             16,
-            BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.RUBY.get())
     );
-    public static final ForgeTier SAPPHIRE = new ForgeTier(
-            3,
+
+    public static final Tier SAPPHIRE = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
             1796,
-            8.5F,
-            4.0F,
+            8.5f,
+            4f,
             16,
-            BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.SAPPHIRE.get())
     );
-    public static final ForgeTier EMERALD = new ForgeTier(
-            3,
+
+    public static final Tier EMERALD = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
             1451,
-            7.5F,
-            3.0F,
+            7.5f,
+            3f,
             14,
-            BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.EMERALD)
     );
-    public static final ForgeTier TOPAZ = new ForgeTier(
-            2,
+
+    public static final Tier TOPAZ = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
             1061,
-            6.5F,
-            2.0F,
+            6.5f,
+            2f,
             14,
-            BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(ModItems.TOPAZ.get())
     );
-    public static final ForgeTier AMETHYST = new ForgeTier(
-            2,
+
+    public static final Tier AMETHYST = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
             871,
-            6.0F,
-            2.0F,
+            6f,
+            2f,
             13,
-            BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.AMETHYST_SHARD)
     );
-    public static final ForgeTier QUARTZ = new ForgeTier(
-            2,
+
+    public static final Tier QUARTZ = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
             671,
-            4.0F,
-            1.0F,
+            4f,
+            1f,
             12,
-            BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(Items.QUARTZ)
     );
 }

@@ -5,24 +5,24 @@ import com.coliwogg.gemsandcrystals.item.ModCreativeModeTabs;
 import com.coliwogg.gemsandcrystals.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(GemsAndCrystals.MOD_ID)
 public class GemsAndCrystals {
     public static final String MOD_ID = "gemsandcrystals";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public GemsAndCrystals() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public GemsAndCrystals(IEventBus modEventBus, ModContainer modContainer) {
+        modEventBus.addListener(this::commonSetup);
 
         ModCreativeModeTabs.register(modEventBus);
 
@@ -30,8 +30,6 @@ public class GemsAndCrystals {
         ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-        MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
     }
 
@@ -218,7 +216,7 @@ public class GemsAndCrystals {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @EventBusSubscriber(modid = MOD_ID)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
