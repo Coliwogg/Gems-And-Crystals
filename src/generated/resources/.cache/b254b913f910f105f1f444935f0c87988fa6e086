@@ -1,2 +1,3 @@
-// 1.21.1	2026-05-29T11:23:30.1033516	Tags for minecraft:item mod id gemsandcrystals
+// 1.21.1	2026-05-30T10:36:29.12328	Tags for minecraft:item mod id gemsandcrystals
 70b3ff28fb0adfb18cec5b42047462f02e33557b data/minecraft/tags/item/trimmable_armor.json
+75730d60cfb9b800bcfb3900a601586d731eb500 data/minecraft/tags/item/trim_materials.json

@@ -12,9 +12,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagGenerator extends ItemTagsProvider {
-    public ModItemTagGenerator(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
-                               CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
+public class ModItemTagProvider extends ItemTagsProvider {
+    public ModItemTagProvider(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
+                              CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
         super(p_275343_, p_275729_, p_275322_, GemsAndCrystals.MOD_ID, existingFileHelper);
     }
 
@@ -45,5 +45,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.QUARTZ_CHESTPLATE.get(),
                         ModItems.QUARTZ_LEGGINGS.get(),
                         ModItems.QUARTZ_BOOTS.get());
+
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.RUBY.get(),
+                        ModItems.SAPPHIRE.get(),
+                        ModItems.TOPAZ.get());
+
     }
 }
