@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 1.0,
   "group": "sapphire",
-  "ingredient": {
-    "item": "gemsandcrystals:deepslate_sapphire_ore"
-  },
+  "ingredient": "gemsandcrystals:deepslate_sapphire_ore",
   "result": {
     "count": 1,
     "id": "gemsandcrystals:sapphire"

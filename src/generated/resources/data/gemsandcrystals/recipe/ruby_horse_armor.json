@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": {
-      "item": "gemsandcrystals:ruby"
-    },
-    "X": {
-      "item": "minecraft:leather_horse_armor"
-    }
+    "#": "gemsandcrystals:ruby",
+    "X": "minecraft:leather_horse_armor"
   },
   "pattern": [
     "# #",

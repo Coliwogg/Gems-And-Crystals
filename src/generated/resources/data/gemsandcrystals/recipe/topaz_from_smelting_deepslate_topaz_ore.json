@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 1.0,
   "group": "topaz",
-  "ingredient": {
-    "item": "gemsandcrystals:deepslate_topaz_ore"
-  },
+  "ingredient": "gemsandcrystals:deepslate_topaz_ore",
   "result": {
     "count": 1,
     "id": "gemsandcrystals:topaz"

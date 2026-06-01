@@ -1,89 +1,73 @@
 package com.coliwogg.gemsandcrystals.item;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
+import com.coliwogg.gemsandcrystals.util.ModTags;
 import net.minecraft.Util;
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.EnumMap;
-import java.util.List;
-import java.util.function.Supplier;
 
 public class ModArmorMaterials {
-    public static final Holder<ArmorMaterial> RUBY_ARMOR_MATERIAL = register("ruby",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 3);
-                attribute.put(ArmorItem.Type.LEGGINGS, 6);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
-                attribute.put(ArmorItem.Type.HELMET, 3);
-                attribute.put(ArmorItem.Type.BODY, 11);
-            }), 16, 2.5f, 0.1f, () -> ModItems.RUBY.get());
+    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(35,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 3);
+                attribute.put(ArmorType.LEGGINGS, 6);
+                attribute.put(ArmorType.CHESTPLATE, 8);
+                attribute.put(ArmorType.HELMET, 3);
+                attribute.put(ArmorType.BODY, 11);
+            }), 16, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            2.5f, 0.1f, ModTags.Items.RUBY_REPAIRABLE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"));
 
-    public static final Holder<ArmorMaterial> SAPPHIRE_ARMOR_MATERIAL = register("sapphire",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 3);
-                attribute.put(ArmorItem.Type.LEGGINGS, 6);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
-                attribute.put(ArmorItem.Type.HELMET, 3);
-                attribute.put(ArmorItem.Type.BODY, 11);
-            }), 16, 2.5f, 0.1f, () -> ModItems.SAPPHIRE.get());
+    public static final ArmorMaterial SAPPHIRE_ARMOR_MATERIAL = new ArmorMaterial(35,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 3);
+                attribute.put(ArmorType.LEGGINGS, 6);
+                attribute.put(ArmorType.CHESTPLATE, 8);
+                attribute.put(ArmorType.HELMET, 3);
+                attribute.put(ArmorType.BODY, 11);
+            }), 16, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            2.5f, 0.1f, ModTags.Items.SAPPHIRE_REPAIRABLE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"));
 
-    public static final Holder<ArmorMaterial> EMERALD_ARMOR_MATERIAL = register("emerald",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 2);
-                attribute.put(ArmorItem.Type.LEGGINGS, 6);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
-                attribute.put(ArmorItem.Type.HELMET, 3);
-                attribute.put(ArmorItem.Type.BODY, 11);
-            }), 14, 1.5f, 0.1f, () -> Items.EMERALD);
+    public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new ArmorMaterial(32,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 2);
+                attribute.put(ArmorType.LEGGINGS, 6);
+                attribute.put(ArmorType.CHESTPLATE, 8);
+                attribute.put(ArmorType.HELMET, 3);
+                attribute.put(ArmorType.BODY, 11);
+            }),14, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            1.5f, 0.1f, ModTags.Items.EMERALD_REPAIRABLE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"));
 
-    public static final Holder<ArmorMaterial> TOPAZ_ARMOR_MATERIAL = register("topaz",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 2);
-                attribute.put(ArmorItem.Type.LEGGINGS, 6);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
-                attribute.put(ArmorItem.Type.HELMET, 3);
-                attribute.put(ArmorItem.Type.BODY, 9);
-            }), 13, 0, 0, ModItems.TOPAZ);
+    public static final ArmorMaterial TOPAZ_ARMOR_MATERIAL = new ArmorMaterial(22,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 2);
+                attribute.put(ArmorType.LEGGINGS, 6);
+                attribute.put(ArmorType.CHESTPLATE, 8);
+                attribute.put(ArmorType.HELMET, 3);
+                attribute.put(ArmorType.BODY, 9);
+            }), 13, SoundEvents.ARMOR_EQUIP_GENERIC,
+            0f, 0f, ModTags.Items.TOPAZ_REPAIRABLE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"));
 
-    public static final Holder<ArmorMaterial> AMETHYST_ARMOR_MATERIAL = register("amethyst",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 2);
-                attribute.put(ArmorItem.Type.LEGGINGS, 5);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 6);
-                attribute.put(ArmorItem.Type.HELMET, 2);
-                attribute.put(ArmorItem.Type.BODY, 9);
-            }), 12, 0, 0, () -> Items.AMETHYST_SHARD);
+    public static final ArmorMaterial AMETHYST_ARMOR_MATERIAL = new ArmorMaterial(18,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 2);
+                attribute.put(ArmorType.LEGGINGS, 5);
+                attribute.put(ArmorType.CHESTPLATE, 6);
+                attribute.put(ArmorType.HELMET, 2);
+                attribute.put(ArmorType.BODY, 9);
+            }), 12, SoundEvents.ARMOR_EQUIP_GENERIC,
+            0f, 0f, ModTags.Items.AMETHYST_REPAIRABLE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"));
 
-    public static final Holder<ArmorMaterial> QUARTZ_ARMOR_MATERIAL = register("quartz",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 1);
-                attribute.put(ArmorItem.Type.LEGGINGS, 3);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 5);
-                attribute.put(ArmorItem.Type.HELMET, 2);
-                attribute.put(ArmorItem.Type.BODY, 7);
-            }), 10, 0, 0, () -> Items.QUARTZ);
-
-    private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection, int enchantability, float toughness, float knockbackResistance, Supplier<Item> ingredientItem) {
-        ResourceLocation location = ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, name);
-        Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_GENERIC;
-        Supplier<Ingredient> ingredient = () -> Ingredient.of(ingredientItem.get());
-        List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(location));
-
-        EnumMap<ArmorItem.Type, Integer> typeMap = new EnumMap<>(ArmorItem.Type.class);
-        for (ArmorItem.Type type : ArmorItem.Type.values()) {
-            typeMap.put(type, typeProtection.get(type));
-        }
-
-        return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, location, new ArmorMaterial(typeProtection, enchantability, equipSound, ingredient, layers, toughness, knockbackResistance));
-    }
+    public static final ArmorMaterial QUARTZ_ARMOR_MATERIAL = new ArmorMaterial(10,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 1);
+                attribute.put(ArmorType.LEGGINGS, 3);
+                attribute.put(ArmorType.CHESTPLATE, 5);
+                attribute.put(ArmorType.HELMET, 2);
+                attribute.put(ArmorType.BODY, 7);
+            }), 10, SoundEvents.ARMOR_EQUIP_GENERIC,
+            0f, 0f, ModTags.Items.QUARTZ_REPAIRABLE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"));
 }

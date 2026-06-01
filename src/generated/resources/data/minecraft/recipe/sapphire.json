@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "gemsandcrystals:sapphire_block"
-    }
+    "gemsandcrystals:sapphire_block"
   ],
   "result": {
     "count": 9,

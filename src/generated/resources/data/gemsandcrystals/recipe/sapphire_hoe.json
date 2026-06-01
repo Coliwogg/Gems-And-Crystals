@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": {
-      "item": "gemsandcrystals:sapphire"
-    },
-    "|": {
-      "item": "minecraft:stick"
-    }
+    "#": "gemsandcrystals:sapphire",
+    "|": "minecraft:stick"
   },
   "pattern": [
     "##",

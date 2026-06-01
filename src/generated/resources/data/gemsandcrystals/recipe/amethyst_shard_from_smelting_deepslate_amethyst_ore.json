@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 1.0,
   "group": "amethyst",
-  "ingredient": {
-    "item": "gemsandcrystals:deepslate_amethyst_ore"
-  },
+  "ingredient": "gemsandcrystals:deepslate_amethyst_ore",
   "result": {
     "count": 1,
     "id": "minecraft:amethyst_shard"
