@@ -4,9 +4,7 @@
   "cookingtime": 100,
   "experience": 1.0,
   "group": "ruby",
-  "ingredient": {
-    "item": "gemsandcrystals:deepslate_ruby_ore"
-  },
+  "ingredient": "gemsandcrystals:deepslate_ruby_ore",
   "result": {
     "count": 1,
     "id": "gemsandcrystals:ruby"

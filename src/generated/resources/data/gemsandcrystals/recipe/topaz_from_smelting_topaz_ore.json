@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 1.0,
   "group": "topaz",
-  "ingredient": {
-    "item": "gemsandcrystals:topaz_ore"
-  },
+  "ingredient": "gemsandcrystals:topaz_ore",
   "result": {
     "count": 1,
     "id": "gemsandcrystals:topaz"

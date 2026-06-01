@@ -2,10 +2,12 @@ package com.coliwogg.gemsandcrystals.datagen;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.item.ModItems;
+import com.coliwogg.gemsandcrystals.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -13,14 +15,33 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends ItemTagsProvider {
-    public ModItemTagProvider(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
-                              CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
-        super(p_275343_, p_275729_, p_275322_, GemsAndCrystals.MOD_ID, existingFileHelper);
+    public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+                              CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, blockTags, GemsAndCrystals.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(ItemTags.TRIMMABLE_ARMOR)
+    protected void addTags(HolderLookup.Provider provider) {
+
+        tag(ModTags.Items.RUBY_REPAIRABLE)
+                .add(ModItems.RUBY.get());
+
+        tag(ModTags.Items.SAPPHIRE_REPAIRABLE)
+                .add(ModItems.SAPPHIRE.get());
+
+        tag(ModTags.Items.EMERALD_REPAIRABLE)
+                .add(Items.EMERALD);
+
+        tag(ModTags.Items.TOPAZ_REPAIRABLE)
+                .add(ModItems.TOPAZ.get());
+
+        tag(ModTags.Items.AMETHYST_REPAIRABLE)
+                .add(Items.AMETHYST_SHARD);
+
+        tag(ModTags.Items.QUARTZ_REPAIRABLE)
+                .add(Items.QUARTZ);
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.RUBY_HELMET.get(),
                         ModItems.RUBY_CHESTPLATE.get(),
                         ModItems.RUBY_LEGGINGS.get(),
@@ -46,7 +67,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.QUARTZ_LEGGINGS.get(),
                         ModItems.QUARTZ_BOOTS.get());
 
-        this.tag(ItemTags.TRIM_MATERIALS)
+        tag(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.RUBY.get(),
                         ModItems.SAPPHIRE.get(),
                         ModItems.TOPAZ.get());
