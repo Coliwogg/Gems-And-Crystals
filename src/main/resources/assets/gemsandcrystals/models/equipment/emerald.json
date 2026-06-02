@@ -1,0 +1,24 @@
+{
+  "layers": {
+    "wolf_body": [
+      {
+        "texture": "gemsandcrystals:emerald"
+      }
+    ],
+    "horse_body": [
+      {
+        "texture": "gemsandcrystals:emerald"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "gemsandcrystals:emerald"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "gemsandcrystals:emerald"
+      }
+    ]
+  }
+}

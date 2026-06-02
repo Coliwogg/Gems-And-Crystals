@@ -1,0 +1,24 @@
+{
+  "layers": {
+    "wolf_body": [
+      {
+        "texture": "gemsandcrystals:topaz"
+      }
+    ],
+    "horse_body": [
+      {
+        "texture": "gemsandcrystals:topaz"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "gemsandcrystals:topaz"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "gemsandcrystals:topaz"
+      }
+    ]
+  }
+}
