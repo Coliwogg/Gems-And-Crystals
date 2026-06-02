@@ -4,6 +4,5 @@
     "color": "#F9C032",
     "translate": "trim_material.gemsandcrystals.topaz"
   },
-  "ingredient": "gemsandcrystals:topaz",
-  "item_model_index": 0.6
+  "ingredient": "gemsandcrystals:topaz"
 }

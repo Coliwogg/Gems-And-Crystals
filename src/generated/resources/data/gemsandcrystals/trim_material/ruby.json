@@ -4,6 +4,5 @@
     "color": "#F62217",
     "translate": "trim_material.gemsandcrystals.ruby"
   },
-  "ingredient": "gemsandcrystals:ruby",
-  "item_model_index": 0.4
+  "ingredient": "gemsandcrystals:ruby"
 }

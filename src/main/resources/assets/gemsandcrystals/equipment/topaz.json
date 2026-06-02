@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "gemsandcrystals:topaz"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "gemsandcrystals:topaz"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "gemsandcrystals:topaz"
+      }
+    ]
+  }
+}

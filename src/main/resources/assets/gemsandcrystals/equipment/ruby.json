@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "gemsandcrystals:ruby"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "gemsandcrystals:ruby"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "gemsandcrystals:ruby"
+      }
+    ]
+  }
+}
