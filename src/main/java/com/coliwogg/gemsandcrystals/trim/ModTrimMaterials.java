@@ -11,9 +11,8 @@ import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.trim.MaterialAssetGroup;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
-
-import java.util.Map;
 
 public class ModTrimMaterials {
     public static final ResourceKey<TrimMaterial> RUBY =
@@ -26,14 +25,14 @@ public class ModTrimMaterials {
             ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
-        register(context, RUBY, ModItems.RUBY.get(), Style.EMPTY.withColor(TextColor.parseColor("#f62217").getOrThrow()));
-        register(context, SAPPHIRE, ModItems.SAPPHIRE.get(), Style.EMPTY.withColor(TextColor.parseColor("#0067bc").getOrThrow()));
-        register(context, TOPAZ, ModItems.TOPAZ.get(), Style.EMPTY.withColor(TextColor.parseColor("#f9c032").getOrThrow()));
+        register(context, RUBY, ModItems.RUBY.get(), Style.EMPTY.withColor(TextColor.parseColor("#f62217").getOrThrow()), "ruby");
+        register(context, SAPPHIRE, ModItems.SAPPHIRE.get(), Style.EMPTY.withColor(TextColor.parseColor("#0067bc").getOrThrow()), "sapphire");
+        register(context, TOPAZ, ModItems.TOPAZ.get(), Style.EMPTY.withColor(TextColor.parseColor("#f9c032").getOrThrow()), "topaz");
     }
 
-    private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item, Style style) {
-        TrimMaterial trimmaterial = TrimMaterial.create(trimKey.location().getPath(), item,
-                Component.translatable(Util.makeDescriptionId("trim_material", trimKey.location())).withStyle(style), Map.of());
+    private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item, Style style, String name) {
+        TrimMaterial trimmaterial = new TrimMaterial(MaterialAssetGroup.create(name),
+                Component.translatable(Util.makeDescriptionId("trim_material", trimKey.location())).withStyle(style));
         context.register(trimKey, trimmaterial);
     }
 }

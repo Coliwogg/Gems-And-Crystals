@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "gemsandcrystals:item/topaz_boots",
-    "layer1": "minecraft:trims/items/topaz_trim_amethyst"
+    "layer1": "gemsandcrystals:topaz_amethyst"
   }
 }

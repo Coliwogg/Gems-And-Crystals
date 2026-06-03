@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "gemsandcrystals:item/ruby_leggings",
-    "layer1": "minecraft:trims/items/ruby_trim_quartz"
+    "layer1": "gemsandcrystals:ruby_quartz"
   }
 }

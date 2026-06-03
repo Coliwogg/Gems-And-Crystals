@@ -3,6 +3,5 @@
   "description": {
     "color": "#F9C032",
     "translate": "trim_material.gemsandcrystals.topaz"
-  },
-  "ingredient": "gemsandcrystals:topaz"
+  }
 }
