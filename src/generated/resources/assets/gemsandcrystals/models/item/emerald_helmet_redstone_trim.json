@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "gemsandcrystals:item/emerald_helmet",
-    "layer1": "minecraft:trims/items/emerald_trim_redstone"
+    "layer1": "gemsandcrystals:emerald_redstone"
   }
 }

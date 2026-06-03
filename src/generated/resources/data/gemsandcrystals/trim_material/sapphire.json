@@ -3,6 +3,5 @@
   "description": {
     "color": "#0067BC",
     "translate": "trim_material.gemsandcrystals.sapphire"
-  },
-  "ingredient": "gemsandcrystals:sapphire"
+  }
 }
