@@ -6,8 +6,8 @@ import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 
 import java.util.HashMap;
@@ -24,22 +24,28 @@ public class ModEquipmentAssetProvider implements DataProvider {
 
     private static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> output) {
         output.accept(ModArmorMaterials.RUBY_KEY, EquipmentClientInfo.builder()
-                .addHumanoidLayers(ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"), false)
+                .addHumanoidLayers(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"), false)
+                .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY, new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby")))
                 .build());
         output.accept(ModArmorMaterials.SAPPHIRE_KEY, EquipmentClientInfo.builder()
-                .addHumanoidLayers(ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"), false)
+                .addHumanoidLayers(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"), false)
+                .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY, new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire")))
                 .build());
         output.accept(ModArmorMaterials.EMERALD_KEY, EquipmentClientInfo.builder()
-                .addHumanoidLayers(ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"), false)
+                .addHumanoidLayers(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"), false)
+                .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY, new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald")))
                 .build());
         output.accept(ModArmorMaterials.TOPAZ_KEY, EquipmentClientInfo.builder()
-                .addHumanoidLayers(ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"), false)
+                .addHumanoidLayers(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"), false)
+                .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY, new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz")))
                 .build());
         output.accept(ModArmorMaterials.AMETHYST_KEY, EquipmentClientInfo.builder()
-                .addHumanoidLayers(ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"), false)
+                .addHumanoidLayers(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"), false)
+                .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY, new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst")))
                 .build());
         output.accept(ModArmorMaterials.QUARTZ_KEY, EquipmentClientInfo.builder()
-                .addHumanoidLayers(ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"), false)
+                .addHumanoidLayers(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"), false)
+                .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY, new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz")))
                 .build());
     }
 
