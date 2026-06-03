@@ -26,29 +26,6 @@ sourceSets.main.resources {
     exclude("src/generated/**/.cache") // datagen cache files
 }
 
-// Process template files with Gradle properties substitution
-tasks.named('processResources', ProcessResources).configure {
-    def replaceProperties = [
-        mod_id: project.mod_id,
-        mod_name: project.mod_name,
-        mod_version: project.mod_version,
-        mod_license: project.mod_license,
-        mod_authors: project.mod_authors,
-        mod_description: project.mod_description,
-        neo_version: project.neo_version,
-        minecraft_version_range: project.minecraft_version_range,
-        loader_version_range: project.loader_version_range,
-        parchment_minecraft_version: project.parchment_minecraft_version,
-        parchment_mappings_version: project.parchment_mappings_version
-    ]
-    
-    inputs.properties replaceProperties
-    filesMatching('**/*.toml') { expand replaceProperties }
-}
-
-// Also copy and process template directory
-sourceSets.main.resources.srcDir('src/main/templates')
-
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
 }
@@ -57,7 +34,7 @@ base {
     archivesName = mod_id
 }
 
-// Mojang ships Java 21 to end users in 1.21.1, so mods should target Java 21.
+// Mojang ships Java 21 to end users in 1.21.6, so mods should target Java 21.
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
@@ -164,6 +141,33 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
 
+// This block of code expands all declared replace properties in the specified resource targets.
+// A missing property will result in an error. Properties are expanded using ${} Groovy notation.
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+// Include the output of "generateModMetadata" as an input directory for the build
+// this works with both building through Gradle and the IDE.
+sourceSets.main.resources.srcDir generateModMetadata
+// To avoid having to run "generateModMetadata" manually, make it run on every project reload
+neoForge.ideSyncTask generateModMetadata
+
 // Example configuration to allow publishing using the maven-publish plugin
 publishing {
     publications {
@@ -173,7 +177,7 @@ publishing {
     }
     repositories {
         maven {
-            url = "file://${project.projectDir}/repo"
+            url "file://${project.projectDir}/repo"
         }
     }
 }
