@@ -4,6 +4,5 @@
     "color": "#0067BC",
     "translate": "trim_material.gemsandcrystals.sapphire"
   },
-  "ingredient": "gemsandcrystals:sapphire",
-  "item_model_index": 0.9
+  "ingredient": "gemsandcrystals:sapphire"
 }

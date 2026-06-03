@@ -26,13 +26,13 @@ public class ModTrimMaterials {
             ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
-        register(context, RUBY, ModItems.RUBY.get(), Style.EMPTY.withColor(TextColor.parseColor("#f62217").getOrThrow()), 0.4F);
-        register(context, SAPPHIRE, ModItems.SAPPHIRE.get(), Style.EMPTY.withColor(TextColor.parseColor("#0067bc").getOrThrow()), 0.9F);
-        register(context, TOPAZ, ModItems.TOPAZ.get(), Style.EMPTY.withColor(TextColor.parseColor("#f9c032").getOrThrow()), 0.6F);
+        register(context, RUBY, ModItems.RUBY.get(), Style.EMPTY.withColor(TextColor.parseColor("#f62217").getOrThrow()));
+        register(context, SAPPHIRE, ModItems.SAPPHIRE.get(), Style.EMPTY.withColor(TextColor.parseColor("#0067bc").getOrThrow()));
+        register(context, TOPAZ, ModItems.TOPAZ.get(), Style.EMPTY.withColor(TextColor.parseColor("#f9c032").getOrThrow()));
     }
 
-    private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item, Style style, float itemModelIndex) {
-        TrimMaterial trimmaterial = TrimMaterial.create(trimKey.location().getPath(), item, itemModelIndex,
+    private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item, Style style) {
+        TrimMaterial trimmaterial = TrimMaterial.create(trimKey.location().getPath(), item,
                 Component.translatable(Util.makeDescriptionId("trim_material", trimKey.location())).withStyle(style), Map.of());
         context.register(trimKey, trimmaterial);
     }

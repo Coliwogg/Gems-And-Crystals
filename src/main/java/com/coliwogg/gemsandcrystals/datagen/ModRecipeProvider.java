@@ -3,21 +3,18 @@ package com.coliwogg.gemsandcrystals.datagen;
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import com.coliwogg.gemsandcrystals.item.ModItems;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+public class ModRecipeProvider extends RecipeProvider {
     public ModRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
         super(provider, recipeOutput);
     }
@@ -46,51 +43,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> AMETHYST_SMELTABLES = List.of(ModBlocks.AMETHYST_ORE, ModBlocks.DEEPSLATE_AMETHYST_ORE);
         List<ItemLike> QUARTZ_SMELTABLES = List.of(ModBlocks.QUARTZ_ORE, ModBlocks.DEEPSLATE_QUARTZ_ORE);
 
+        oreSmelting(output, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 1.0f, 200, "ruby");
+        oreBlasting(output, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 1.0f, 100, "ruby");
+        oreSmelting(output, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 1.0f, 200, "sapphire");
+        oreBlasting(output, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 1.0f, 100, "sapphire");
+        oreSmelting(output, TOPAZ_SMELTABLES, RecipeCategory.MISC, ModItems.TOPAZ.get(), 1.0f, 200, "topaz");
+        oreBlasting(output, TOPAZ_SMELTABLES, RecipeCategory.MISC, ModItems.TOPAZ.get(), 1.0f, 100, "topaz");
 
-        oreSmelting(output, List.of(ModBlocks.RUBY_ORE.get()), RecipeCategory.MISC,
-                ModItems.RUBY.get(), 1.0f, 200, "ruby");
-        oreSmelting(output, List.of(ModBlocks.DEEPSLATE_RUBY_ORE.get()), RecipeCategory.MISC,
-                ModItems.RUBY.get(), 1.0f, 200, "ruby");
-        oreBlasting(output, List.of(ModBlocks.RUBY_ORE.get()), RecipeCategory.MISC,
-                ModItems.RUBY.get(), 1.0f, 100, "ruby");
-        oreBlasting(output, List.of(ModBlocks.DEEPSLATE_RUBY_ORE.get()), RecipeCategory.MISC,
-                ModItems.RUBY.get(), 1.0f, 100, "ruby");
+        oreSmelting(output, AMETHYST_SMELTABLES, RecipeCategory.MISC, Items.AMETHYST_SHARD.asItem(), 1.0f, 200, "amethyst");
+        oreBlasting(output, AMETHYST_SMELTABLES, RecipeCategory.MISC, Items.AMETHYST_SHARD.asItem(), 1.0f, 100, "amethyst");
 
-        oreSmelting(output, List.of(ModBlocks.SAPPHIRE_ORE.get()), RecipeCategory.MISC,
-                ModItems.SAPPHIRE.get(), 1.0f, 200, "sapphire");
-        oreSmelting(output, List.of(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get()), RecipeCategory.MISC,
-                ModItems.SAPPHIRE.get(), 1.0f, 200, "sapphire");
-        oreBlasting(output, List.of(ModBlocks.SAPPHIRE_ORE.get()), RecipeCategory.MISC,
-                ModItems.SAPPHIRE.get(), 1.0f, 100, "sapphire");
-        oreBlasting(output, List.of(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get()), RecipeCategory.MISC,
-                ModItems.SAPPHIRE.get(), 1.0f, 100, "sapphire");
-
-        oreSmelting(output, List.of(ModBlocks.TOPAZ_ORE.get()), RecipeCategory.MISC,
-                ModItems.TOPAZ.get(), 1.0f, 200, "topaz");
-        oreSmelting(output, List.of(ModBlocks.DEEPSLATE_TOPAZ_ORE.get()), RecipeCategory.MISC,
-                ModItems.TOPAZ.get(), 1.0f, 200, "topaz");
-        oreBlasting(output, List.of(ModBlocks.TOPAZ_ORE.get()), RecipeCategory.MISC,
-                ModItems.TOPAZ.get(), 1.0f, 100, "topaz");
-        oreBlasting(output, List.of(ModBlocks.DEEPSLATE_TOPAZ_ORE.get()), RecipeCategory.MISC,
-                ModItems.TOPAZ.get(), 1.0f, 100, "topaz");
-
-        oreSmelting(output, List.of(ModBlocks.AMETHYST_ORE.get()), RecipeCategory.MISC,
-                Items.AMETHYST_SHARD.asItem(), 1.0f, 200, "amethyst");
-        oreSmelting(output, List.of(ModBlocks.DEEPSLATE_AMETHYST_ORE.get()), RecipeCategory.MISC,
-                Items.AMETHYST_SHARD.asItem(), 1.0f, 200, "amethyst");
-        oreBlasting(output, List.of(ModBlocks.AMETHYST_ORE.get()), RecipeCategory.MISC,
-                Items.AMETHYST_SHARD.asItem(), 1.0f, 100, "amethyst");
-        oreBlasting(output, List.of(ModBlocks.DEEPSLATE_AMETHYST_ORE.get()), RecipeCategory.MISC,
-                Items.AMETHYST_SHARD.asItem(), 1.0f, 100, "amethyst");
-
-        oreSmelting(output, List.of(ModBlocks.QUARTZ_ORE.get()), RecipeCategory.MISC,
-                Items.QUARTZ.asItem(), 1.0f, 200, "quartz");
-        oreSmelting(output, List.of(ModBlocks.DEEPSLATE_QUARTZ_ORE.get()), RecipeCategory.MISC,
-                Items.QUARTZ.asItem(), 1.0f, 200, "quartz");
-        oreBlasting(output, List.of(ModBlocks.QUARTZ_ORE.get()), RecipeCategory.MISC,
-                Items.QUARTZ.asItem(), 1.0f, 100, "quartz");
-        oreBlasting(output, List.of(ModBlocks.DEEPSLATE_QUARTZ_ORE.get()), RecipeCategory.MISC,
-                Items.QUARTZ.asItem(), 1.0f, 100, "quartz");
+        oreSmelting(output, QUARTZ_SMELTABLES, RecipeCategory.MISC, Items.QUARTZ.asItem(), 1.0f, 200, "quartz");
+        oreBlasting(output, QUARTZ_SMELTABLES, RecipeCategory.MISC, Items.QUARTZ.asItem(), 1.0f, 100, "quartz");
 
         nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.RUBY.get(),
                 RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get());
