@@ -2,27 +2,26 @@ package com.coliwogg.gemsandcrystals.item;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.util.ModTags;
-import net.minecraft.Util;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Util;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
-import net.minecraft.world.item.equipment.EquipmentAssets;
 
 import java.util.EnumMap;
 
 public class ModArmorMaterials {
-    public static final ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(ResourceLocation.withDefaultNamespace("equipment_asset"));
+    public static final ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset"));
 
-    public static final ResourceKey<EquipmentAsset> RUBY_KEY = ResourceKey.create(ROOT_ID, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"));
-    public static final ResourceKey<EquipmentAsset> SAPPHIRE_KEY = ResourceKey.create(ROOT_ID, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"));
-    public static final ResourceKey<EquipmentAsset> EMERALD_KEY = ResourceKey.create(ROOT_ID, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"));
-    public static final ResourceKey<EquipmentAsset> TOPAZ_KEY = ResourceKey.create(ROOT_ID, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"));
-    public static final ResourceKey<EquipmentAsset> AMETHYST_KEY = ResourceKey.create(ROOT_ID, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"));
-    public static final ResourceKey<EquipmentAsset> QUARTZ_KEY = ResourceKey.create(ROOT_ID, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"));
+    public static final ResourceKey<EquipmentAsset> RUBY_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"));
+    public static final ResourceKey<EquipmentAsset> SAPPHIRE_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"));
+    public static final ResourceKey<EquipmentAsset> EMERALD_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"));
+    public static final ResourceKey<EquipmentAsset> TOPAZ_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"));
+    public static final ResourceKey<EquipmentAsset> AMETHYST_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"));
+    public static final ResourceKey<EquipmentAsset> QUARTZ_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"));
 
     public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(35,
             Util.make(new EnumMap<>(ArmorType.class), attribute -> {

@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "gemsandcrystals:amethyst"
+      }
+    ],
     "humanoid": [
       {
         "texture": "gemsandcrystals:amethyst"

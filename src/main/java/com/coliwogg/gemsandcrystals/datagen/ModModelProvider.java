@@ -9,7 +9,6 @@ import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 
 public class ModModelProvider extends ModelProvider {
     public ModModelProvider(PackOutput output) {
