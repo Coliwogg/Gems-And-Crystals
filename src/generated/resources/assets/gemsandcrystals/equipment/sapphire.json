@@ -1,10 +1,5 @@
 {
   "layers": {
-    "horse_body": [
-      {
-        "texture": "gemsandcrystals:sapphire"
-      }
-    ],
     "humanoid": [
       {
         "texture": "gemsandcrystals:sapphire"

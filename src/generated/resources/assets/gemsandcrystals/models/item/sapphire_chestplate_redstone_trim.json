@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "gemsandcrystals:item/sapphire_chestplate",
-    "layer1": "gemsandcrystals:sapphire_redstone"
+    "layer1": "minecraft:trims/items/chestplate_trim_redstone"
   }
 }

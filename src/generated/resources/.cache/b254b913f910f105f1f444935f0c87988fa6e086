@@ -1,9 +1,12 @@
-// 1.21.6	2026-06-03T14:21:15.9724155	Tags for minecraft:item mod id gemsandcrystals
+// 1.21.10	2026-06-03T15:17:59.1963266	Tags for minecraft:item mod id gemsandcrystals
 bde6ca31173d1f22d5f6fe355dc90c9faa35b239 data/gemsandcrystals/tags/item/amethyst_repairable.json
 8c4f379d97e2cd8c7f9297bf4fab7e60083ecb0d data/gemsandcrystals/tags/item/emerald_repairable.json
 42605e6989bb70ecdd5f2ded50fbb315b1c185ec data/gemsandcrystals/tags/item/quartz_repairable.json
 06dace5883f23475422f6973723e518971ddda08 data/gemsandcrystals/tags/item/ruby_repairable.json
 063eff39abeb339ef20b48153ce072fb31827c32 data/gemsandcrystals/tags/item/sapphire_repairable.json
 05afd86327d9482ba7adb92019ed235aea5bc31e data/gemsandcrystals/tags/item/topaz_repairable.json
-70b3ff28fb0adfb18cec5b42047462f02e33557b data/minecraft/tags/item/trimmable_armor.json
+647119eecd7597f9ff0618c27e0bf20d09f831a2 data/minecraft/tags/item/chest_armor.json
+317c98d48a2c1434bbec8fdf07c685dc813406d7 data/minecraft/tags/item/foot_armor.json
+6b2a4b25cedd794fbfb73275dd1a43d729aacae1 data/minecraft/tags/item/head_armor.json
+ac53947f186fd78d495f3e00fc8effa706917f63 data/minecraft/tags/item/leg_armor.json
 75730d60cfb9b800bcfb3900a601586d731eb500 data/minecraft/tags/item/trim_materials.json

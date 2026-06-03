@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "gemsandcrystals:item/quartz_boots",
-    "layer1": "gemsandcrystals:quartz_amethyst"
+    "layer1": "minecraft:trims/items/boots_trim_amethyst"
   }
 }

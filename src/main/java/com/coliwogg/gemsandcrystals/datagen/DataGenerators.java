@@ -23,12 +23,14 @@ public class DataGenerators {
         generator.addProvider(true, ModLootTableProvider.create(packOutput, lookupProvider));
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
 
-        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider);
+        BlockTagsProvider blockTagsProvider = new ModBlockTagsProvider(packOutput, lookupProvider);
         generator.addProvider(true, blockTagsProvider);
-        generator.addProvider(true, new ModItemTagProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
 
         generator.addProvider(true, new ModModelProvider(packOutput));
         generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
+
+        generator.addProvider(true, new ModEquipmentAssetProvider(packOutput));
     }
 
     @SubscribeEvent
@@ -40,11 +42,13 @@ public class DataGenerators {
         generator.addProvider(true, ModLootTableProvider.create(packOutput, lookupProvider));
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
 
-        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider);
+        BlockTagsProvider blockTagsProvider = new ModBlockTagsProvider(packOutput, lookupProvider);
         generator.addProvider(true, blockTagsProvider);
-        generator.addProvider(true, new ModItemTagProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
 
         generator.addProvider(true, new ModModelProvider(packOutput));
         generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
+
+        generator.addProvider(true, new ModEquipmentAssetProvider(packOutput));
     }
 }
