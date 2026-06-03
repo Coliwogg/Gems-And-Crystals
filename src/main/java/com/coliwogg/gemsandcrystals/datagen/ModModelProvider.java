@@ -66,40 +66,40 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.QUARTZ_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
         /* Ruby Armor */
-        itemModels.generateTrimmableItem(ModItems.RUBY_HELMET.get(), ModArmorMaterials.RUBY, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"), false);
-        itemModels.generateTrimmableItem(ModItems.RUBY_CHESTPLATE.get(), ModArmorMaterials.RUBY, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"), false);
-        itemModels.generateTrimmableItem(ModItems.RUBY_LEGGINGS.get(), ModArmorMaterials.RUBY, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"), false);
-        itemModels.generateTrimmableItem(ModItems.RUBY_BOOTS.get(), ModArmorMaterials.RUBY, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "ruby"), false);
+        itemModels.generateTrimmableItem(ModItems.RUBY_HELMET.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.RUBY_CHESTPLATE.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.RUBY_LEGGINGS.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.RUBY_BOOTS.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* Sapphire Armor */
-        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_HELMET.get(), ModArmorMaterials.SAPPHIRE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"), false);
-        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_CHESTPLATE.get(), ModArmorMaterials.SAPPHIRE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"), false);
-        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_LEGGINGS.get(), ModArmorMaterials.SAPPHIRE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"), false);
-        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_BOOTS.get(), ModArmorMaterials.SAPPHIRE, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "sapphire"), false);
+        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_HELMET.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_CHESTPLATE.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_LEGGINGS.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.SAPPHIRE_BOOTS.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* Emerald Armor */
-        itemModels.generateTrimmableItem(ModItems.EMERALD_HELMET.get(), ModArmorMaterials.EMERALD, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"), false);
-        itemModels.generateTrimmableItem(ModItems.EMERALD_CHESTPLATE.get(), ModArmorMaterials.EMERALD, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"), false);
-        itemModels.generateTrimmableItem(ModItems.EMERALD_LEGGINGS.get(), ModArmorMaterials.EMERALD, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"), false);
-        itemModels.generateTrimmableItem(ModItems.EMERALD_BOOTS.get(), ModArmorMaterials.EMERALD, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "emerald"), false);
+        itemModels.generateTrimmableItem(ModItems.EMERALD_HELMET.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.EMERALD_CHESTPLATE.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.EMERALD_LEGGINGS.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.EMERALD_BOOTS.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* Topaz Armor */
-        itemModels.generateTrimmableItem(ModItems.TOPAZ_HELMET.get(), ModArmorMaterials.TOPAZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"), false);
-        itemModels.generateTrimmableItem(ModItems.TOPAZ_CHESTPLATE.get(), ModArmorMaterials.TOPAZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"), false);
-        itemModels.generateTrimmableItem(ModItems.TOPAZ_LEGGINGS.get(), ModArmorMaterials.TOPAZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"), false);
-        itemModels.generateTrimmableItem(ModItems.TOPAZ_BOOTS.get(), ModArmorMaterials.TOPAZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "topaz"), false);
+        itemModels.generateTrimmableItem(ModItems.TOPAZ_HELMET.get(), ModArmorMaterials.TOPAZ_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.TOPAZ_CHESTPLATE.get(), ModArmorMaterials.TOPAZ_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.TOPAZ_LEGGINGS.get(), ModArmorMaterials.TOPAZ_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.TOPAZ_BOOTS.get(), ModArmorMaterials.TOPAZ_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* Amethyst Armor */
-        itemModels.generateTrimmableItem(ModItems.AMETHYST_HELMET.get(), ModArmorMaterials.AMETHYST, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"), false);
-        itemModels.generateTrimmableItem(ModItems.AMETHYST_CHESTPLATE.get(), ModArmorMaterials.AMETHYST, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"), false);
-        itemModels.generateTrimmableItem(ModItems.AMETHYST_LEGGINGS.get(), ModArmorMaterials.AMETHYST, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"), false);
-        itemModels.generateTrimmableItem(ModItems.AMETHYST_BOOTS.get(), ModArmorMaterials.AMETHYST, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"), false);
+        itemModels.generateTrimmableItem(ModItems.AMETHYST_HELMET.get(), ModArmorMaterials.AMETHYST_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.AMETHYST_CHESTPLATE.get(), ModArmorMaterials.AMETHYST_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.AMETHYST_LEGGINGS.get(), ModArmorMaterials.AMETHYST_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.AMETHYST_BOOTS.get(), ModArmorMaterials.AMETHYST_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* Quartz Armor */
-        itemModels.generateTrimmableItem(ModItems.QUARTZ_HELMET.get(), ModArmorMaterials.QUARTZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"), false);
-        itemModels.generateTrimmableItem(ModItems.QUARTZ_CHESTPLATE.get(), ModArmorMaterials.QUARTZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"), false);
-        itemModels.generateTrimmableItem(ModItems.QUARTZ_LEGGINGS.get(), ModArmorMaterials.QUARTZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"), false);
-        itemModels.generateTrimmableItem(ModItems.QUARTZ_BOOTS.get(), ModArmorMaterials.QUARTZ, ResourceLocation.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"), false);
+        itemModels.generateTrimmableItem(ModItems.QUARTZ_HELMET.get(), ModArmorMaterials.QUARTZ_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.QUARTZ_CHESTPLATE.get(), ModArmorMaterials.QUARTZ_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.QUARTZ_LEGGINGS.get(), ModArmorMaterials.QUARTZ_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.QUARTZ_BOOTS.get(), ModArmorMaterials.QUARTZ_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* Horse Armor */
         itemModels.generateFlatItem(ModItems.RUBY_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);

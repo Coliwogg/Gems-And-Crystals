@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "gemsandcrystals:item/amethyst_leggings",
-    "layer1": "gemsandcrystals:amethyst_resin"
+    "layer1": "minecraft:trims/items/leggings_trim_resin"
   }
 }

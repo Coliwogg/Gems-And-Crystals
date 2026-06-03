@@ -13,9 +13,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GemsAndCrystals.MOD_ID);
 
-    public static final DeferredItem<Item> RUBY = ITEMS.registerItem("ruby", Item::new, new Item.Properties());
-    public static final DeferredItem<Item> SAPPHIRE = ITEMS.registerItem("sapphire", Item::new, new Item.Properties());
-    public static final DeferredItem<Item> TOPAZ = ITEMS.registerItem("topaz", Item::new, new Item.Properties());
+    public static final DeferredItem<Item> RUBY = ITEMS.registerSimpleItem("ruby");
+    public static final DeferredItem<Item> SAPPHIRE = ITEMS.registerSimpleItem("sapphire");
+    public static final DeferredItem<Item> TOPAZ = ITEMS.registerSimpleItem("topaz");
 
     public static final DeferredItem<Item> RUBY_SWORD = ITEMS.registerItem("ruby_sword", (properties) -> new Item(properties.sword(ModToolTiers.RUBY, 3, -2.4f)));
     public static final DeferredItem<ShovelItem> RUBY_SHOVEL = ITEMS.registerItem("ruby_shovel", (properties) -> new ShovelItem(ModToolTiers.RUBY, 1.5F, -3.0f, properties));

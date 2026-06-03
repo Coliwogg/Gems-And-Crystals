@@ -9,14 +9,14 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModBlockTagProvider extends BlockTagsProvider {
-    public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+public class ModBlockTagsProvider extends BlockTagsProvider {
+    public ModBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider, GemsAndCrystals.MOD_ID);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.RUBY_ORE.get(),
                         ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                         ModBlocks.RUBY_BLOCK.get(),
@@ -31,7 +31,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.QUARTZ_ORE.get(),
                         ModBlocks.DEEPSLATE_QUARTZ_ORE.get());
 
-        this.tag(BlockTags.NEEDS_IRON_TOOL)
+        tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RUBY_ORE.get(),
                         ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                         ModBlocks.RUBY_BLOCK.get(),
