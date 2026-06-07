@@ -23,64 +23,69 @@ public class ModArmorMaterials {
     public static final ResourceKey<EquipmentAsset> AMETHYST_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "amethyst"));
     public static final ResourceKey<EquipmentAsset> QUARTZ_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(GemsAndCrystals.MOD_ID, "quartz"));
 
-    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(35,
+    // RUBY: Juggernaut armor. Maximum protection, high toughness (3.0f), and massive Knockback Resistance (0.25f per piece!)
+    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(37,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 3); 
+                attribute.put(ArmorType.LEGGINGS, 6);
+                attribute.put(ArmorType.CHESTPLATE, 8); 
+                attribute.put(ArmorType.HELMET, 3);
+                attribute.put(ArmorType.BODY, 11);
+            }), 10, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            3.0f, 0.25f, ModTags.Items.RUBY_REPAIRABLE, RUBY_KEY);
+
+    // SAPPHIRE: Battle-mage armor. High enchantment value (25), fair toughness (2.0f), no knockback resistance.
+    public static final ArmorMaterial SAPPHIRE_ARMOR_MATERIAL = new ArmorMaterial(28,
             Util.make(new EnumMap<>(ArmorType.class), attribute -> {
                 attribute.put(ArmorType.BOOTS, 3);
-                attribute.put(ArmorType.LEGGINGS, 6);
-                attribute.put(ArmorType.CHESTPLATE, 8);
+                attribute.put(ArmorType.LEGGINGS, 5);
+                attribute.put(ArmorType.CHESTPLATE, 7);
                 attribute.put(ArmorType.HELMET, 3);
-                attribute.put(ArmorType.BODY, 11);
-            }), 16, SoundEvents.ARMOR_EQUIP_DIAMOND,
-            2.5f, 0.1f, ModTags.Items.RUBY_REPAIRABLE, RUBY_KEY);
+                attribute.put(ArmorType.BODY, 10);
+            }), 25, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            2.0f, 0.0f, ModTags.Items.SAPPHIRE_REPAIRABLE, SAPPHIRE_KEY);
 
-    public static final ArmorMaterial SAPPHIRE_ARMOR_MATERIAL = new ArmorMaterial(35,
-            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
-                attribute.put(ArmorType.BOOTS, 3);
-                attribute.put(ArmorType.LEGGINGS, 6);
-                attribute.put(ArmorType.CHESTPLATE, 8);
-                attribute.put(ArmorType.HELMET, 3);
-                attribute.put(ArmorType.BODY, 11);
-            }), 16, SoundEvents.ARMOR_EQUIP_DIAMOND,
-            2.5f, 0.1f, ModTags.Items.SAPPHIRE_REPAIRABLE, SAPPHIRE_KEY);
-
-    public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new ArmorMaterial(32,
-            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
-                attribute.put(ArmorType.BOOTS, 2);
-                attribute.put(ArmorType.LEGGINGS, 6);
-                attribute.put(ArmorType.CHESTPLATE, 8);
-                attribute.put(ArmorType.HELMET, 3);
-                attribute.put(ArmorType.BODY, 11);
-            }),14, SoundEvents.ARMOR_EQUIP_DIAMOND,
-            1.5f, 0.1f, ModTags.Items.EMERALD_REPAIRABLE, EMERALD_KEY);
-
-    public static final ArmorMaterial TOPAZ_ARMOR_MATERIAL = new ArmorMaterial(22,
-            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
-                attribute.put(ArmorType.BOOTS, 2);
-                attribute.put(ArmorType.LEGGINGS, 6);
-                attribute.put(ArmorType.CHESTPLATE, 8);
-                attribute.put(ArmorType.HELMET, 3);
-                attribute.put(ArmorType.BODY, 9);
-            }), 13, SoundEvents.ARMOR_EQUIP_GENERIC,
-            0f, 0f, ModTags.Items.TOPAZ_REPAIRABLE, TOPAZ_KEY);
-
-    public static final ArmorMaterial AMETHYST_ARMOR_MATERIAL = new ArmorMaterial(18,
+    // EMERALD: Utility gear. Decent defenses, low toughness, but highly enchantable.
+    public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new ArmorMaterial(22,
             Util.make(new EnumMap<>(ArmorType.class), attribute -> {
                 attribute.put(ArmorType.BOOTS, 2);
                 attribute.put(ArmorType.LEGGINGS, 5);
                 attribute.put(ArmorType.CHESTPLATE, 6);
-                attribute.put(ArmorType.HELMET, 2);
+                attribute.put(ArmorType.HELMET, 3);
                 attribute.put(ArmorType.BODY, 9);
-            }), 12, SoundEvents.ARMOR_EQUIP_GENERIC,
-            0f, 0f, ModTags.Items.AMETHYST_REPAIRABLE, AMETHYST_KEY);
+            }), 20, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            1.0f, 0.0f, ModTags.Items.EMERALD_REPAIRABLE, EMERALD_KEY);
 
-    public static final ArmorMaterial QUARTZ_ARMOR_MATERIAL = new ArmorMaterial(10,
+    // TOPAZ: Flak / Light Striker jacket. Low base armor points, but grants standard toughness (1.0f) so it scales against big hits.
+    public static final ArmorMaterial TOPAZ_ARMOR_MATERIAL = new ArmorMaterial(16,
             Util.make(new EnumMap<>(ArmorType.class), attribute -> {
-                attribute.put(ArmorType.BOOTS, 1);
-                attribute.put(ArmorType.BOOTS, 1);
-                attribute.put(ArmorType.LEGGINGS, 3);
+                attribute.put(ArmorType.BOOTS, 2);
+                attribute.put(ArmorType.LEGGINGS, 4);
                 attribute.put(ArmorType.CHESTPLATE, 5);
                 attribute.put(ArmorType.HELMET, 2);
                 attribute.put(ArmorType.BODY, 7);
-            }), 10, SoundEvents.ARMOR_EQUIP_GENERIC,
+            }), 14, SoundEvents.ARMOR_EQUIP_GENERIC,
+            1.0f, 0.0f, ModTags.Items.TOPAZ_REPAIRABLE, TOPAZ_KEY);
+
+    // AMETHYST: Light evasive gear. Extremely weak armor points, but high enchantability (18) to allow custom builds.
+    public static final ArmorMaterial AMETHYST_ARMOR_MATERIAL = new ArmorMaterial(12,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 1);
+                attribute.put(ArmorType.LEGGINGS, 3);
+                attribute.put(ArmorType.CHESTPLATE, 4);
+                attribute.put(ArmorType.HELMET, 2);
+                attribute.put(ArmorType.BODY, 5);
+            }), 18, SoundEvents.ARMOR_EQUIP_GENERIC,
+            0f, 0f, ModTags.Items.AMETHYST_REPAIRABLE, AMETHYST_KEY);
+
+    // QUARTZ: Fragile glass armor. Decent initial chunk protection, but zero toughness or knockback resistance, breaks fast.
+    public static final ArmorMaterial QUARTZ_ARMOR_MATERIAL = new ArmorMaterial(6,
+            Util.make(new EnumMap<>(ArmorType.class), attribute -> {
+                attribute.put(ArmorType.BOOTS, 2);
+                attribute.put(ArmorType.LEGGINGS, 3);
+                attribute.put(ArmorType.CHESTPLATE, 5);
+                attribute.put(ArmorType.HELMET, 2);
+                attribute.put(ArmorType.BODY, 6);
+            }), 8, SoundEvents.ARMOR_EQUIP_GENERIC,
             0f, 0f, ModTags.Items.QUARTZ_REPAIRABLE, QUARTZ_KEY);
 }

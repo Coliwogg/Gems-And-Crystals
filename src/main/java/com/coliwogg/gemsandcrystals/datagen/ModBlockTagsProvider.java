@@ -5,6 +5,7 @@ import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
@@ -29,21 +30,29 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                         ModBlocks.AMETHYST_ORE.get(),
                         ModBlocks.DEEPSLATE_AMETHYST_ORE.get(),
                         ModBlocks.QUARTZ_ORE.get(),
-                        ModBlocks.DEEPSLATE_QUARTZ_ORE.get());
+                        ModBlocks.DEEPSLATE_QUARTZ_ORE.get(),
+                        ModBlocks.BUDDING_QUARTZ.get(),
+                        ModBlocks.QUARTZ_CLUSTER.get(),
+                        ModBlocks.LARGE_QUARTZ_BUD.get(),
+                        ModBlocks.MEDIUM_QUARTZ_BUD.get(),
+                        ModBlocks.SMALL_QUARTZ_BUD.get());
 
-        tag(BlockTags.NEEDS_IRON_TOOL)
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RUBY_ORE.get(),
                         ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                         ModBlocks.RUBY_BLOCK.get(),
                         ModBlocks.SAPPHIRE_ORE.get(),
                         ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
-                        ModBlocks.SAPPHIRE_BLOCK.get(),
-                        ModBlocks.TOPAZ_ORE.get(),
+                        ModBlocks.SAPPHIRE_BLOCK.get());
+
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.TOPAZ_ORE.get(),
                         ModBlocks.DEEPSLATE_TOPAZ_ORE.get(),
                         ModBlocks.TOPAZ_BLOCK.get(),
                         ModBlocks.AMETHYST_ORE.get(),
                         ModBlocks.DEEPSLATE_AMETHYST_ORE.get(),
                         ModBlocks.QUARTZ_ORE.get(),
-                        ModBlocks.DEEPSLATE_QUARTZ_ORE.get());
+                        ModBlocks.DEEPSLATE_QUARTZ_ORE.get(),
+                        ModBlocks.BUDDING_QUARTZ.get());
     }
 }

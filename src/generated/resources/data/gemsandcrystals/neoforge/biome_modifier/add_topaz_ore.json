@@ -1,6 +1,23 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": "gemsandcrystals:topaz_ore_placed",
+  "biomes": [
+    "minecraft:desert",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:windswept_savanna",
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:meadow",
+    "minecraft:cherry_grove",
+    "minecraft:stony_peaks",
+    "minecraft:warm_ocean",
+    "minecraft:lukewarm_ocean",
+    "minecraft:deep_lukewarm_ocean"
+  ],
+  "features": [
+    "gemsandcrystals:topaz_ore_small_placed",
+    "gemsandcrystals:topaz_ore_large_placed"
+  ],
   "step": "underground_ores"
 }

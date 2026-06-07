@@ -1,9 +1,9 @@
 {
-  "feature": "gemsandcrystals:amethyst_ore",
+  "feature": "gemsandcrystals:sapphire_ore_small",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 7
+      "count": 1
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:trapezoid",
         "max_inclusive": {
-          "above_bottom": 60
+          "absolute": -10
         },
         "min_inclusive": {
-          "above_bottom": -80
+          "absolute": -58
         }
       }
     },

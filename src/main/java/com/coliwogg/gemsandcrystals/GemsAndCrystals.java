@@ -61,6 +61,11 @@ public class GemsAndCrystals {
             event.accept(ModBlocks.DEEPSLATE_AMETHYST_ORE);
             event.accept(ModBlocks.QUARTZ_ORE);
             event.accept(ModBlocks.DEEPSLATE_QUARTZ_ORE);
+            event.accept(ModBlocks.BUDDING_QUARTZ);
+            event.accept(ModBlocks.SMALL_QUARTZ_BUD);
+            event.accept(ModBlocks.MEDIUM_QUARTZ_BUD);
+            event.accept(ModBlocks.LARGE_QUARTZ_BUD);
+            event.accept(ModBlocks.QUARTZ_CLUSTER);
         }
 
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
@@ -152,6 +157,11 @@ public class GemsAndCrystals {
             event.accept(ModBlocks.DEEPSLATE_AMETHYST_ORE);
             event.accept(ModBlocks.QUARTZ_ORE);
             event.accept(ModBlocks.DEEPSLATE_QUARTZ_ORE);
+            event.accept(ModBlocks.BUDDING_QUARTZ);
+            event.accept(ModBlocks.SMALL_QUARTZ_BUD);
+            event.accept(ModBlocks.MEDIUM_QUARTZ_BUD);
+            event.accept(ModBlocks.LARGE_QUARTZ_BUD);
+            event.accept(ModBlocks.QUARTZ_CLUSTER);
             event.accept(ModItems.RUBY_SWORD);
             event.accept(ModItems.RUBY_SHOVEL);
             event.accept(ModItems.RUBY_PICKAXE);

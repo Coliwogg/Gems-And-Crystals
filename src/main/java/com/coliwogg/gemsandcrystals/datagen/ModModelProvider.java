@@ -7,8 +7,12 @@ import com.coliwogg.gemsandcrystals.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.MultiVariant;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
 
 public class ModModelProvider extends ModelProvider {
     public ModModelProvider(PackOutput output) {
@@ -108,6 +112,10 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.AMETHYST_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.QUARTZ_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
 
+        itemModels.declareCustomModelItem(ModBlocks.QUARTZ_CLUSTER.get().asItem());
+        itemModels.declareCustomModelItem(ModBlocks.LARGE_QUARTZ_BUD.get().asItem());
+        itemModels.declareCustomModelItem(ModBlocks.MEDIUM_QUARTZ_BUD.get().asItem());
+        itemModels.declareCustomModelItem(ModBlocks.SMALL_QUARTZ_BUD.get().asItem());
 
         /*** BLOCKS ***/
         blockModels.createTrivialCube(ModBlocks.RUBY_BLOCK.get());
@@ -123,7 +131,25 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.DEEPSLATE_AMETHYST_ORE.get());
         blockModels.createTrivialCube(ModBlocks.QUARTZ_ORE.get());
         blockModels.createTrivialCube(ModBlocks.DEEPSLATE_QUARTZ_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.BUDDING_QUARTZ.get());
 
+        createQuartzCluster(blockModels, ModBlocks.SMALL_QUARTZ_BUD.get());
+        createQuartzCluster(blockModels, ModBlocks.MEDIUM_QUARTZ_BUD.get());
+        createQuartzCluster(blockModels, ModBlocks.LARGE_QUARTZ_BUD.get());
+        createQuartzCluster(blockModels, ModBlocks.QUARTZ_CLUSTER.get());
     }
 
+    private void createQuartzCluster(BlockModelGenerators blockModels, Block block) {
+        MultiVariant multiVariant = BlockModelGenerators.plainVariant(
+                ModelTemplates.CROSS
+                        .extend()
+                        .renderType("minecraft:cutout")
+                        .build()
+                        .create(block, TextureMapping.cross(block), blockModels.modelOutput)
+        );
+        blockModels.blockStateOutput.accept(
+                MultiVariantGenerator.dispatch(block, multiVariant)
+                        .with(BlockModelGenerators.ROTATIONS_COLUMN_WITH_FACING)
+        );
+    }
 }

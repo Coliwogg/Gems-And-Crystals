@@ -1,6 +1,23 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": "gemsandcrystals:sapphire_ore_placed",
+  "biomes": [
+    "minecraft:snowy_plains",
+    "minecraft:ice_spikes",
+    "minecraft:snowy_taiga",
+    "minecraft:grove",
+    "minecraft:snowy_slopes",
+    "minecraft:frozen_peaks",
+    "minecraft:jagged_peaks",
+    "minecraft:frozen_ocean",
+    "minecraft:cold_ocean",
+    "minecraft:deep_cold_ocean",
+    "minecraft:deep_frozen_ocean",
+    "minecraft:frozen_river",
+    "minecraft:snowy_beach"
+  ],
+  "features": [
+    "gemsandcrystals:sapphire_ore_small_placed",
+    "gemsandcrystals:sapphire_ore_large_placed"
+  ],
   "step": "underground_ores"
 }

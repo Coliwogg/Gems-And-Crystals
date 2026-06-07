@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "gemsandcrystals:topaz_ore"
+          "Name": "gemsandcrystals:quartz_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "gemsandcrystals:deepslate_topaz_ore"
+          "Name": "gemsandcrystals:deepslate_quartz_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
