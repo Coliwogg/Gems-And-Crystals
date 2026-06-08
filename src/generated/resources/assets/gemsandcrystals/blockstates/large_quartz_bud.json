@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "gemsandcrystals:block/large_quartz_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "gemsandcrystals:block/large_quartz_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gemsandcrystals:block/large_quartz_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "gemsandcrystals:block/large_quartz_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "gemsandcrystals:block/large_quartz_bud"
+    },
+    "facing=west": {
+      "model": "gemsandcrystals:block/large_quartz_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

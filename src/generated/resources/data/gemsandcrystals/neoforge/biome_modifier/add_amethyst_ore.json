@@ -1,6 +1,14 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": "gemsandcrystals:amethyst_ore_placed",
+  "biomes": [
+    "minecraft:deep_dark",
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:stony_shore",
+    "minecraft:mushroom_fields",
+    "minecraft:dark_forest",
+    "minecraft:pale_garden"
+  ],
+  "features": "gemsandcrystals:amethyst_ore_small_placed",
   "step": "underground_ores"
 }

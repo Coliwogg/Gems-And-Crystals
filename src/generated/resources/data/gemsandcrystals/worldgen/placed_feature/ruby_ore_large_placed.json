@@ -1,9 +1,9 @@
 {
-  "feature": "gemsandcrystals:quartz_ore",
+  "feature": "gemsandcrystals:ruby_ore_large",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 8
+      "type": "minecraft:rarity_filter",
+      "chance": 1
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:trapezoid",
         "max_inclusive": {
-          "above_bottom": 80
+          "absolute": -20
         },
         "min_inclusive": {
-          "above_bottom": -80
+          "absolute": -64
         }
       }
     },

@@ -8,6 +8,9 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import java.util.Set;
 
@@ -21,7 +24,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RUBY_BLOCK.get());
         dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         dropSelf(ModBlocks.TOPAZ_BLOCK.get());
-
         add(ModBlocks.RUBY_ORE.get(), (block) -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get()));
         add(ModBlocks.DEEPSLATE_RUBY_ORE.get(), (block) -> createOreDrop(ModBlocks.DEEPSLATE_RUBY_ORE.get(), ModItems.RUBY.get()));
         add(ModBlocks.SAPPHIRE_ORE.get(), (block) -> createOreDrop(ModBlocks.SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get()));
@@ -32,6 +34,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.DEEPSLATE_AMETHYST_ORE.get(), (block) -> createOreDrop(ModBlocks.DEEPSLATE_AMETHYST_ORE.get(), Items.AMETHYST_SHARD.asItem()));
         add(ModBlocks.QUARTZ_ORE.get(), (block) -> createOreDrop(ModBlocks.QUARTZ_ORE.get(), Items.QUARTZ.asItem()));
         add(ModBlocks.DEEPSLATE_QUARTZ_ORE.get(), (block) -> createOreDrop(ModBlocks.DEEPSLATE_QUARTZ_ORE.get(), Items.QUARTZ.asItem()));
+        add(ModBlocks.BUDDING_QUARTZ.get(), noDrop());
+        add(ModBlocks.SMALL_QUARTZ_BUD.get(), noDrop());
+        add(ModBlocks.MEDIUM_QUARTZ_BUD.get(), noDrop());
+        add(ModBlocks.LARGE_QUARTZ_BUD.get(), noDrop());
+        add(ModBlocks.QUARTZ_CLUSTER.get(),
+                createSilkTouchDispatchTable(
+                        ModBlocks.QUARTZ_CLUSTER.get(),
+                        applyExplosionDecay(
+                                ModBlocks.QUARTZ_CLUSTER.get(),
+                                LootItem.lootTableItem(Items.QUARTZ)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2)))
+                        )
+                )
+        );
     }
 
     @Override
