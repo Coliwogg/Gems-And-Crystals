@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "group": "ruby",
   "key": {
     "#": "gemsandcrystals:ruby",
     "|": "minecraft:stick"

@@ -22,36 +22,42 @@ public class ModItems {
     public static final DeferredItem<Item> RUBY_PICKAXE = ITEMS.registerItem("ruby_pickaxe", (properties) -> new Item(properties.pickaxe(ModToolTiers.RUBY, 1.0F, -2.8f)));
     public static final DeferredItem<AxeItem> RUBY_AXE = ITEMS.registerItem("ruby_axe", (properties) -> new AxeItem(ModToolTiers.RUBY, 6, -3.2f, properties));
     public static final DeferredItem<HoeItem> RUBY_HOE = ITEMS.registerItem("ruby_hoe", (properties) -> new HoeItem(ModToolTiers.RUBY, -4, 0, properties));
+    public static final DeferredItem<Item> RUBY_SPEAR = ITEMS.registerItem("ruby_spear", properties -> new Item(properties.spear(ModToolTiers.RUBY, 1.15f, 1.20f, 0.40f, 1.5f, 7.0f, 5.5f, 5.1f, 8.75f, 4.6f)));
 
     public static final DeferredItem<Item> SAPPHIRE_SWORD = ITEMS.registerItem("sapphire_sword", (properties) -> new Item(properties.sword(ModToolTiers.SAPPHIRE, 3, -2.4f)));
     public static final DeferredItem<ShovelItem> SAPPHIRE_SHOVEL = ITEMS.registerItem("sapphire_shovel", (properties) -> new ShovelItem(ModToolTiers.SAPPHIRE, 1.5f, -3.0f, properties));
     public static final DeferredItem<Item> SAPPHIRE_PICKAXE = ITEMS.registerItem("sapphire_pickaxe", (properties) -> new Item(properties.pickaxe(ModToolTiers.SAPPHIRE, 1.0F, -2.8f)));
     public static final DeferredItem<AxeItem> SAPPHIRE_AXE = ITEMS.registerItem("sapphire_axe", (properties) -> new AxeItem(ModToolTiers.SAPPHIRE, 5, -3.0f, properties));
     public static final DeferredItem<HoeItem> SAPPHIRE_HOE = ITEMS.registerItem("sapphire_hoe", (properties) -> new HoeItem(ModToolTiers.SAPPHIRE, -3, 0, properties));
+    public static final DeferredItem<Item> SAPPHIRE_SPEAR = ITEMS.registerItem("sapphire_spear", properties -> new Item(properties.spear(ModToolTiers.SAPPHIRE, 1.10f, 1.14f, 0.45f, 1.8f, 7.2f, 6.0f, 5.1f, 9.4f, 4.6f)));
 
     public static final DeferredItem<Item> EMERALD_SWORD = ITEMS.registerItem("emerald_sword", (properties) -> new Item(properties.sword(ModToolTiers.EMERALD, 3, -2.4f)));
     public static final DeferredItem<ShovelItem> EMERALD_SHOVEL = ITEMS.registerItem("emerald_shovel", (properties) -> new ShovelItem(ModToolTiers.EMERALD, 1.5f, -3.0f, properties));
     public static final DeferredItem<Item> EMERALD_PICKAXE = ITEMS.registerItem("emerald_pickaxe", (properties) -> new Item(properties.pickaxe(ModToolTiers.EMERALD, 1.0F, -2.8f)));
     public static final DeferredItem<AxeItem> EMERALD_AXE = ITEMS.registerItem("emerald_axe", (properties) -> new AxeItem(ModToolTiers.EMERALD, 5, -3.0f, properties));
     public static final DeferredItem<HoeItem> EMERALD_HOE = ITEMS.registerItem("emerald_hoe", (properties) -> new HoeItem(ModToolTiers.EMERALD, -3, 0, properties));
+    public static final DeferredItem<Item> EMERALD_SPEAR = ITEMS.registerItem("emerald_spear", properties -> new Item(properties.spear(ModToolTiers.EMERALD, 1.05f, 1.075f, 0.50f, 2.0f, 7.5f, 6.5f, 5.1f, 10.0f, 4.6f)));
 
     public static final DeferredItem<Item> TOPAZ_SWORD = ITEMS.registerItem("topaz_sword", (properties) -> new Item(properties.sword(ModToolTiers.TOPAZ, 2, -1.8f)));
     public static final DeferredItem<ShovelItem> TOPAZ_SHOVEL = ITEMS.registerItem("topaz_shovel", (properties) -> new ShovelItem(ModToolTiers.TOPAZ, 1.5f, -3.0f, properties));
     public static final DeferredItem<Item> TOPAZ_PICKAXE = ITEMS.registerItem("topaz_pickaxe", (properties) -> new Item(properties.pickaxe(ModToolTiers.TOPAZ, 1.0F, -2.8f)));
     public static final DeferredItem<AxeItem> TOPAZ_AXE = ITEMS.registerItem("topaz_axe", (properties) -> new AxeItem(ModToolTiers.TOPAZ, 4, -2.9f, properties));
     public static final DeferredItem<HoeItem> TOPAZ_HOE = ITEMS.registerItem("topaz_hoe", (properties) -> new HoeItem(ModToolTiers.TOPAZ, -2, -1, properties));
+    public static final DeferredItem<Item> TOPAZ_SPEAR = ITEMS.registerItem("topaz_spear", properties -> new Item(properties.spear(ModToolTiers.TOPAZ, 1.02f, 1.02f, 0.55f, 2.2f, 7.6f, 6.5f, 5.1f, 10.2f, 4.6f)));
 
     public static final DeferredItem<Item> AMETHYST_SWORD = ITEMS.registerItem("amethyst_sword", (properties) -> new Item(properties.sword(ModToolTiers.AMETHYST, 2, -1.4f)));
     public static final DeferredItem<ShovelItem> AMETHYST_SHOVEL = ITEMS.registerItem("amethyst_shovel", (properties) -> new ShovelItem(ModToolTiers.AMETHYST, 1.5f, -3.0f, properties));
     public static final DeferredItem<Item> AMETHYST_PICKAXE = ITEMS.registerItem("amethyst_pickaxe", (properties) -> new Item(properties.pickaxe(ModToolTiers.AMETHYST, 1.0F, -2.8f)));
     public static final DeferredItem<AxeItem> AMETHYST_AXE = ITEMS.registerItem("amethyst_axe", (properties) -> new AxeItem(ModToolTiers.AMETHYST, 5, -3.1f, properties));
     public static final DeferredItem<HoeItem> AMETHYST_HOE = ITEMS.registerItem("amethyst_hoe", (properties) -> new HoeItem(ModToolTiers.AMETHYST, -2, -1, properties));
+    public static final DeferredItem<Item> AMETHYST_SPEAR = ITEMS.registerItem("amethyst_spear", properties -> new Item(properties.spear(ModToolTiers.AMETHYST, 1.00f, 1.00f, 0.57f, 2.3f, 7.6f, 6.5f, 5.1f, 10.5f, 4.6f)));
 
     public static final DeferredItem<Item> QUARTZ_SWORD = ITEMS.registerItem("quartz_sword", (properties) -> new Item(properties.sword(ModToolTiers.QUARTZ, 3, -2.4f)));
     public static final DeferredItem<ShovelItem> QUARTZ_SHOVEL = ITEMS.registerItem("quartz_shovel", (properties) -> new ShovelItem(ModToolTiers.QUARTZ, 1.5f, -3.0f, properties));
     public static final DeferredItem<Item> QUARTZ_PICKAXE = ITEMS.registerItem("quartz_pickaxe", (properties) -> new Item(properties.pickaxe(ModToolTiers.QUARTZ, 1.0F, -2.8f)));
     public static final DeferredItem<AxeItem> QUARTZ_AXE = ITEMS.registerItem("quartz_axe", (properties) -> new AxeItem(ModToolTiers.QUARTZ, 5, -3.2f, properties));
     public static final DeferredItem<HoeItem> QUARTZ_HOE = ITEMS.registerItem("quartz_hoe", (properties) -> new HoeItem(ModToolTiers.QUARTZ, -2, -3F, properties));
+    public static final DeferredItem<Item> QUARTZ_SPEAR = ITEMS.registerItem("quartz_spear", properties -> new Item(properties.spear(ModToolTiers.QUARTZ, 0.95f, 0.95f, 0.62f, 2.4f, 7.8f, 6.6f, 5.1f, 11.0f, 4.6f)));
 
     public static final DeferredItem<Item> RUBY_HELMET = ITEMS.registerItem("ruby_helmet", (properties) -> new Item(properties.humanoidArmor(ModArmorMaterials.RUBY_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final DeferredItem<Item> RUBY_CHESTPLATE = ITEMS.registerItem("ruby_chestplate", (properties) -> new Item(properties.humanoidArmor(ModArmorMaterials.RUBY_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));

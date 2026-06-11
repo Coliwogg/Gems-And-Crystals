@@ -97,7 +97,14 @@ public class ModRecipeProvider extends RecipeProvider {
         swordBuilder(output, ModItems.RUBY_SWORD.get(), ModItems.RUBY.get(), "ruby");
         swordBuilder(output, ModItems.SAPPHIRE_SWORD.get(), ModItems.SAPPHIRE.get(), "sapphire");
         swordBuilder(output, ModItems.TOPAZ_SWORD.get(), ModItems.TOPAZ.get(), "topaz");
-        
+
+        spearBuilder(output, ModItems.AMETHYST_SPEAR.get(), Items.AMETHYST_SHARD.asItem(), "amethyst");
+        spearBuilder(output, ModItems.EMERALD_SPEAR.get(), Items.EMERALD.asItem(), "emerald");
+        spearBuilder(output, ModItems.QUARTZ_SPEAR.get(), Items.QUARTZ.asItem(), "quartz");
+        spearBuilder(output, ModItems.RUBY_SPEAR.get(), ModItems.RUBY.get(), "ruby");
+        spearBuilder(output, ModItems.SAPPHIRE_SPEAR.get(), ModItems.SAPPHIRE.get(), "sapphire");
+        spearBuilder(output, ModItems.TOPAZ_SPEAR.get(), ModItems.TOPAZ.get(), "topaz");
+
         bootsBuilder(output, ModItems.AMETHYST_BOOTS.get(), Items.AMETHYST_SHARD.asItem(), "amethyst");
         bootsBuilder(output, ModItems.EMERALD_BOOTS.get(), Items.EMERALD.asItem(), "emerald");
         bootsBuilder(output, ModItems.QUARTZ_BOOTS.get(), Items.QUARTZ.asItem(), "quartz");
@@ -142,6 +149,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('#', ingredientItem)
                 .define('|', Items.STICK.asItem())
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
@@ -153,6 +162,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" |")
                 .pattern(" |")
                 .unlockedBy(getHasName(ingredientItem), this.has(itemLike))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
@@ -164,28 +175,47 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" | ")
                 .pattern(" | ")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
     protected void shovelBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.TOOLS, itemLike)
                 .define('#', ingredientItem)
-                .define('|', Items.STICK.asItem())
+                .define('|', Items.STICK)
                 .pattern("#")
                 .pattern("|")
                 .pattern("|")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
     protected void swordBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
-                .define('|', Items.STICK.asItem())
+                .define('|', Items.STICK)
                 .pattern("#")
                 .pattern("#")
                 .pattern("|")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group(itemName)
+                .save(finishedRecipe);
+    }
+
+    protected void spearBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+                .define('#', ingredientItem)
+                .define('|', Items.STICK)
+                .pattern("  #")
+                .pattern(" | ")
+                .pattern("|  ")
+                .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
@@ -197,6 +227,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("#X#")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
@@ -206,6 +237,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("# #")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
@@ -216,6 +248,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("###")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
@@ -226,6 +259,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("# #")
                 .pattern("# #")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
@@ -235,6 +269,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("# #")
                 .pattern("# #")
                 .unlockedBy(getHasName(ingredientItem), has(itemLike))
+                .group(itemName)
                 .save(finishedRecipe);
     }
 
