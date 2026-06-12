@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "amethyst",
+  "key": {
+    "#": "minecraft:amethyst_shard",
+    "|": "minecraft:stick"
+  },
+  "pattern": [
+    "  #",
+    " | ",
+    "|  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "gemsandcrystals:amethyst_spear"
+  }
+}

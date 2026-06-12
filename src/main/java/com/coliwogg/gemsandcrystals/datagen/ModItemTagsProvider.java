@@ -42,6 +42,54 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                         ModItems.SAPPHIRE.get(),
                         ModItems.TOPAZ.get());
 
+        tag(ItemTags.SWORDS)
+                .add(ModItems.RUBY_SWORD.get())
+                .add(ModItems.SAPPHIRE_SWORD.get())
+                .add(ModItems.EMERALD_SWORD.get())
+                .add(ModItems.TOPAZ_SWORD.get())
+                .add(ModItems.AMETHYST_SWORD.get())
+                .add(ModItems.QUARTZ_SWORD.get());
+
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.RUBY_PICKAXE.get())
+                .add(ModItems.SAPPHIRE_PICKAXE.get())
+                .add(ModItems.EMERALD_PICKAXE.get())
+                .add(ModItems.TOPAZ_PICKAXE.get())
+                .add(ModItems.AMETHYST_PICKAXE.get())
+                .add(ModItems.QUARTZ_PICKAXE.get());
+
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.RUBY_SHOVEL.get())
+                .add(ModItems.SAPPHIRE_SHOVEL.get())
+                .add(ModItems.EMERALD_SHOVEL.get())
+                .add(ModItems.TOPAZ_SHOVEL.get())
+                .add(ModItems.AMETHYST_SHOVEL.get())
+                .add(ModItems.QUARTZ_SHOVEL.get());
+
+        tag(ItemTags.AXES)
+                .add(ModItems.RUBY_AXE.get())
+                .add(ModItems.SAPPHIRE_AXE.get())
+                .add(ModItems.EMERALD_AXE.get())
+                .add(ModItems.TOPAZ_AXE.get())
+                .add(ModItems.AMETHYST_AXE.get())
+                .add(ModItems.QUARTZ_AXE.get());
+
+        tag(ItemTags.HOES)
+                .add(ModItems.RUBY_HOE.get())
+                .add(ModItems.SAPPHIRE_HOE.get())
+                .add(ModItems.EMERALD_HOE.get())
+                .add(ModItems.TOPAZ_HOE.get())
+                .add(ModItems.AMETHYST_HOE.get())
+                .add(ModItems.QUARTZ_HOE.get());
+
+        tag(ItemTags.SPEARS)
+                .add(ModItems.RUBY_SPEAR.get())
+                .add(ModItems.SAPPHIRE_SPEAR.get())
+                .add(ModItems.EMERALD_SPEAR.get())
+                .add(ModItems.TOPAZ_SPEAR.get())
+                .add(ModItems.AMETHYST_SPEAR.get())
+                .add(ModItems.QUARTZ_SPEAR.get());
+
         tag(ItemTags.HEAD_ARMOR)
                 .add(ModItems.RUBY_HELMET.get())
                 .add(ModItems.SAPPHIRE_HELMET.get())
