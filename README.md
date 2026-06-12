@@ -2,6 +2,8 @@
 
 <https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals>
 
+<https://modrinth.com/mod/gems-and-crystals>
+
 
 ![Gems and crystals header](https://i.imgur.com/nT9uSDz.png)
 
