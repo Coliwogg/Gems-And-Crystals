@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "quartz",
+  "key": {
+    "#": {
+      "item": "minecraft:quartz"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "##",
+    " |",
+    " |"
+  ],
+  "result": {
+    "count": 1,
+    "id": "gemsandcrystals:quartz_hoe"
+  }
+}

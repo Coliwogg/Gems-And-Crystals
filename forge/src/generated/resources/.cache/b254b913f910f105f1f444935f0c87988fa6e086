@@ -1,0 +1,12 @@
+// 1.21.1	2026-06-24T11:31:36.6839455	Tags for minecraft:item mod id gemsandcrystals
+5df9659e98e23d0c680c264bdc6faeb52021ab5f data/minecraft/tags/item/axes.json
+647119eecd7597f9ff0618c27e0bf20d09f831a2 data/minecraft/tags/item/chest_armor.json
+317c98d48a2c1434bbec8fdf07c685dc813406d7 data/minecraft/tags/item/foot_armor.json
+6b2a4b25cedd794fbfb73275dd1a43d729aacae1 data/minecraft/tags/item/head_armor.json
+71acca7c6716e9c25ad2261c7c3cade662064894 data/minecraft/tags/item/hoes.json
+ac53947f186fd78d495f3e00fc8effa706917f63 data/minecraft/tags/item/leg_armor.json
+b0e42d45abc505579484658f4fa09bdc3118ea4f data/minecraft/tags/item/pickaxes.json
+cc5e1cefe249edc4f4ffa6dcc3d91f0b36c4c9c1 data/minecraft/tags/item/shovels.json
+0516a5f0dd1645759f0d516ca0a839c42a2b8a78 data/minecraft/tags/item/swords.json
+70b3ff28fb0adfb18cec5b42047462f02e33557b data/minecraft/tags/item/trimmable_armor.json
+75730d60cfb9b800bcfb3900a601586d731eb500 data/minecraft/tags/item/trim_materials.json

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "sapphire",
+  "key": {
+    "#": {
+      "item": "gemsandcrystals:sapphire"
+    },
+    "X": {
+      "item": "minecraft:leather_horse_armor"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###",
+    "#X#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "gemsandcrystals:sapphire_horse_armor"
+  }
+}

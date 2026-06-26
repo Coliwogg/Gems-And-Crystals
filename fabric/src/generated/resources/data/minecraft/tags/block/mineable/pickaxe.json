@@ -1,0 +1,17 @@
+{
+  "values": [
+    "gemsandcrystals:ruby_block",
+    "gemsandcrystals:ruby_ore",
+    "gemsandcrystals:deepslate_ruby_ore",
+    "gemsandcrystals:sapphire_block",
+    "gemsandcrystals:sapphire_ore",
+    "gemsandcrystals:deepslate_sapphire_ore",
+    "gemsandcrystals:topaz_block",
+    "gemsandcrystals:topaz_ore",
+    "gemsandcrystals:deepslate_topaz_ore",
+    "gemsandcrystals:amethyst_ore",
+    "gemsandcrystals:deepslate_amethyst_ore",
+    "gemsandcrystals:quartz_ore",
+    "gemsandcrystals:deepslate_quartz_ore"
+  ]
+}

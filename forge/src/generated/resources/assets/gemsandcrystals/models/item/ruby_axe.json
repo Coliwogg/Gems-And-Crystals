@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "gemsandcrystals:item/ruby_axe"
+  }
+}
