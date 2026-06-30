@@ -42,6 +42,32 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                         ModItems.SAPPHIRE.get(),
                         ModItems.TOPAZ.get());
 
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.RUBY_HELMET.get())
+                .add(ModItems.SAPPHIRE_HELMET.get())
+                .add(ModItems.EMERALD_HELMET.get())
+                .add(ModItems.TOPAZ_HELMET.get())
+                .add(ModItems.AMETHYST_HELMET.get())
+                .add(ModItems.QUARTZ_HELMET.get())
+                .add(ModItems.RUBY_CHESTPLATE.get())
+                .add(ModItems.SAPPHIRE_CHESTPLATE.get())
+                .add(ModItems.EMERALD_CHESTPLATE.get())
+                .add(ModItems.TOPAZ_CHESTPLATE.get())
+                .add(ModItems.AMETHYST_CHESTPLATE.get())
+                .add(ModItems.QUARTZ_CHESTPLATE.get())
+                .add(ModItems.RUBY_LEGGINGS.get())
+                .add(ModItems.SAPPHIRE_LEGGINGS.get())
+                .add(ModItems.EMERALD_LEGGINGS.get())
+                .add(ModItems.TOPAZ_LEGGINGS.get())
+                .add(ModItems.AMETHYST_LEGGINGS.get())
+                .add(ModItems.QUARTZ_LEGGINGS.get())
+                .add(ModItems.RUBY_BOOTS.get())
+                .add(ModItems.SAPPHIRE_BOOTS.get())
+                .add(ModItems.EMERALD_BOOTS.get())
+                .add(ModItems.TOPAZ_BOOTS.get())
+                .add(ModItems.AMETHYST_BOOTS.get())
+                .add(ModItems.QUARTZ_BOOTS.get());
+
         tag(ItemTags.SWORDS)
                 .add(ModItems.RUBY_SWORD.get())
                 .add(ModItems.SAPPHIRE_SWORD.get())

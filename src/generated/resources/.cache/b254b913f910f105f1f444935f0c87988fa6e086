@@ -1,4 +1,4 @@
-// 1.21.11	2026-06-11T12:23:34.9106243	Tags for minecraft:item mod id gemsandcrystals
+// 1.21.11	2026-06-30T09:05:15.516518	Tags for minecraft:item mod id gemsandcrystals
 bde6ca31173d1f22d5f6fe355dc90c9faa35b239 data/gemsandcrystals/tags/item/amethyst_repairable.json
 8c4f379d97e2cd8c7f9297bf4fab7e60083ecb0d data/gemsandcrystals/tags/item/emerald_repairable.json
 42605e6989bb70ecdd5f2ded50fbb315b1c185ec data/gemsandcrystals/tags/item/quartz_repairable.json
@@ -15,4 +15,5 @@ b0e42d45abc505579484658f4fa09bdc3118ea4f data/minecraft/tags/item/pickaxes.json
 cc5e1cefe249edc4f4ffa6dcc3d91f0b36c4c9c1 data/minecraft/tags/item/shovels.json
 f7db5fe920bf1cc2149baed5f5a811d077cf9f1e data/minecraft/tags/item/spears.json
 0516a5f0dd1645759f0d516ca0a839c42a2b8a78 data/minecraft/tags/item/swords.json
+de4c9931b3eabfa1613ec9328f37d3e0359b8690 data/minecraft/tags/item/trimmable_armor.json
 75730d60cfb9b800bcfb3900a601586d731eb500 data/minecraft/tags/item/trim_materials.json
