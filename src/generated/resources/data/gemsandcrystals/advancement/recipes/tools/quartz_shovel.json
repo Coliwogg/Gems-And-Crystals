@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "gemsandcrystals:quartz_shovel"
+            "items": "minecraft:quartz"
           }
         ]
       },

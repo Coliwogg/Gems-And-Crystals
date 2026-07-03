@@ -149,7 +149,6 @@ public class ModModelProvider extends ModelProvider {
         MultiVariant multiVariant = BlockModelGenerators.plainVariant(
                 ModelTemplates.CROSS
                         .extend()
-                        .renderType("minecraft:cutout")
                         .build()
                         .create(block, TextureMapping.cross(block), blockModels.modelOutput)
         );

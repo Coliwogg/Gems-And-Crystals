@@ -6,7 +6,6 @@
   "group": "quartz",
   "ingredient": "gemsandcrystals:deepslate_quartz_ore",
   "result": {
-    "count": 1,
     "id": "minecraft:quartz"
   }
 }

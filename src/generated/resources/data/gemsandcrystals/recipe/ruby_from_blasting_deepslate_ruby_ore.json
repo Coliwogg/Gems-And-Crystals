@@ -6,7 +6,6 @@
   "group": "ruby",
   "ingredient": "gemsandcrystals:deepslate_ruby_ore",
   "result": {
-    "count": 1,
     "id": "gemsandcrystals:ruby"
   }
 }

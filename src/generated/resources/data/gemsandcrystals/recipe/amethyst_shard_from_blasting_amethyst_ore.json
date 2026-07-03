@@ -6,7 +6,6 @@
   "group": "amethyst",
   "ingredient": "gemsandcrystals:amethyst_ore",
   "result": {
-    "count": 1,
     "id": "minecraft:amethyst_shard"
   }
 }

@@ -6,7 +6,6 @@
   "group": "sapphire",
   "ingredient": "gemsandcrystals:sapphire_ore",
   "result": {
-    "count": 1,
     "id": "gemsandcrystals:sapphire"
   }
 }
