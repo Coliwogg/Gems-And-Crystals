@@ -6,7 +6,6 @@
   "group": "topaz",
   "ingredient": "gemsandcrystals:deepslate_topaz_ore",
   "result": {
-    "count": 1,
     "id": "gemsandcrystals:topaz"
   }
 }

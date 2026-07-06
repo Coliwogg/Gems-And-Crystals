@@ -6,7 +6,6 @@
   "group": "topaz",
   "ingredient": "gemsandcrystals:topaz_ore",
   "result": {
-    "count": 1,
     "id": "gemsandcrystals:topaz"
   }
 }

@@ -1,4 +1,0 @@
-// 1.21.11	2026-06-07T11:14:18.11706	Tags for minecraft:block mod id gemsandcrystals
-ad4c37c42958e19d721bec588f510486df96f18e data/minecraft/tags/block/mineable/pickaxe.json
-0ee1d36d1889cf7c7d8d11474753ac757cbc7efd data/minecraft/tags/block/needs_diamond_tool.json
-6b4416ff385f343de4fd2bc9310157178cc1e21e data/minecraft/tags/block/needs_iron_tool.json
