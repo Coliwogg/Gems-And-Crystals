@@ -2,12 +2,14 @@ package com.coliwogg.gemsandcrystals.worldgen;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GeodeBlockSettings;
 import net.minecraft.world.level.levelgen.GeodeCrackSettings;
@@ -36,6 +38,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_QUARTZ_GEODE_KEY = registerKey("quartz_geode");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+        HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
+
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
@@ -78,7 +82,8 @@ public class ModConfiguredFeatures {
                         ModBlocks.LARGE_QUARTZ_BUD.get().defaultBlockState(),
                         ModBlocks.QUARTZ_CLUSTER.get().defaultBlockState()
                 ),
-                BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                blocks.getOrThrow(BlockTags.FEATURES_CANNOT_REPLACE),
+                blocks.getOrThrow(BlockTags.GEODE_INVALID_BLOCKS)),
                 new GeodeLayerSettings(1.7, 2.2, 3.0, 4.2),
                 new GeodeCrackSettings(0.6, 2.0, 2),
                         0.4, 0.083,

@@ -1,6 +1,8 @@
 package com.coliwogg.gemsandcrystals.item;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -95,6 +97,10 @@ public class ModItems {
     public static final DeferredItem<Item> TOPAZ_HORSE_ARMOR = ITEMS.registerItem("topaz_horse_armor", (properties) -> new Item(properties.horseArmor(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL)));
     public static final DeferredItem<Item> AMETHYST_HORSE_ARMOR = ITEMS.registerItem("amethyst_horse_armor", (properties) -> new Item(properties.horseArmor(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL)));
     public static final DeferredItem<Item> QUARTZ_HORSE_ARMOR = ITEMS.registerItem("quartz_horse_armor", (properties) -> new Item(properties.horseArmor(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL)));
+
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
