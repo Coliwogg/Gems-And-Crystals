@@ -3,6 +3,8 @@ package com.coliwogg.gemsandcrystals.block;
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.block.custom.BuddingQuartzBlock;
 import com.coliwogg.gemsandcrystals.item.ModItems;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.AmethystClusterBlock;
@@ -59,12 +61,15 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SMALL_QUARTZ_BUD = registerBlock("small_quartz_bud",
             (properties -> new AmethystClusterBlock(3.0F, 8.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.SMALL_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> 1).pushReaction(PushReaction.DESTROY))));
 
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.registerItem(name, (properties) -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix()));
