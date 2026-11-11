@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_pickaxe"
+        "recipes": "gemsandcrystals:topaz_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

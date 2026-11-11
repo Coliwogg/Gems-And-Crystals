@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_axe"
+        "recipes": "gemsandcrystals:topaz_axe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

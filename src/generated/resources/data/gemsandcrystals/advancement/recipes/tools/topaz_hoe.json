@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_hoe"
+        "recipes": "gemsandcrystals:topaz_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

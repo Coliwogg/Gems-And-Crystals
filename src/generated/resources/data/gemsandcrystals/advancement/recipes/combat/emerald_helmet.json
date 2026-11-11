@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:emerald_helmet"
+        "recipes": "gemsandcrystals:emerald_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

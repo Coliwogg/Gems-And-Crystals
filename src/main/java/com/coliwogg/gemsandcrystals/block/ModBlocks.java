@@ -51,15 +51,15 @@ public class ModBlocks {
             (properties) -> new DropExperienceBlock(UniformInt.of(3, 7), properties.mapColor(MapColor.DEEPSLATE).strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> BUDDING_QUARTZ = registerBlock("budding_quartz",
-            (properties) -> new BuddingQuartzBlock(properties.mapColor(MapColor.QUARTZ).strength(1.5F).randomTicks().noOcclusion().sound(SoundType.AMETHYST).requiresCorrectToolForDrops().pushReaction(PushReaction.DESTROY)));
+            (properties) -> new BuddingQuartzBlock(properties.mapColor(MapColor.QUARTZ).strength(1.5F).randomTicks().noOcclusion().sound(SoundType.AMETHYST).requiresCorrectToolForDrops().pushReaction(PushReaction.POPPED)));
     public static final DeferredBlock<Block> QUARTZ_CLUSTER = registerBlock("quartz_cluster",
-            (properties -> new AmethystClusterBlock(7.0F, 10.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel((p_152632_) -> 5).pushReaction(PushReaction.DESTROY))));
+            (properties -> new AmethystClusterBlock(7.0F, 10.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel((p_152632_) -> 5).pushReaction(PushReaction.POPPED))));
     public static final DeferredBlock<Block> LARGE_QUARTZ_BUD = registerBlock("large_quartz_bud",
-            (properties -> new AmethystClusterBlock(5.0F, 10.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.LARGE_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> 4).pushReaction(PushReaction.DESTROY))));
+            (properties -> new AmethystClusterBlock(5.0F, 10.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.LARGE_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> 4).pushReaction(PushReaction.POPPED))));
     public static final DeferredBlock<Block> MEDIUM_QUARTZ_BUD = registerBlock("medium_quartz_bud",
-            (properties -> new AmethystClusterBlock(4.0F, 10.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.MEDIUM_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> 2).pushReaction(PushReaction.DESTROY))));
+            (properties -> new AmethystClusterBlock(4.0F, 10.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.MEDIUM_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> 2).pushReaction(PushReaction.POPPED))));
     public static final DeferredBlock<Block> SMALL_QUARTZ_BUD = registerBlock("small_quartz_bud",
-            (properties -> new AmethystClusterBlock(3.0F, 8.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.SMALL_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> 1).pushReaction(PushReaction.DESTROY))));
+            (properties -> new AmethystClusterBlock(3.0F, 8.0F, properties.mapColor(MapColor.QUARTZ).forceSolidOn().noOcclusion().sound(SoundType.SMALL_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> 1).pushReaction(PushReaction.POPPED))));
 
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();

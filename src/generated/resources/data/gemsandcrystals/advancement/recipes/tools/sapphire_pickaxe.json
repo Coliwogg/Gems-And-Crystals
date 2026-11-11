@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_pickaxe"
+        "recipes": "gemsandcrystals:sapphire_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

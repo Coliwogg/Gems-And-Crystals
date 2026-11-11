@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:amethyst_spear"
+        "recipes": "gemsandcrystals:amethyst_spear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

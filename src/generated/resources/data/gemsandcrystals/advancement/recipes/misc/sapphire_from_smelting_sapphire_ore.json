@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_from_smelting_sapphire_ore"
+        "recipes": "gemsandcrystals:sapphire_from_smelting_sapphire_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

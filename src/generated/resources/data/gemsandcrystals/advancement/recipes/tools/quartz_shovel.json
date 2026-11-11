@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:quartz_shovel"
+        "recipes": "gemsandcrystals:quartz_shovel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

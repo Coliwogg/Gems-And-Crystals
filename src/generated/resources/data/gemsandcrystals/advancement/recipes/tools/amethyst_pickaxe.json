@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:amethyst_pickaxe"
+        "recipes": "gemsandcrystals:amethyst_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

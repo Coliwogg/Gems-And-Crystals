@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:quartz_horse_armor"
+        "recipes": "gemsandcrystals:quartz_horse_armor"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

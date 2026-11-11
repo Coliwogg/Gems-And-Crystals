@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:amethyst_shard_from_blasting_amethyst_ore"
+        "recipes": "gemsandcrystals:amethyst_shard_from_blasting_amethyst_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

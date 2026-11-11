@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:amethyst_hoe"
+        "recipes": "gemsandcrystals:amethyst_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

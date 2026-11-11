@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:quartz_leggings"
+        "recipes": "gemsandcrystals:quartz_leggings"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

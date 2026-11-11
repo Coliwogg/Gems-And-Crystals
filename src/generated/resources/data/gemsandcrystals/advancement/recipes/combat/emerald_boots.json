@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:emerald_boots"
+        "recipes": "gemsandcrystals:emerald_boots"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

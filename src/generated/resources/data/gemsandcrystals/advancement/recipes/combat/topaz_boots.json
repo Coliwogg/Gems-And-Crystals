@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_boots"
+        "recipes": "gemsandcrystals:topaz_boots"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

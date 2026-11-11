@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:emerald_leggings"
+        "recipes": "gemsandcrystals:emerald_leggings"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

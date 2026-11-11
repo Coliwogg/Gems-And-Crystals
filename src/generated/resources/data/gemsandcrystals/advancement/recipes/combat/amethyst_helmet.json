@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:amethyst_helmet"
+        "recipes": "gemsandcrystals:amethyst_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
