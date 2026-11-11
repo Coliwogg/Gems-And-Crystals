@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_boots"
+        "recipes": "gemsandcrystals:sapphire_boots"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

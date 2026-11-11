@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:geode",
+  "blocks": {
+    "alternate_inner_layer_provider": {
+      "id": "gemsandcrystals:budding_quartz"
+    },
+    "cannot_replace": "#minecraft:features_cannot_replace",
+    "filling_provider": {
+      "id": "minecraft:air"
+    },
+    "inner_layer_provider": {
+      "id": "minecraft:diorite"
+    },
+    "inner_placements": [
+      "gemsandcrystals:small_quartz_bud",
+      "gemsandcrystals:medium_quartz_bud",
+      "gemsandcrystals:large_quartz_bud",
+      "gemsandcrystals:quartz_cluster"
+    ],
+    "invalid_blocks": "#minecraft:geode_invalid_blocks",
+    "middle_layer_provider": {
+      "id": "minecraft:tuff"
+    },
+    "outer_layer_provider": {
+      "id": "minecraft:smooth_basalt"
+    }
+  },
+  "crack": {
+    "generate_crack_chance": 0.6
+  },
+  "distribution_points": {
+    "type": "minecraft:uniform",
+    "max_inclusive": 4,
+    "min_inclusive": 2
+  },
+  "invalid_blocks_threshold": 1,
+  "layers": {
+    "middle_layer": 3.0
+  },
+  "noise_multiplier": 0.065,
+  "outer_wall_distance": {
+    "type": "minecraft:uniform",
+    "max_inclusive": 7,
+    "min_inclusive": 4
+  },
+  "use_alternate_layer0_chance": 0.083,
+  "use_potential_placements_chance": 0.4
+}

@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_hoe"
+        "recipes": "gemsandcrystals:ruby_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

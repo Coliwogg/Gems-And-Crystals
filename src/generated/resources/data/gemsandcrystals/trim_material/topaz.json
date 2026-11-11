@@ -1,7 +1,7 @@
 {
-  "asset_name": "topaz",
   "description": {
     "color": "#F9C032",
     "translate": "trim_material.gemsandcrystals.topaz"
-  }
+  },
+  "palette_id": "minecraft:trim/topaz"
 }

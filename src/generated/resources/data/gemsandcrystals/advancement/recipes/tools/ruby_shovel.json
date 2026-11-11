@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_shovel"
+        "recipes": "gemsandcrystals:ruby_shovel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

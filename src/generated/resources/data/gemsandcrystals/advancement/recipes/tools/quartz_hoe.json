@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:quartz_hoe"
+        "recipes": "gemsandcrystals:quartz_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

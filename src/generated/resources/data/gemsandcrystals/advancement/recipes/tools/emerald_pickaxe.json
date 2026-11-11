@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:emerald_pickaxe"
+        "recipes": "gemsandcrystals:emerald_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

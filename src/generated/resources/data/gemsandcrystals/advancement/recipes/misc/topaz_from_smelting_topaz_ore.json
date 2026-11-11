@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_from_smelting_topaz_ore"
+        "recipes": "gemsandcrystals:topaz_from_smelting_topaz_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

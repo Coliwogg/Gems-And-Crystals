@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_helmet"
+        "recipes": "gemsandcrystals:topaz_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

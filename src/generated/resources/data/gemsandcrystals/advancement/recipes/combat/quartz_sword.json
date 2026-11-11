@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:quartz_sword"
+        "recipes": "gemsandcrystals:quartz_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

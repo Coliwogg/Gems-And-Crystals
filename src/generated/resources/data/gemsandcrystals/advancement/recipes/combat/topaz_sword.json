@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_sword"
+        "recipes": "gemsandcrystals:topaz_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

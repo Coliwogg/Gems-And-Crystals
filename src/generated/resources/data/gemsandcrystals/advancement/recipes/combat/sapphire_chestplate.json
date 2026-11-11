@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_chestplate"
+        "recipes": "gemsandcrystals:sapphire_chestplate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

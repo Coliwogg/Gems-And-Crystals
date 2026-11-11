@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_horse_armor"
+        "recipes": "gemsandcrystals:topaz_horse_armor"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

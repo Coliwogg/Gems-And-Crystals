@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_hoe"
+        "recipes": "gemsandcrystals:sapphire_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

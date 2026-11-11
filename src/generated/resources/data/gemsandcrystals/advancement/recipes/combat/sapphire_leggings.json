@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_leggings"
+        "recipes": "gemsandcrystals:sapphire_leggings"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

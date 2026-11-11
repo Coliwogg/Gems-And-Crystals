@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_spear"
+        "recipes": "gemsandcrystals:sapphire_spear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

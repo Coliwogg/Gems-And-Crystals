@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_sword"
+        "recipes": "gemsandcrystals:ruby_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

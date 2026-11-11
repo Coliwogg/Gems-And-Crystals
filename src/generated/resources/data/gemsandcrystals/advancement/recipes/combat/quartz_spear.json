@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:quartz_spear"
+        "recipes": "gemsandcrystals:quartz_spear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

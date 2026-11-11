@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:quartz_from_blasting_deepslate_quartz_ore"
+        "recipes": "gemsandcrystals:quartz_from_blasting_deepslate_quartz_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

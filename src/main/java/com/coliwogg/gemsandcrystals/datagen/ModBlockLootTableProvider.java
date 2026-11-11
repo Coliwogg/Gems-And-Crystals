@@ -3,20 +3,20 @@ package com.coliwogg.gemsandcrystals.datagen;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import com.coliwogg.gemsandcrystals.item.ModItems;
 import net.minecraft.core.Holder;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
-    public ModBlockLootTableProvider(HolderLookup.Provider registries) {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
+    public ModBlockLootTableProvider(LootTableSubProvider.Context context) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), context);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                         applyExplosionDecay(
                                 ModBlocks.QUARTZ_CLUSTER.get(),
                                 LootItem.lootTableItem(Items.QUARTZ)
-                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2)))
+                                        .apply(SetItemCountFunction.setCount(ContextIntProviders.exactly(2)))
                         )
                 )
         );

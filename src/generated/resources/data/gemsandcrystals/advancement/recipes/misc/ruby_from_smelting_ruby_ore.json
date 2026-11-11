@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_from_smelting_ruby_ore"
+        "recipes": "gemsandcrystals:ruby_from_smelting_ruby_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

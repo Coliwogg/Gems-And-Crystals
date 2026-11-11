@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_horse_armor"
+        "recipes": "gemsandcrystals:sapphire_horse_armor"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

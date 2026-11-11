@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_axe"
+        "recipes": "gemsandcrystals:ruby_axe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

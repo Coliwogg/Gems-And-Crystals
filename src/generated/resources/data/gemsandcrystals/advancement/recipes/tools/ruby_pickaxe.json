@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_pickaxe"
+        "recipes": "gemsandcrystals:ruby_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

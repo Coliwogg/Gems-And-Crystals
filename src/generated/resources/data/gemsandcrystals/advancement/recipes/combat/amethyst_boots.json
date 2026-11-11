@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:amethyst_boots"
+        "recipes": "gemsandcrystals:amethyst_boots"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

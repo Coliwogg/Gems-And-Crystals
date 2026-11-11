@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:sapphire_shovel"
+        "recipes": "gemsandcrystals:sapphire_shovel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

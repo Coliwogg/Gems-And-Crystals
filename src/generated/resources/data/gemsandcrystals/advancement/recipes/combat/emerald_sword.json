@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:emerald_sword"
+        "recipes": "gemsandcrystals:emerald_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

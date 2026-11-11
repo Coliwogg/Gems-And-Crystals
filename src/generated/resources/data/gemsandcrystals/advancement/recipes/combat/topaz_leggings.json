@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_leggings"
+        "recipes": "gemsandcrystals:topaz_leggings"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

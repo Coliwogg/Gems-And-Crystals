@@ -4,10 +4,13 @@ import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import com.coliwogg.gemsandcrystals.item.ModItems;
 import com.google.common.collect.ImmutableList;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.MultiRegistryBootstrap;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -22,24 +25,12 @@ public class ModRecipeProvider extends RecipeProvider {
     ImmutableList<ItemLike> AMETHYST_SMELTABLES = ImmutableList.of(ModBlocks.AMETHYST_ORE, ModBlocks.DEEPSLATE_AMETHYST_ORE);
     ImmutableList<ItemLike> QUARTZ_SMELTABLES = ImmutableList.of(ModBlocks.QUARTZ_ORE, ModBlocks.DEEPSLATE_QUARTZ_ORE);
 
-    public ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-        super(registries, output);
+    public ModRecipeProvider(BootstrapContext<Recipe<?>> recipeContext, BootstrapContext<Advancement> advancementContext) {
+        super(recipeContext, advancementContext);
     }
 
-    public static class Runner extends RecipeProvider.Runner {
-        public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
-            super(packOutput, registries);
-        }
-
-        @Override
-        protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-            return new ModRecipeProvider(registries, output);
-        }
-
-        @Override
-        public String getName() {
-            return "Gems and Crystals Recipes";
-        }
+    public static MultiRegistryBootstrap create() {
+        return RecipeProvider.asBootstrap(ModRecipeProvider::new);
     }
 
     @Override
@@ -138,7 +129,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void axeBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.TOOLS, itemLike)
+        shaped(RecipeCategory.TOOLS, itemLike)
                 .pattern("##")
                 .pattern("#|")
                 .pattern(" |")
@@ -151,7 +142,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void hoeBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.TOOLS, itemLike)
+        shaped(RecipeCategory.TOOLS, itemLike)
                 .define('#', ingredientItem)
                 .define('|', Items.STICK)
                 .pattern("##")
@@ -164,7 +155,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void pickaxeBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.TOOLS, itemLike)
+        shaped(RecipeCategory.TOOLS, itemLike)
                 .define('#', ingredientItem)
                 .define('|', Items.STICK)
                 .pattern("###")
@@ -177,7 +168,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void shovelBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.TOOLS, itemLike)
+        shaped(RecipeCategory.TOOLS, itemLike)
                 .define('#', ingredientItem)
                 .define('|', Items.STICK)
                 .pattern("#")
@@ -190,7 +181,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void swordBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+        shaped(RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
                 .define('|', Items.STICK)
                 .pattern("#")
@@ -203,7 +194,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void spearBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+        shaped(RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
                 .define('|', Items.STICK)
                 .pattern("  #")
@@ -216,7 +207,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void horseArmorBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+        shaped(RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
                 .define('X', Items.LEATHER_HORSE_ARMOR)
                 .pattern("# #")
@@ -228,7 +219,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void helmetBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+        shaped(RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
                 .pattern("###")
                 .pattern("# #")
@@ -238,7 +229,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void chestplateBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+        shaped(RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
                 .pattern("# #")
                 .pattern("###")
@@ -249,7 +240,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void leggingsBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+        shaped(RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
                 .pattern("###")
                 .pattern("# #")
@@ -260,7 +251,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     protected void bootsBuilder(RecipeOutput finishedRecipe, ItemLike itemLike, ItemLike ingredientItem, String itemName) {
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, itemLike)
+        shaped(RecipeCategory.COMBAT, itemLike)
                 .define('#', ingredientItem)
                 .pattern("# #")
                 .pattern("# #")

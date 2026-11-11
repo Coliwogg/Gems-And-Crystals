@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:topaz_chestplate"
+        "recipes": "gemsandcrystals:topaz_chestplate"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
